@@ -35,6 +35,31 @@
       margin: 0 auto;
     }
 
+    /* ── Accessibility utilities ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--red);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 0 0 8px 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+
     /* ── Header ── */
     header {
       text-align: center;
@@ -109,8 +134,82 @@
       border-color: transparent;
     }
 
-    .btn-random {
+    /* ── Search ── */
+    .search-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      position: relative;
+    }
+    #search-input {
       width: 100%;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--text);
+    }
+    #search-input:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    .search-results {
+      list-style: none;
+    }
+    .search-results:not(:empty) {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 0.2rem;
+    }
+    .search-result-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.55rem 0.7rem;
+      background: var(--card);
+      border: none;
+      border-bottom: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.82rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .search-results li:last-child .search-result-btn { border-bottom: none; }
+    .search-result-btn:hover { background: var(--bg); }
+    .search-result-btn:focus-visible { outline: 2px solid var(--red); outline-offset: -2px; }
+    .search-result-btn .sr-no {
+      font-weight: 700;
+      color: var(--red);
+      margin-right: 0.4rem;
+    }
+
+    /* ── Nav + random buttons ── */
+    .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-nav {
+      flex: 0 0 92px;
+      padding: 0.75rem 0.4rem;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+    .btn-nav:hover  { background: var(--border); }
+    .btn-nav:active { opacity: 0.8; }
+
+    .btn-random {
+      flex: 1;
       padding: 0.75rem;
       background: var(--red);
       color: #fff;
@@ -130,6 +229,17 @@
     .btn-random:hover  { opacity: 0.88; }
     .btn-random:active { opacity: 0.72; transform: scale(0.99); }
 
+    button:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 2px;
+    }
+
+    .kbd-hint {
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     /* ── Kural card ── */
     .kural-card {
       background: var(--card);
@@ -138,6 +248,10 @@
       padding: 1.75rem 1.5rem 2rem;
       box-shadow: 0 1px 4px rgba(0,0,0,.04);
       min-height: 200px;
+    }
+    .kural-card:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 2px;
     }
 
     .kural-meta {
@@ -226,47 +340,70 @@
   </style>
 </head>
 <body>
+
+  <a class="skip-link" href="#kural-display">Skip to kural</a>
+
   <div class="container">
 
     <header>
-      <div class="title-tamil">திருக்குறள்</div>
-      <div class="title-sub">Thirukkural &middot; Thiruvalluvar</div>
+      <h1 class="title-tamil">திருக்குறள்</h1>
+      <p class="title-sub">Thirukkural &middot; Thiruvalluvar</p>
     </header>
 
-    <div class="controls">
-      <div class="selects-row">
-        <div class="select-group chapter">
-          <label for="chapter-sel">Chapter</label>
-          <select id="chapter-sel"></select>
+    <main>
+      <div class="controls">
+        <div class="selects-row">
+          <div class="select-group chapter">
+            <label for="chapter-sel">Chapter</label>
+            <select id="chapter-sel"></select>
+          </div>
+          <div class="select-group kural-no">
+            <label for="kural-sel">Kural</label>
+            <select id="kural-sel">
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="4">5</option>
+              <option value="5">6</option>
+              <option value="6">7</option>
+              <option value="7">8</option>
+              <option value="8">9</option>
+              <option value="9">10</option>
+            </select>
+          </div>
         </div>
-        <div class="select-group kural-no">
-          <label for="kural-sel">Kural</label>
-          <select id="kural-sel">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-            <option value="4">5</option>
-            <option value="5">6</option>
-            <option value="6">7</option>
-            <option value="7">8</option>
-            <option value="8">9</option>
-            <option value="9">10</option>
-          </select>
-        </div>
-      </div>
-      <button class="btn-random" id="random-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 9 15"/>
-          <path d="M21 3L3 21"/><path d="M21 21l-5-5"/><path d="M3 3l5 5"/>
-        </svg>
-        Random Kural
-      </button>
-    </div>
 
-    <div class="kural-card" id="kural-display">
-      <div class="loading">Loading…</div>
-    </div>
+        <div class="search-group" role="search" aria-label="Search kurals">
+          <label for="search-input">Search by word or kural number</label>
+          <input type="text" id="search-input" autocomplete="off" placeholder="e.g. அறம், truth, 42" />
+          <ul class="search-results" id="search-results"></ul>
+          <p id="search-status" class="sr-only" aria-live="polite"></p>
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="btn-nav" id="prev-btn" aria-label="Previous kural">
+            <span aria-hidden="true">⟵</span> Previous
+          </button>
+          <button type="button" class="btn-random" id="random-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 9 15"/>
+              <path d="M21 3L3 21"/><path d="M21 21l-5-5"/><path d="M3 3l5 5"/>
+            </svg>
+            Random Kural
+          </button>
+          <button type="button" class="btn-nav" id="next-btn" aria-label="Next kural">
+            Next <span aria-hidden="true">⟶</span>
+          </button>
+        </div>
+
+        <p class="kbd-hint">Tip: once a kural is open, press ← / → to move to the previous / next kural.</p>
+      </div>
+
+      <div class="kural-card" id="kural-display" tabindex="-1" aria-live="polite" aria-atomic="true">
+        <div class="loading">Loading…</div>
+      </div>
+    </main>
 
     <footer>அறத்துப்பால் &amp; பொருட்பால் &middot; Kurals 1–1080</footer>
 
@@ -274,6 +411,8 @@
 
   <script>
     let chapters = [];
+    let flatKurals = [];   // flattened, in canonical order 1..1080
+    let currentFlatIndex = 0;
 
     async function loadData() {
       try {
@@ -281,12 +420,39 @@
         if (!resp.ok) throw new Error('Failed to load data');
         const data = await resp.json();
         chapters = data.chapters;
+        buildFlatKurals();
         buildChapterDropdown();
-        showKural(0, 0);
+
+        const params = new URLSearchParams(location.search);
+        const requestedNumber = parseInt(params.get('kural'), 10);
+        const startIdx = flatKurals.findIndex(k => k.number === requestedNumber);
+        // No specific kural requested via URL → open on a random one instead of always kural 1.
+        const initialIdx = startIdx >= 0 ? startIdx : Math.floor(Math.random() * flatKurals.length);
+        showKuralByFlatIndex(initialIdx, { updateUrl: false, focusCard: false });
       } catch (e) {
         document.getElementById('kural-display').innerHTML =
           '<div class="error">Could not load kural data.<br>Make sure data/kurals.json is present.</div>';
       }
+    }
+
+    function buildFlatKurals() {
+      flatKurals = [];
+      chapters.forEach((ch, chIdx) => {
+        ch.kurals.forEach((k, kuralIdx) => {
+          flatKurals.push({
+            chIdx, kuralIdx,
+            number: k.number,
+            line1: k.line1,
+            line2: k.line2,
+            tamil: k.tamil,
+            english: k.english,
+            section: ch.section,
+            sectionTamil: ch.section_tamil,
+            chapterTamil: ch.chapter_tamil,
+            chapterEnglish: ch.chapter_english,
+          });
+        });
+      });
     }
 
     function buildChapterDropdown() {
@@ -299,46 +465,160 @@
       });
     }
 
-    function showKural(chIdx, kuralIdx) {
-      const ch = chapters[chIdx];
-      const k  = ch.kurals[kuralIdx];
-      const isAratha = ch.section === 'Arathuppal';
+    // ── Core render + navigation ──
 
-      document.getElementById('kural-display').innerHTML = `
+    function showKuralByFlatIndex(flatIdx, opts = {}) {
+      const { updateUrl = true, focusCard = true } = opts;
+      if (!flatKurals.length) return;
+      if (flatIdx < 0) flatIdx = flatKurals.length - 1;
+      if (flatIdx >= flatKurals.length) flatIdx = 0;
+      currentFlatIndex = flatIdx;
+
+      const k = flatKurals[flatIdx];
+      const isAratha = k.section === 'Arathuppal';
+
+      document.getElementById('chapter-sel').value = k.chIdx;
+      document.getElementById('kural-sel').value = k.kuralIdx;
+
+      const display = document.getElementById('kural-display');
+      display.innerHTML = `
         <div class="kural-meta">
-          <span class="badge ${isAratha ? 'badge-aratha' : 'badge-porul'}">${ch.section_tamil}</span>
+          <span class="badge ${isAratha ? 'badge-aratha' : 'badge-porul'}">${k.sectionTamil}</span>
           <span class="kural-no">குறள் ${k.number}</span>
-          <span class="chapter-name">${ch.chapter_tamil} · ${ch.chapter_english}</span>
+          <span class="chapter-name">${k.chapterTamil} · ${k.chapterEnglish}</span>
         </div>
-        <div class="kural-tamil">${k.line1}<br>${k.line2}</div>
+        <h2 class="kural-tamil" lang="ta">${k.line1}<br>${k.line2}</h2>
         <div class="divider"></div>
-        <div class="kural-english">${k.english}</div>
+        <p class="kural-english" lang="en">${k.english}</p>
       `;
+
+      document.title = `குறள் ${k.number} · திருக்குறள்`;
+
+      if (updateUrl) {
+        const url = new URL(location.href);
+        url.searchParams.set('kural', k.number);
+        history.pushState({ kuralNumber: k.number }, '', url);
+      }
+
+      if (focusCard) {
+        display.focus();
+      }
+    }
+
+    function showKuralByNumber(number, opts) {
+      const idx = flatKurals.findIndex(k => k.number === number);
+      if (idx >= 0) showKuralByFlatIndex(idx, opts);
     }
 
     function getSelections() {
       return {
-        chIdx:    parseInt(document.getElementById('chapter-sel').value),
-        kuralIdx: parseInt(document.getElementById('kural-sel').value),
+        chIdx: parseInt(document.getElementById('chapter-sel').value, 10),
+        kuralIdx: parseInt(document.getElementById('kural-sel').value, 10),
       };
     }
 
-    document.getElementById('chapter-sel').addEventListener('change', () => {
+    function showFromSelections() {
       const { chIdx, kuralIdx } = getSelections();
-      showKural(chIdx, kuralIdx);
-    });
+      const idx = flatKurals.findIndex(k => k.chIdx === chIdx && k.kuralIdx === kuralIdx);
+      // Don't steal focus from the dropdown the user is still interacting with;
+      // aria-live on the card announces the change instead.
+      showKuralByFlatIndex(idx, { updateUrl: true, focusCard: false });
+    }
 
-    document.getElementById('kural-sel').addEventListener('change', () => {
-      const { chIdx, kuralIdx } = getSelections();
-      showKural(chIdx, kuralIdx);
-    });
+    document.getElementById('chapter-sel').addEventListener('change', showFromSelections);
+    document.getElementById('kural-sel').addEventListener('change', showFromSelections);
 
     document.getElementById('random-btn').addEventListener('click', () => {
-      const chIdx    = Math.floor(Math.random() * chapters.length);
-      const kuralIdx = Math.floor(Math.random() * 10);
-      document.getElementById('chapter-sel').value = chIdx;
-      document.getElementById('kural-sel').value   = kuralIdx;
-      showKural(chIdx, kuralIdx);
+      let idx;
+      do {
+        idx = Math.floor(Math.random() * flatKurals.length);
+      } while (idx === currentFlatIndex && flatKurals.length > 1);
+      showKuralByFlatIndex(idx);
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      showKuralByFlatIndex(currentFlatIndex - 1);
+    });
+    document.getElementById('next-btn').addEventListener('click', () => {
+      showKuralByFlatIndex(currentFlatIndex + 1);
+    });
+
+    // Arrow-key convenience once the kural card has focus (after any navigation action).
+    // Scoped to this element only, so it never competes with assistive-tech browse-mode
+    // shortcuts or normal typing elsewhere on the page.
+    document.getElementById('kural-display').addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        showKuralByFlatIndex(currentFlatIndex + 1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        showKuralByFlatIndex(currentFlatIndex - 1);
+      }
+    });
+
+    // Support browser Back/Forward for shared/bookmarked links.
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(location.search);
+      const number = parseInt(params.get('kural'), 10);
+      if (!isNaN(number)) showKuralByNumber(number, { updateUrl: false });
+    });
+
+    // ── Search ──
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchStatus = document.getElementById('search-status');
+
+    function clearSearch() {
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      searchStatus.textContent = '';
+    }
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim();
+      searchResults.innerHTML = '';
+      if (!q) {
+        searchStatus.textContent = '';
+        return;
+      }
+
+      const qLower = q.toLowerCase();
+      let matches;
+      if (/^\d+$/.test(q)) {
+        const asNumber = parseInt(q, 10);
+        matches = flatKurals.filter(k => k.number === asNumber);
+      } else {
+        matches = flatKurals
+          .filter(k => k.tamil.includes(q) || k.english.toLowerCase().includes(qLower))
+          .slice(0, 8);
+      }
+
+      searchStatus.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} found`;
+
+      matches.forEach(k => {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'search-result-btn';
+        const snippet = k.english.length > 70 ? k.english.slice(0, 70) + '…' : k.english;
+        btn.innerHTML = `<span class="sr-no">குறள் ${k.number}</span>${snippet}`;
+        btn.addEventListener('click', () => {
+          showKuralByFlatIndex(flatKurals.indexOf(k));
+          clearSearch();
+        });
+        li.appendChild(btn);
+        searchResults.appendChild(li);
+      });
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const first = searchResults.querySelector('.search-result-btn');
+        if (first) first.click();
+      } else if (e.key === 'Escape') {
+        clearSearch();
+      }
     });
 
     loadData();
