@@ -315,6 +315,26 @@
       color: #333;
     }
 
+    /* ── Audio button ── */
+    .audio-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      padding: 0;
+      flex-shrink: 0;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .audio-btn:hover  { color: var(--red); border-color: var(--red); }
+    .audio-btn.playing { color: var(--red); border-color: var(--red); }
+    .audio-btn:disabled { opacity: 0.3; cursor: default; }
+
     .loading {
       text-align: center;
       color: var(--muted);
@@ -409,6 +429,14 @@
     let chapters = [];
     let flatKurals = [];   // flattened, in canonical order 1..1080
     let currentFlatIndex = 0;
+    let currentAudio = null;
+
+    function stopAudio() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+    }
 
     async function loadData() {
       try {
@@ -476,17 +504,50 @@
       document.getElementById('chapter-sel').value = k.chIdx;
       document.getElementById('kural-sel').value = k.kuralIdx;
 
+      stopAudio();
+
       const display = document.getElementById('kural-display');
       display.innerHTML = `
         <div class="kural-meta">
           <span class="badge ${isAratha ? 'badge-aratha' : 'badge-porul'}">${k.sectionTamil}</span>
           <span class="kural-no">குறள் ${k.number}</span>
+          <button class="audio-btn" id="audio-btn" aria-label="Play audio for kural ${k.number}" title="Play audio" disabled>
+            <svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          </button>
           <span class="chapter-name">${k.chapterTamil} · ${k.chapterEnglish}</span>
         </div>
         <h2 class="kural-tamil" lang="ta"><span class="kural-line">${k.line1}</span><span class="kural-line">${k.line2}</span></h2>
         <div class="divider"></div>
         <p class="kural-english" lang="en">${k.english}</p>
       `;
+
+      // Probe for audio file — enable button only if it exists
+      const audioSrc = `audio/${k.number}.mp3`;
+      const btn = document.getElementById('audio-btn');
+      fetch(audioSrc, { method: 'HEAD' }).then(r => {
+        if (r.ok) btn.removeAttribute('disabled');
+      }).catch(() => {});
+
+      btn.addEventListener('click', () => {
+        if (currentAudio && !currentAudio.paused) {
+          stopAudio();
+          btn.classList.remove('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          btn.setAttribute('aria-label', `Play audio for kural ${k.number}`);
+          return;
+        }
+        currentAudio = new Audio(audioSrc);
+        currentAudio.play();
+        btn.classList.add('playing');
+        btn.innerHTML = '<svg viewBox="0 0 8 8" fill="currentColor" width="8" height="8" aria-hidden="true"><rect width="8" height="8"/></svg>';
+        btn.setAttribute('aria-label', `Stop audio for kural ${k.number}`);
+        currentAudio.addEventListener('ended', () => {
+          btn.classList.remove('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          btn.setAttribute('aria-label', `Play audio for kural ${k.number}`);
+          currentAudio = null;
+        });
+      });
 
       document.title = `குறள் ${k.number} · திருக்குறள்`;
 
