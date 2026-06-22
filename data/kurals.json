@@ -681,7 +681,7 @@
           "line1": "வித்தும் இடல்வேண்டும் கொல்லோ விருந்தோம்பி",
           "line2": "மிச்சில் மிசைவான் புலம்.",
           "tamil": "வித்தும் இடல்வேண்டும் கொல்லோ விருந்தோம்பி\nமிச்சில் மிசைவான் புலம்.",
-          "english": "A man who feasts his guests first and eats only the leftovers hardly needs to farm — his fields will provide."
+          "english": "A person who feasts their guests first and eats only the leftovers hardly needs to farm — their fields will provide."
         },
         {
           "number": 86,
@@ -932,7 +932,7 @@
           "line1": "கெடுவாக வையாது உலகம் நடுவாக",
           "line2": "நன்றிக்கண் தங்கியான் தாழ்வு.",
           "tamil": "கெடுவாக வையாது உலகம் நடுவாக\nநன்றிக்கண் தங்கியான் தாழ்வு.",
-          "english": "Wise people never see a fair man's low status as true poverty."
+          "english": "Wise people never see a fair person's low status as true poverty."
         },
         {
           "number": 118,
@@ -1327,7 +1327,7 @@
           "line1": "அவ்வித்து அழுக்காறு உடையானைச் செய்யவள்",
           "line2": "தவ்வையைக் காட்டி விடும்.",
           "tamil": "அவ்வித்து அழுக்காறு உடையானைச் செய்யவள்\nதவ்வையைக் காட்டி விடும்.",
-          "english": "Fortune, offended by an envious man's jealousy, leaves him and hands him over to misfortune instead."
+          "english": "Fortune, offended by an envious person's jealousy, leaves them and hands them over to misfortune instead."
         },
         {
           "number": 168,
@@ -1341,7 +1341,7 @@
           "line1": "அவ்விய நெஞ்சத்தான் ஆக்கமும் செவ்வியான்",
           "line2": "கேடும் நினைக்கப் படும்.",
           "tamil": "அவ்விய நெஞ்சத்தான் ஆக்கமும் செவ்வியான்\nகேடும் நினைக்கப் படும்.",
-          "english": "Weigh carefully an envious man's wealth against a righteous man's poverty — the difference matters."
+          "english": "Weigh carefully an envious person's wealth against a righteous person's poverty — the difference matters."
         },
         {
           "number": 170,
@@ -1364,7 +1364,7 @@
           "line1": "நடுவின்றி நன்பொருள் வெஃகின் குடிபொன்றிக்",
           "line2": "குற்றமும் ஆங்கே தரும்.",
           "tamil": "நடுவின்றி நன்பொருள் வெஃகின் குடிபொன்றிக்\nகுற்றமும் ஆங்கே தரும்.",
-          "english": "The moment a man abandons fairness to covet another's property, his family's ruin and his own guilt begin."
+          "english": "The moment a person abandons fairness to covet another's property, their family's ruin and their own guilt begin."
         },
         {
           "number": 172,
@@ -1399,7 +1399,7 @@
           "line1": "அருள்வெஃகி ஆற்றின்கண் நின்றான் பொருள்வெஃகிப்",
           "line2": "பொல்லாத சூழக் கெடும்.",
           "tamil": "அருள்வெஃகி ஆற்றின்கண் நின்றான் பொருள்வெஃகிப்\nபொல்லாத சூழக் கெடும்.",
-          "english": "Even a man pursuing the virtue of kindness will be ruined if he covets others' property and schemes for it."
+          "english": "Even a person pursuing the virtue of kindness will be ruined if they covet others' property and scheme for it."
         },
         {
           "number": 177,
@@ -1708,21 +1708,21 @@
           "line1": "ஊருணி நீர்நிறைந் தற்றே உலகவாம்",
           "line2": "பேரறி வாளன் திரு.",
           "tamil": "ஊருணி நீர்நிறைந் தற்றே உலகவாம்\nபேரறி வாளன் திரு.",
-          "english": "A wise, generous man's wealth is like a city reservoir kept full for everyone to draw from."
+          "english": "A wise, generous person's wealth is like a city reservoir kept full for everyone to draw from."
         },
         {
           "number": 216,
           "line1": "பயன்மரம் உள்ளூர்ப் பழுத்தற்றால் செல்வம்",
           "line2": "நயனுடை யான்கண் படின்.",
           "tamil": "பயன்மரம் உள்ளூர்ப் பழுத்தற்றால் செல்வம்\nநயனுடை யான்கண் படின்.",
-          "english": "A generous man's wealth is like a fruit tree ripening in the middle of town, there for everyone."
+          "english": "A generous person's wealth is like a fruit tree ripening in the middle of town, there for everyone."
         },
         {
           "number": 217,
           "line1": "மருந்தாகித் தப்பா மரத்தற்றால் செல்வம்",
           "line2": "பெருந்தகை யான்கண் படின்.",
           "tamil": "மருந்தாகித் தப்பா மரத்தற்றால் செல்வம்\nபெருந்தகை யான்கண் படின்.",
-          "english": "Wealth in a generous man's hands works like a medicinal tree — a cure available to all."
+          "english": "Wealth in a generous person's hands works like a medicinal tree — a cure available to all."
         },
         {
           "number": 218,
@@ -1845,7 +1845,7 @@
           "line1": "உரைப்பார் உரைப்பவை எல்லாம் இரப்பார்க்கொன்று",
           "line2": "ஈவார்மேல் நிற்கும் புகழ்.",
           "tamil": "உரைப்பார் உரைப்பவை எல்லாம் இரப்பார்க்கொன்று\nஈவார்மேல் நிற்கும் புகழ்.",
-          "english": "Everything said about a man who gives to the poor lives on as lasting praise."
+          "english": "Everything said about a person who gives to the poor lives on as lasting praise."
         },
         {
           "number": 233,
@@ -1917,7 +1917,7 @@
           "line1": "அருட்செல்வம் செல்வத்துள் செல்வம் பொருட்செல்வம்",
           "line2": "பூரியார் கண்ணும் உள.",
           "tamil": "அருட்செல்வம் செல்வத்துள் செல்வம் பொருட்செல்வம்\nபூரியார் கண்ணும் உள.",
-          "english": "Kindness is the truest wealth, since even the basest of men can possess mere property."
+          "english": "Kindness is the truest wealth, since even the basest of people can possess mere property."
         },
         {
           "number": 242,
@@ -2154,7 +2154,7 @@
           "line1": "வஞ்ச மனத்தான் படிற்றொழுக்கம் பூதங்கள்",
           "line2": "ஐந்தும் அகத்தே நகும்.",
           "tamil": "வஞ்ச மனத்தான் படிற்றொழுக்கம் பூதங்கள்\nஐந்தும் அகத்தே நகும்.",
-          "english": "Even the very elements that make up his body silently mock the deceitful man's fake piety."
+          "english": "Even the very elements that make up their body silently mock the deceitful person's fake piety."
         },
         {
           "number": 272,
@@ -2168,7 +2168,7 @@
           "line1": "வலியில் நிலைமையான் வல்லுருவம் பெற்றம்",
           "line2": "புலியின்தோல் போர்த்துமேய்ந் தற்று.",
           "tamil": "வலியில் நிலைமையான் வல்லுருவம் பெற்றம்\nபுலியின்தோல் போர்த்துமேய்ந் தற்று.",
-          "english": "A man faking self-discipline he doesn't have is like a cow grazing on grass under a tiger-skin disguise."
+          "english": "A person faking self-discipline they don't have is like a cow grazing on grass under a tiger-skin disguise."
         },
         {
           "number": 274,
@@ -2484,7 +2484,7 @@
           "line1": "செய்யாமல் செற்றார்க்கும் இன்னாத செய்தபின்",
           "line2": "உய்யா விழுமந் தரும்.",
           "tamil": "செய்யாமல் செற்றார்க்கும் இன்னாத செய்தபின்\nஉய்யா விழுமந் தரும்.",
-          "english": "If even an ascetic harms someone who hates him without cause, it brings him sorrow that can never be undone."
+          "english": "If even an ascetic harms someone who hates them without cause, it brings them sorrow that can never be undone."
         },
         {
           "number": 314,
@@ -2958,7 +2958,7 @@
           "line1": "நுண்ணிய நூல்பல கற்பினும் மற்றுந்தன்",
           "line2": "உண்மை யறிவே மிகும்.",
           "tamil": "நுண்ணிய நூல்பல கற்பினும் மற்றுந்தன்\nஉண்மை யறிவே மிகும்.",
-          "english": "However refined the texts a man studies, the knowledge fate has decreed for him will still win out."
+          "english": "However refined the texts a person studies, the knowledge fate has decreed for them will still win out."
         },
         {
           "number": 374,
@@ -3030,7 +3030,7 @@
           "line1": "அஞ்சாமை ஈகை அறிவூக்கம் இந்நான்கும்",
           "line2": "எஞ்சாமை வேந்தர்க் கியல்பு.",
           "tamil": "அஞ்சாமை ஈகை அறிவூக்கம் இந்நான்கும்\nஎஞ்சாமை வேந்தர்க் கியல்பு.",
-          "english": "True kingly character means never lacking in courage, generosity, wisdom, and energy."
+          "english": "A true leader's character is never lacking in courage, generosity, wisdom, and energy."
         },
         {
           "number": 383,
@@ -3209,7 +3209,7 @@
           "line1": "கல்லா ஒருவன் தகைமை தலைப்பெய்து",
           "line2": "சொல்லாடச் சோர்வு படும்.",
           "tamil": "கல்லா ஒருவன் தகைமை தலைப்பெய்து\nசொல்லாடச் சோர்வு படும்.",
-          "english": "An unlearned man's self-conceit vanishes the moment he opens his mouth among the learned."
+          "english": "An unlearned person's self-conceit vanishes the moment they open their mouth among the learned."
         },
         {
           "number": 406,
@@ -3425,7 +3425,7 @@
           "line1": "இவறலும் மாண்பிறந்த மானமும் மாணா",
           "line2": "உவகையும் ஏதம் இறைக்கு.",
           "tamil": "இவறலும் மாண்பிறந்த மானமும் மாணா\nஉவகையும் ஏதம் இறைக்கு.",
-          "english": "Greed, undignified pride, and base pleasures are faults that disgrace a king."
+          "english": "Greed, undignified pride, and base pleasures are faults that disgrace a leader."
         },
         {
           "number": 433,
@@ -3460,7 +3460,7 @@
           "line1": "செயற்பால செய்யா திவறியான் செல்வம்",
           "line2": "உயற்பால தன்றிக் கெடும்.",
           "tamil": "செயற்பால செய்யா திவறியான் செல்வம்\nஉயற்பால தன்றிக் கெடும்.",
-          "english": "A greedy man's wealth, spent on nothing it should be spent on, wastes away and never lasts."
+          "english": "A greedy person's wealth, spent on nothing it should be spent on, wastes away and never lasts."
         },
         {
           "number": 438,
@@ -3755,7 +3755,7 @@
           "line1": "அமைந்தாங் கொழுகான் அளவறியான் தன்னை",
           "line2": "வியந்தான் விரைந்து கெடும்.",
           "tamil": "அமைந்தாங் கொழுகான் அளவறியான் தன்னை\nவியந்தான் விரைந்து கெடும்.",
-          "english": "Whoever flatters himself about his own greatness while ignorant of his real resources will quickly come to ruin."
+          "english": "Whoever flatters themselves about their own greatness while ignorant of their real resources will quickly come to ruin."
         },
         {
           "number": 475,
@@ -3992,7 +3992,7 @@
           "line1": "குணம்நாடிக் குற்றமும் நாடி அவற்றுள்",
           "line2": "மிகைநாடி மிக்க கொளல்.",
           "tamil": "குணம்நாடிக் குற்றமும் நாடி அவற்றுள்\nமிகைநாடி மிக்க கொளல்.",
-          "english": "A king should weigh both a man's good qualities and his faults, then judge his character by whichever outweighs the other."
+          "english": "A king should weigh both a person's good qualities and their faults, then judge their character by whichever outweighs the other."
         },
         {
           "number": 505,
@@ -4106,7 +4106,7 @@
           "line1": "வினைக்கண் வினையுடையான் கேண்மைவே றாக",
           "line2": "நினைப்பானை நீங்கும் திரு.",
           "tamil": "வினைக்கண் வினையுடையான் கேண்மைவே றாக\nநினைப்பானை நீங்கும் திரு.",
-          "english": "Prosperity abandons a king who doubts the loyalty of someone steadily working hard at their duties."
+          "english": "Prosperity abandons a leader who doubts the loyalty of someone steadily working hard at their duties."
         },
         {
           "number": 520,
@@ -4129,7 +4129,7 @@
           "line1": "பற்றற்ற கண்ணும் பழைமைபா ராட்டுதல்",
           "line2": "சுற்றத்தார் கண்ணே உள.",
           "tamil": "பற்றற்ற கண்ணும் பழைமைபா ராட்டுதல்\nசுற்றத்தார் கண்ணே உள.",
-          "english": "Even when all his wealth is gone, true relatives still treat him with the same kindness as before."
+          "english": "Even when all their wealth is gone, true relatives still treat them with the same kindness as before."
         },
         {
           "number": 522,
@@ -4185,7 +4185,7 @@
           "line1": "தமராகிக் தற்றுறந்தார் சுற்றம் அமராமைக்",
           "line2": "காரணம் இன்றி வரும்.",
           "tamil": "தமராகிக் தற்றுறந்தார் சுற்றம் அமராமைக்\nகாரணம் இன்றி வரும்.",
-          "english": "Friends who once drifted away will return on their own, as long as the original falling-out was never his fault."
+          "english": "Friends who once drifted away will return on their own, as long as the original falling-out was never their fault."
         },
         {
           "number": 530,
@@ -4236,7 +4236,7 @@
           "line1": "முன்னுறக் காவாது இழுக்கியான் தன்பிழை",
           "line2": "பின்னூறு இரங்கி விடும்.",
           "tamil": "முன்னுறக் காவாது இழுக்கியான் தன்பிழை\nபின்னூறு இரங்கி விடும்.",
-          "english": "A thoughtless man who fails to prepare for coming disaster will deeply regret it afterward."
+          "english": "A thoughtless person who fails to prepare for coming disaster will deeply regret it afterward."
         },
         {
           "number": 536,
@@ -4566,7 +4566,7 @@
           "line1": "கண்ணோட்டம் இல்லவர் கண்ணிலர் கண்ணுடையார்",
           "line2": "கண்ணோட்டம் இன்மையும் இல்.",
           "tamil": "கண்ணோட்டம் இல்லவர் கண்ணிலர் கண்ணுடையார்\nகண்ணோட்டம் இன்மையும் இல்.",
-          "english": "A man with no kindness in his eyes is, in truth, a man without eyes at all; true eyes always carry kindness."
+          "english": "A person with no kindness in their eyes is, in truth, a person without eyes at all; true eyes always carry kindness."
         },
         {
           "number": 578,
@@ -4682,7 +4682,7 @@
           "line1": "உடையர் எனப்படுவது ஊக்கம் அஃதில்லார்",
           "line2": "உடையது உடையரோ மற்று.",
           "tamil": "உடையர் எனப்படுவது ஊக்கம் அஃதில்லார்\nஉடையது உடையரோ மற்று.",
-          "english": "Drive and energy are what make a man truly wealthy — without them, does anyone really own what they own?"
+          "english": "Drive and energy are what make a person truly wealthy — without them, does anyone really own what they own?"
         },
         {
           "number": 592,
@@ -4745,7 +4745,7 @@
           "line1": "உரமொருவற்கு உள்ள வெறுக்கைஅஃ தில்லார்",
           "line2": "மரம்மக்க ளாதலே வேறு.",
           "tamil": "உரமொருவற்கு உள்ள வெறுக்கைஅஃ தில்லார்\nமரம்மக்க ளாதலே வேறு.",
-          "english": "Energy is wealth of the mind — those without it are merely trees wearing the shape of men."
+          "english": "Energy is wealth of the mind — those without it are merely trees wearing the shape of people."
         }
       ]
     },
@@ -4775,14 +4775,14 @@
           "line1": "மடிமடிக் கொண்டொழுகும் பேதை பிறந்த",
           "line2": "குடிமடியும் தன்னினும் முந்து.",
           "tamil": "மடிமடிக் கொண்டொழுகும் பேதை பிறந்த\nகுடிமடியும் தன்னினும் முந்து.",
-          "english": "An ignorant, lazy man's family loses its shine even before he himself is dead."
+          "english": "An ignorant, lazy person's family loses its shine even before they themselves are dead."
         },
         {
           "number": 604,
           "line1": "குடிமடிந்து குற்றம் பெருகும் மடிமடிந்து",
           "line2": "மாண்ட உஞற்றி லவர்க்கு.",
           "tamil": "குடிமடிந்து குற்றம் பெருகும் மடிமடிந்து\nமாண்ட உஞற்றி லவர்க்கு.",
-          "english": "Family greatness crumbles and faults multiply in men who give in to laziness and never make a real effort."
+          "english": "Family greatness crumbles and faults multiply in people who give in to laziness and never make a real effort."
         },
         {
           "number": 605,
@@ -4817,7 +4817,7 @@
           "line1": "குடியாண்மை யுள்வந்த குற்றம் ஒருவன்",
           "line2": "மடியாண்மை மாற்றக் கெடும்.",
           "tamil": "குடியாண்மை யுள்வந்த குற்றம் ஒருவன்\nமடியாண்மை மாற்றக் கெடும்.",
-          "english": "The moment a man casts off idleness, the disgrace hanging over him and his family disappears."
+          "english": "The moment a person casts off idleness, the disgrace hanging over them and their family disappears."
         },
         {
           "number": 610,
@@ -5665,7 +5665,7 @@
           "line1": "ஆற்றின் நிலைதளர்ந் தற்றே வியன்புலம்",
           "line2": "ஏற்றுணர்வார் முன்னர் இழுக்கு.",
           "tamil": "ஆற்றின் நிலைதளர்ந் தற்றே வியன்புலம்\nஏற்றுணர்வார் முன்னர் இழுக்கு.",
-          "english": "A minister blundering before deeply learned people is like a good man stumbling off the very path of virtue."
+          "english": "A minister blundering before deeply learned people is like a good person stumbling off the very path of virtue."
         },
         {
           "number": 717,
@@ -6462,7 +6462,7 @@
           "line1": "நகைவகைய ராகிய நட்பின் பகைவரால்",
           "line2": "பத்தடுத்த கோடி உறும்.",
           "tamil": "நகைவகைய ராகிய நட்பின் பகைவரால்\nபத்தடுத்த கோடி உறும்.",
-          "english": "What you get from enemies is a hundred million times more valuable than what you get from friends who give you nothing but laughs."
+          "english": "What a true enemy gives you is worth a hundred million times more than what you gain from fair-weather friends whose only offering is laughter."
         },
         {
           "number": 818,
@@ -6613,14 +6613,14 @@
           "line1": "பொய்படும் ஒன்றோ புனைபூணும் கையறியாப்",
           "line2": "பேதை வினைமேற் கொளின்.",
           "tamil": "பொய்படும் ஒன்றோ புனைபூணும் கையறியாப்\nபேதை வினைமேற் கொளின்.",
-          "english": "When a fool who doesn't know how to act takes on a task, he won't just fail — he'll wrap himself in chains of his own making."
+          "english": "When a fool who doesn't know how to act takes on a task, they won't just fail — they'll wrap themselves in chains of their own making."
         },
         {
           "number": 837,
           "line1": "ஏதிலார் ஆரத் தமர்பசிப்பர் பேதை",
           "line2": "பெருஞ்செல்வம் உற்றக் கடை.",
           "tamil": "ஏதிலார் ஆரத் தமர்பசிப்பர் பேதை\nபெருஞ்செல்வம் உற்றக் கடை.",
-          "english": "If a fool stumbles into great fortune, his neighbors enjoy it while his own relatives starve."
+          "english": "If a fool stumbles into great fortune, their neighbors enjoy it while their own relatives starve."
         },
         {
           "number": 838,
@@ -6699,21 +6699,21 @@
           "line1": "அருமறை சோரும் அறிவிலான் செய்யும்",
           "line2": "பெருமிறை தானே தனக்கு.",
           "tamil": "அருமறை சோரும் அறிவிலான் செய்யும்\nபெருமிறை தானே தனக்கு.",
-          "english": "A fool who ignores valuable advice does serious harm to himself, entirely by his own choice."
+          "english": "A fool who ignores valuable advice does serious harm to themselves, entirely by their own choice."
         },
         {
           "number": 848,
           "line1": "ஏவவும் செய்கலான் தான்தேறான் அவ்வுயிர்",
           "line2": "போஒம் அளவுமோர் நோய்.",
           "tamil": "ஏவவும் செய்கலான் தான்தேறான் அவ்வுயிர்\nபோஒம் அளவுமோர் நோய்.",
-          "english": "A fool neither acts on good advice nor figures out his duties on his own — such a person is truly lost."
+          "english": "A fool neither acts on good advice nor figures out their duties on their own — such a person is truly lost."
         },
         {
           "number": 849,
           "line1": "காணாதான் காட்டுவான் தான்காணான் காணாதான்",
           "line2": "கண்டானாம் தான்கண்ட வாறு.",
           "tamil": "காணாதான் காட்டுவான் தான்காணான் காணாதான்\nகண்டானாம் தான்கண்ட வாறு.",
-          "english": "Trying to teach a fool only exposes his foolishness further, yet he'll still believe himself wise."
+          "english": "Trying to teach a fool only exposes their foolishness further, yet they'll still believe themselves wise."
         },
         {
           "number": 850,
@@ -7431,7 +7431,7 @@
           "line1": "இழத்தொறூஉம் காதலிக்கும் சூதேபோல் துன்பம்",
           "line2": "உழத்தொறூஉம் காதற்று உயிர்.",
           "tamil": "இழத்தொறூஉம் காதலிக்கும் சூதேபோல் துன்பம்\nஉழத்தொறூஉம் காதற்று உயிர்.",
-          "english": "Just as a gambler loves his vice more the more he loses to it, the soul clings to the body more, the more it suffers through it."
+          "english": "Just as a gambler loves their vice more the more they lose to it, the soul clings to the body more, the more it suffers through it."
         }
       ]
     },
@@ -7640,7 +7640,7 @@
           "line1": "புகழ்இன்றால் புத்தேள்நாட்டு உய்யாதால் என்மற்று",
           "line2": "இகழ்வார்பின் சென்று நிலை.",
           "tamil": "புகழ்இன்றால் புத்தேள்நாட்டு உய்யாதால் என்மற்று\nஇகழ்வார்பின் சென்று நிலை.",
-          "english": "Why follow and wait on the bidding of men who only scorn you?"
+          "english": "Why follow and wait on the bidding of people who only scorn you?"
         },
         {
           "number": 967,
@@ -7935,7 +7935,7 @@
           "line1": "ஈட்டம் இவறி இசைவேண்டா ஆடவர்",
           "line2": "தோற்றம் நிலக்குப் பொறை.",
           "tamil": "ஈட்டம் இவறி இசைவேண்டா ஆடவர்\nதோற்றம் நிலக்குப் பொறை.",
-          "english": "Men obsessed with piling up riches rather than earning true fame are nothing but a burden on the earth."
+          "english": "People obsessed with piling up riches rather than earning true fame are nothing but a burden on the earth."
         },
         {
           "number": 1004,
@@ -7970,7 +7970,7 @@
           "line1": "நச்சப் படாதவன் செல்வம் நடுவூருள்",
           "line2": "நச்சு மரம்பழுத் தற்று.",
           "tamil": "நச்சப் படாதவன் செல்வம் நடுவூருள்\nநச்சு மரம்பழுத் தற்று.",
-          "english": "The wealth of a universally disliked man is like the bitter etty tree bearing fruit in the middle of town — present, but useless to everyone."
+          "english": "The wealth of a universally disliked person is like the bitter etty tree bearing fruit in the middle of town — present, but useless to everyone."
         },
         {
           "number": 1009,
@@ -8214,7 +8214,7 @@
           "line1": "செல்லான் கிழவன் இருப்பின் நிலம்புலந்து",
           "line2": "இல்லாளின் ஊடி விடும்.",
           "tamil": "செல்லான் கிழவன் இருப்பின் நிலம்புலந்து\nஇல்லாளின் ஊடி விடும்.",
-          "english": "Land left untended by its own owner turns as unyielding as an angry wife, giving him no joy at all."
+          "english": "Land left untended by its own owner turns as unyielding as an angry wife, giving them no joy at all."
         },
         {
           "number": 1040,
@@ -8279,7 +8279,7 @@
           "line1": "அறஞ்சாரா நல்குரவு ஈன்றதா யானும்",
           "line2": "பிறன்போல நோக்கப் படும்.",
           "tamil": "அறஞ்சாரா நல்குரவு ஈன்றதா யானும்\nபிறன்போல நோக்கப் படும்.",
-          "english": "Someone reduced to absolute poverty can be treated as a stranger even by his own mother."
+          "english": "Someone reduced to absolute poverty can be treated as a stranger even by their own mother."
         },
         {
           "number": 1048,
@@ -8458,7 +8458,7 @@
           "line1": "கரப்பவர்க்கு யாங்கொளிக்கும் கொல்லோ இரப்பவர்",
           "line2": "சொல்லாடப் போஒம் உயிர்.",
           "tamil": "கரப்பவர்க்கு யாங்கொளிக்கும் கொல்லோ இரப்பவர்\nசொல்லாடப் போஒம் உயிர்.",
-          "english": "Refusing a beggar's request can crush his spirit, yet that very refusal wounds the refuser too — leaving no one truly unscathed."
+          "english": "Refusing a beggar's request can crush their spirit, yet that very refusal wounds the refuser too — leaving no one truly unscathed."
         }
       ]
     },
