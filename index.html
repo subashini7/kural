@@ -234,6 +234,29 @@
       outline-offset: 2px;
     }
 
+    /* ── Play All button ── */
+    .btn-play-all {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.7rem;
+      background: transparent;
+      color: var(--red);
+      border: 1.5px solid var(--red);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: background 0.15s, color 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-play-all:hover   { background: var(--red); color: #fff; }
+    .btn-play-all.playing { background: var(--red); color: #fff; }
+
     .kbd-hint {
       font-size: 0.68rem;
       color: var(--muted);
@@ -415,6 +438,11 @@
           </button>
         </div>
 
+        <button type="button" class="btn-play-all" id="play-all-btn">
+          <svg width="12" height="12" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          <span id="play-all-label">Play All (1–40)</span>
+        </button>
+
         <p class="kbd-hint">Tip: once a kural is open, press ← / → to move to the previous / next kural.</p>
       </div>
 
@@ -429,13 +457,103 @@
     let chapters = [];
     let flatKurals = [];   // flattened, in canonical order 1..1080
     let currentFlatIndex = 0;
-    let currentAudio = null;
+    let currentAudio   = null;
+    let playAllActive  = false;
+    let playAllTimeout = null;
 
     function stopAudio() {
       if (currentAudio) {
         currentAudio.pause();
         currentAudio = null;
       }
+    }
+
+    function setPlayAllBtn(active) {
+      const btn   = document.getElementById('play-all-btn');
+      const label = document.getElementById('play-all-label');
+      const icon  = btn.querySelector('svg');
+      btn.classList.toggle('playing', active);
+      if (active) {
+        label.textContent = 'Stop';
+        icon.innerHTML    = '<rect width="8" height="8"/>';
+        icon.setAttribute('viewBox', '0 0 8 8');
+      } else {
+        label.textContent = 'Play All (1–40)';
+        icon.innerHTML    = '<polygon points="0,0 8,5 0,10"/>';
+        icon.setAttribute('viewBox', '0 0 8 10');
+      }
+    }
+
+    function stopPlayAll() {
+      playAllActive = false;
+      if (playAllTimeout) { clearTimeout(playAllTimeout); playAllTimeout = null; }
+      stopAudio();
+      setPlayAllBtn(false);
+    }
+
+    function playAudioPromise(number) {
+      return new Promise((resolve) => {
+        stopAudio();
+        const audio = new Audio(`audio/${number}.mp3`);
+        currentAudio = audio;
+
+        // Reflect state on the per-kural audio button
+        const btn = document.getElementById('audio-btn');
+        if (btn) {
+          btn.removeAttribute('disabled');
+          btn.classList.add('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 8" fill="currentColor" width="8" height="8" aria-hidden="true"><rect width="8" height="8"/></svg>';
+        }
+
+        const done = () => {
+          if (btn) {
+            btn.classList.remove('playing');
+            btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          }
+          resolve();
+        };
+
+        audio.addEventListener('ended', done);
+        audio.addEventListener('error', resolve);
+
+        // Resolve if play-all is cancelled externally
+        const poll = setInterval(() => {
+          if (!playAllActive || currentAudio !== audio) {
+            clearInterval(poll);
+            resolve();
+          }
+        }, 200);
+        audio.addEventListener('ended', () => clearInterval(poll));
+        audio.addEventListener('error', () => clearInterval(poll));
+
+        audio.play().catch(resolve);
+      });
+    }
+
+    async function startPlayAll() {
+      if (playAllActive) { stopPlayAll(); return; }
+
+      playAllActive = true;
+      setPlayAllBtn(true);
+
+      const targets = flatKurals.filter(k => k.number >= 1 && k.number <= 40);
+
+      for (let i = 0; i < targets.length; i++) {
+        if (!playAllActive) break;
+
+        const k   = targets[i];
+        const idx = flatKurals.indexOf(k);
+        showKuralByFlatIndex(idx, { updateUrl: true, focusCard: false });
+
+        await playAudioPromise(k.number);
+        if (!playAllActive) break;
+
+        if (i < targets.length - 1) {
+          await new Promise(r => { playAllTimeout = setTimeout(r, 5000); });
+        }
+      }
+
+      if (playAllActive) stopPlayAll();
     }
 
     async function loadData() {
@@ -585,6 +703,8 @@
     document.getElementById('chapter-sel').addEventListener('change', showFromSelections);
     document.getElementById('kural-sel').addEventListener('change', showFromSelections);
 
+    document.getElementById('play-all-btn').addEventListener('click', startPlayAll);
+
     document.getElementById('random-btn').addEventListener('click', () => {
       let idx;
       do {
@@ -594,9 +714,11 @@
     });
 
     document.getElementById('prev-btn').addEventListener('click', () => {
+      stopPlayAll();
       showKuralByFlatIndex(currentFlatIndex - 1);
     });
     document.getElementById('next-btn').addEventListener('click', () => {
+      stopPlayAll();
       showKuralByFlatIndex(currentFlatIndex + 1);
     });
 
