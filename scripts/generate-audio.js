@@ -60,12 +60,12 @@ async function main() {
   const raw      = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
   const kurals   = raw.chapters
     .flatMap(ch => ch.kurals)
-    .filter(k => k.number >= 1 && k.number <= 40);
+    .filter(k => k.number >= 1 && k.number <= 230);
 
   const outDir = path.resolve(__dirname, '../audio');
   fs.mkdirSync(outDir, { recursive: true });
 
-  console.log(`Generating ${kurals.length} kurals (1–40) — ${PAIR.tamil} / ${PAIR.english}\n`);
+  console.log(`Generating ${kurals.length} kurals (1–230, excl. removed chapters) — ${PAIR.tamil} / ${PAIR.english}\n`);
 
   for (const k of kurals) {
     await synthesize(k, PAIR, `${k.number}.mp3`, outDir);

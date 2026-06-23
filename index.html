@@ -440,7 +440,7 @@
 
         <button type="button" class="btn-play-all" id="play-all-btn">
           <svg width="12" height="12" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
-          <span id="play-all-label">Play All (1–40)</span>
+          <span id="play-all-label">Play Randomly (1–230)</span>
         </button>
 
         <p class="kbd-hint">Tip: once a kural is open, press ← / → to move to the previous / next kural.</p>
@@ -478,7 +478,7 @@
         icon.innerHTML    = '<rect width="8" height="8"/>';
         icon.setAttribute('viewBox', '0 0 8 8');
       } else {
-        label.textContent = 'Play All (1–40)';
+        label.textContent = 'Play Randomly (1–230)';
         icon.innerHTML    = '<polygon points="0,0 8,5 0,10"/>';
         icon.setAttribute('viewBox', '0 0 8 10');
       }
@@ -530,13 +530,23 @@
       });
     }
 
+    function shuffleArray(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
     async function startPlayAll() {
       if (playAllActive) { stopPlayAll(); return; }
 
       playAllActive = true;
       setPlayAllBtn(true);
 
-      const targets = flatKurals.filter(k => k.number >= 1 && k.number <= 40);
+      const pool    = flatKurals.filter(k => k.number >= 1 && k.number <= 230);
+      const targets = shuffleArray(pool);
 
       for (let i = 0; i < targets.length; i++) {
         if (!playAllActive) break;
