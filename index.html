@@ -440,7 +440,7 @@
 
         <button type="button" class="btn-play-all" id="play-all-btn">
           <svg width="12" height="12" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
-          <span id="play-all-label">Play Randomly (1–230)</span>
+          <span id="play-all-label">Play Randomly (1–630)</span>
         </button>
 
         <p class="kbd-hint">Tip: once a kural is open, press ← / → to move to the previous / next kural.</p>
@@ -478,7 +478,7 @@
         icon.innerHTML    = '<rect width="8" height="8"/>';
         icon.setAttribute('viewBox', '0 0 8 8');
       } else {
-        label.textContent = 'Play Randomly (1–230)';
+        label.textContent = 'Play Randomly (1–630)';
         icon.innerHTML    = '<polygon points="0,0 8,5 0,10"/>';
         icon.setAttribute('viewBox', '0 0 8 10');
       }
@@ -545,7 +545,7 @@
       playAllActive = true;
       setPlayAllBtn(true);
 
-      const pool    = flatKurals.filter(k => k.number >= 1 && k.number <= 230);
+      const pool    = flatKurals.filter(k => k.number >= 1 && k.number <= 630);
       const targets = shuffleArray(pool);
 
       for (let i = 0; i < targets.length; i++) {

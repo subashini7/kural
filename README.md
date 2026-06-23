@@ -6,8 +6,6 @@ A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets comp
 
 **[https://subashini7.github.io/kural/](https://subashini7.github.io/kural/?kural=1)**
 
-Or open `index.html` directly in a browser — no build step or server required.
-
 ## Features
 
 - Browse all chapters and kurals with Tamil and English side by side
@@ -16,7 +14,7 @@ Or open `index.html` directly in a browser — no build step or server required.
 - Search by Tamil word, English phrase, or kural number
 - Deep-linkable URLs (`?kural=610`)
 - Per-kural audio playback (Tamil + English, read aloud)
-- **Play Randomly (1–230)** — shuffles all 210 available kurals and plays them in a fresh random order each time
+- **Play Randomly (1–630)** — shuffles all 610 available kurals and plays them in a fresh random order each time
 - Fully accessible (ARIA live regions, skip link, focus management)
 
 ## Translation Philosophy
@@ -43,7 +41,7 @@ Audio files are generated using **Azure Cognitive Services Text-to-Speech**:
 - **English**: `en-GB-SoniaNeural` (female) at −25% speed
 - Format: 24 kHz mono MP3
 
-Audio is available for kurals **1–230** (210 kurals; chapters under review are excluded). The script to regenerate audio is in `scripts/generate-audio.js` and requires an `.env` file with `AZURE_TTS_KEY` and `AZURE_TTS_REGION`.
+Audio is available for kurals **1–630** (610 kurals; chapters under review are excluded). The script to regenerate audio is in `scripts/generate-audio.js` and requires an `.env` file with `AZURE_TTS_KEY` and `AZURE_TTS_REGION`.
 
 ## Sources
 
@@ -64,9 +62,12 @@ kural/
 │   ├── kurals.json         # Active kurals with Tamil, English, chapter, and section fields
 │   └── chapters_under_review.json  # Chapters temporarily removed pending translation review
 ├── audio/
-│   └── {number}.mp3        # Pre-generated TTS audio for kurals 1–230
+│   └── {number}.mp3        # Pre-generated TTS audio for kurals 1–630
 └── scripts/
-    └── generate-audio.js   # Azure TTS generation script (requires .env)
+│    └── generate-audio.js   # Azure TTS generation script (requires .env)
+├── tests/
+│   └── data.test.js           # Unit tests (node:test, no dependencies)
+│   └── ssml.test.js           # Unit tests (node:test, no dependencies)
 ```
 
 ## Coverage
@@ -78,4 +79,4 @@ kural/
 
 > **Note:** Three chapters (6, 15, 92) are currently in `data/chapters_under_review.json` and not displayed in the app. They are being reviewed for gendered framing before being reintroduced with updated translations.
 
-Audio playback is available for kurals 1–230 (210 kurals, skipping the chapters under review).
+Audio playback is available for kurals 1–630 (610 kurals, skipping the chapters under review).
