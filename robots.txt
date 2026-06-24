@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://subashini7.github.io/kural/sitemap.xml

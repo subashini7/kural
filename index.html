@@ -19,6 +19,8 @@
   <meta name="twitter:description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
   <meta name="twitter:image"       content="https://subashini7.github.io/kural/screenshots/kural-ex.png" />
 
+  <link rel="canonical" id="canonical-url" href="https://subashini7.github.io/kural/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -693,6 +695,13 @@
       });
 
       document.title = `குறள் ${k.number} · திருக்குறள்`;
+
+      const kuralUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      document.getElementById('canonical-url').setAttribute('href', kuralUrl);
+      document.querySelector('meta[name="description"]').setAttribute('content', k.english);
+      document.querySelector('meta[property="og:url"]').setAttribute('content', kuralUrl);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', `குறள் ${k.number} · ${k.chapterEnglish} · Thirukkural`);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', k.english);
 
       if (updateUrl) {
         const url = new URL(location.href);

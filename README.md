@@ -75,11 +75,15 @@ npm test
 ```
 kural/
 ├── index.html              # Single-file web app (no build step)
+├── sitemap.xml             # XML sitemap for search engine indexing
+├── robots.txt              # Allows all crawlers and points to sitemap
 ├── data/
 │   ├── kurals.json         # Active kurals with Tamil, English, chapter, and section fields
 │   └── chapters_under_review.json  # Chapters temporarily removed pending translation review
 ├── audio/
 │   └── {number}.mp3        # Pre-generated TTS audio for all kurals (excl. chapters under review)
+├── screenshots/
+│   └── kural-ex.png        # App screenshot used in README and Open Graph tags
 ├── scripts/
 │   └── generate-audio.js   # Azure TTS generation script (requires .env)
 └── tests/
