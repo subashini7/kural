@@ -24,6 +24,8 @@
 
   <link rel="canonical" id="canonical-url" href="https://subashini7.github.io/kural/" />
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -255,25 +257,22 @@
       outline-offset: 2px;
     }
 
-    /* ── Play All button ── */
+    /* ── Play All button (header pill) ── */
     .btn-play-all {
-      width: 100%;
-      margin-top: 0.5rem;
-      padding: 0.7rem;
-      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.28rem 0.6rem;
+      background: none;
       color: var(--red);
-      border: 1.5px solid var(--red);
-      border-radius: 8px;
-      font-size: 0.85rem;
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      font-size: 0.72rem;
       font-weight: 600;
       font-family: inherit;
       cursor: pointer;
-      letter-spacing: 0.02em;
+      line-height: 1;
       transition: background 0.15s, color 0.15s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
     }
     .btn-play-all:hover   { background: var(--red); color: #fff; }
     .btn-play-all.playing { background: var(--red); color: #fff; }
@@ -400,6 +399,120 @@
       .container { max-width: 820px; }
     }
 
+    /* ── Reactions ── */
+    .reactions-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .reaction-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .reaction-btn:hover { color: var(--text); border-color: var(--muted); }
+    .reaction-btn.voted-up   { color: var(--green); border-color: var(--green); background: rgba(26,74,46,.07); }
+    .reaction-btn.voted-down { color: var(--red);   border-color: var(--red);   background: rgba(139,26,26,.07); }
+    [data-theme="dark"] .reaction-btn.voted-up   { background: rgba(26,74,46,.2); }
+    [data-theme="dark"] .reaction-btn.voted-down { background: rgba(139,26,26,.2); }
+
+    /* ── Comments ── */
+    .comments-section {
+      margin-top: 0.75rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      overflow: hidden;
+    }
+    .comments-header {
+      padding: 0.7rem 1.25rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .comment-item {
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--text);
+      word-break: break-word;
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-time {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+    .comments-empty, .comments-loading {
+      padding: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .comment-form {
+      padding: 0.85rem 1.25rem 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .comment-input {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 3.5rem;
+      max-height: 10rem;
+    }
+    .comment-input:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    .comment-form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .comment-char-count { font-size: 0.68rem; color: var(--muted); }
+    .comment-char-count.over { color: var(--red); }
+    .btn-comment-submit {
+      padding: 0.4rem 1rem;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn-comment-submit:hover:not(:disabled) { opacity: 0.85; }
+    .btn-comment-submit:disabled { opacity: 0.4; cursor: default; }
+
     /* ── Dark mode ── */
     [data-theme="dark"] {
       --bg:     #1c1914;
@@ -419,9 +532,14 @@
     /* ── Pref bar (dark mode + font size) ── */
     .pref-bar {
       display: flex;
-      gap: 0.4rem;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 0.75rem;
+    }
+    .pref-right {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
     }
     .pref-btn {
       background: none;
@@ -473,11 +591,17 @@
       <h1 class="title-tamil">திருக்குறள்</h1>
       <p class="title-sub">Thirukkural &middot; Thiruvalluvar</p>
       <div class="pref-bar" role="toolbar" aria-label="Display preferences">
-        <button class="pref-btn" id="font-dec-btn" aria-label="Decrease font size">A−</button>
-        <button class="pref-btn" id="font-inc-btn" aria-label="Increase font size">A+</button>
-        <button class="pref-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
-          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>
+        <button type="button" class="btn-play-all" id="play-all-btn">
+          <svg width="9" height="10" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          <span id="play-all-label">Play</span>
         </button>
+        <div class="pref-right">
+          <button class="pref-btn" id="font-dec-btn" aria-label="Decrease font size">A−</button>
+          <button class="pref-btn" id="font-inc-btn" aria-label="Increase font size">A+</button>
+          <button class="pref-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -528,17 +652,34 @@
           </button>
         </div>
 
-        <button type="button" class="btn-play-all" id="play-all-btn">
-          <svg width="12" height="12" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
-          <span id="play-all-label">Play Randomly</span>
-        </button>
-
-        <p class="kbd-hint">Tip: once a kural is open, press ← / → to move to the previous / next kural.</p>
       </div>
 
       <div class="kural-card" id="kural-display" tabindex="-1" aria-live="polite" aria-atomic="true">
         <div class="loading">Loading…</div>
       </div>
+
+      <div class="reactions-row" id="reactions-row">
+        <button class="reaction-btn" id="btn-up" aria-label="Thumbs up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          <span id="count-up">—</span>
+        </button>
+        <button class="reaction-btn" id="btn-down" aria-label="Thumbs down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/><path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+          <span id="count-down">—</span>
+        </button>
+      </div>
+
+      <section class="comments-section">
+        <div class="comments-header" id="comments-header">Comments</div>
+        <div id="comments-list"></div>
+        <form class="comment-form" id="comment-form" novalidate>
+          <textarea class="comment-input" id="comment-input" placeholder="Share your thoughts on this kural…" maxlength="280" rows="3"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count" id="comment-char-count">280</span>
+            <button type="submit" class="btn-comment-submit" id="comment-submit-btn" disabled>Post</button>
+          </div>
+        </form>
+      </section>
     </main>
 
   </div>
@@ -568,7 +709,7 @@
         icon.innerHTML    = '<rect width="8" height="8"/>';
         icon.setAttribute('viewBox', '0 0 8 8');
       } else {
-        label.textContent = 'Play Randomly';
+        label.textContent = 'Play';
         icon.innerHTML    = '<polygon points="0,0 8,5 0,10"/>';
         icon.setAttribute('viewBox', '0 0 8 10');
       }
@@ -813,6 +954,10 @@
       document.querySelector('meta[property="og:title"]').setAttribute('content', `குறள் ${k.number} · ${k.chapterEnglish} · Thirukkural`);
       document.querySelector('meta[property="og:description"]').setAttribute('content', k.english);
 
+      activeKuralNumber = k.number;
+      loadReactions(k.number);
+      loadComments(k.number);
+
       if (updateUrl) {
         const url = new URL(location.href);
         url.searchParams.set('kural', k.number);
@@ -941,6 +1086,134 @@
       } else if (e.key === 'Escape') {
         clearSearch();
       }
+    });
+
+    // ── Supabase ──
+
+    const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+    const SUPABASE_KEY = 'YOUR_SUPABASE_ANON_KEY';
+    const db = (SUPABASE_URL !== 'YOUR_SUPABASE_URL')
+      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+      : null;
+
+    let activeKuralNumber = null;
+
+    function escapeHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function timeAgo(dateStr) {
+      const s = Math.floor((Date.now() - new Date(dateStr)) / 1000);
+      if (s < 60)    return 'just now';
+      if (s < 3600)  return `${Math.floor(s / 60)}m ago`;
+      if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
+      return `${Math.floor(s / 86400)}d ago`;
+    }
+
+    // ── Reactions ──
+
+    async function loadReactions(kuralNumber) {
+      const voted = localStorage.getItem(`kural_vote_${kuralNumber}`);
+      document.getElementById('btn-up').classList.toggle('voted-up',     voted === 'up');
+      document.getElementById('btn-down').classList.toggle('voted-down', voted === 'down');
+
+      if (!db) return;
+      const { data } = await db
+        .from('kural_reactions')
+        .select('up, down')
+        .eq('kural_number', kuralNumber)
+        .maybeSingle();
+      document.getElementById('count-up').textContent   = data ? data.up   : 0;
+      document.getElementById('count-down').textContent = data ? data.down : 0;
+    }
+
+    async function castVote(kuralNumber, direction) {
+      const current = localStorage.getItem(`kural_vote_${kuralNumber}`);
+      let dUp = 0, dDown = 0, next = direction;
+
+      if (current === direction) {
+        next = null;
+        if (direction === 'up')   dUp   = -1;
+        if (direction === 'down') dDown = -1;
+      } else {
+        if (current === 'up')   dUp   = -1;
+        if (current === 'down') dDown = -1;
+        if (direction === 'up')   dUp   += 1;
+        if (direction === 'down') dDown += 1;
+      }
+
+      next === null
+        ? localStorage.removeItem(`kural_vote_${kuralNumber}`)
+        : localStorage.setItem(`kural_vote_${kuralNumber}`, next);
+
+      const cUp   = document.getElementById('count-up');
+      const cDown = document.getElementById('count-down');
+      cUp.textContent   = Math.max(0, (parseInt(cUp.textContent,   10) || 0) + dUp);
+      cDown.textContent = Math.max(0, (parseInt(cDown.textContent, 10) || 0) + dDown);
+      document.getElementById('btn-up').classList.toggle('voted-up',     next === 'up');
+      document.getElementById('btn-down').classList.toggle('voted-down', next === 'down');
+
+      if (!db) return;
+      await db.rpc('vote_kural', { p_kural_number: kuralNumber, p_delta_up: dUp, p_delta_down: dDown });
+    }
+
+    document.getElementById('btn-up').addEventListener('click',   () => castVote(activeKuralNumber, 'up'));
+    document.getElementById('btn-down').addEventListener('click', () => castVote(activeKuralNumber, 'down'));
+
+    // ── Comments ──
+
+    async function loadComments(kuralNumber) {
+      const list   = document.getElementById('comments-list');
+      const header = document.getElementById('comments-header');
+      list.innerHTML = '<div class="comments-loading">Loading…</div>';
+
+      if (!db) { list.innerHTML = ''; return; }
+
+      const { data, error } = await db
+        .from('kural_comments')
+        .select('body, created_at')
+        .eq('kural_number', kuralNumber)
+        .order('created_at', { ascending: true });
+
+      if (error || !data) { list.innerHTML = ''; return; }
+
+      const n = data.length;
+      header.textContent = n > 0 ? `${n} comment${n === 1 ? '' : 's'}` : 'Comments';
+      list.innerHTML = n === 0
+        ? '<div class="comments-empty">Be the first to comment.</div>'
+        : data.map(c => `<div class="comment-item"><span>${escapeHtml(c.body)}</span><time class="comment-time" datetime="${c.created_at}">${timeAgo(c.created_at)}</time></div>`).join('');
+    }
+
+    const commentInput = document.getElementById('comment-input');
+    const commentForm  = document.getElementById('comment-form');
+    const charCount    = document.getElementById('comment-char-count');
+    const submitBtn    = document.getElementById('comment-submit-btn');
+    const MAX_CHARS    = 280;
+
+    commentInput.addEventListener('input', () => {
+      const rem = MAX_CHARS - commentInput.value.length;
+      charCount.textContent = rem;
+      charCount.classList.toggle('over', rem < 0);
+      submitBtn.disabled = commentInput.value.trim().length === 0 || rem < 0;
+    });
+
+    commentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const body = commentInput.value.trim();
+      if (!body || body.length > MAX_CHARS || !db) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Posting…';
+
+      const { error } = await db.from('kural_comments').insert({ kural_number: activeKuralNumber, body });
+
+      if (!error) {
+        commentInput.value = '';
+        charCount.textContent = MAX_CHARS;
+        await loadComments(activeKuralNumber);
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Post';
     });
 
     // ── Preferences: dark mode + font size ──
