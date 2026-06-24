@@ -18,6 +18,8 @@ A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets comp
 - Per-kural audio playback (Tamil + English, read aloud)
 - **Play Randomly** — shuffles all available kurals and plays them in a fresh random order each time
 - **Share button** — copies the deep-link URL to clipboard (or opens the native share sheet on mobile)
+- **Reactions** — thumbs up / down per kural; vote persists in `localStorage`, toggle to unvote or switch direction
+- **Anonymous comments** — per-kural comment thread stored in Supabase; no login required
 - **Dark mode** — toggle in the header; respects `prefers-color-scheme` on first visit, persists in `localStorage`
 - **Resizable text** — A− / A+ buttons scale the Tamil and English text across three sizes
 - Fully accessible (ARIA live regions, skip link, focus management)
