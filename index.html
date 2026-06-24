@@ -119,6 +119,7 @@
       display: flex;
       gap: 0.75rem;
       align-items: flex-end;
+      flex-wrap: wrap;
     }
     .select-group {
       display: flex;
@@ -127,6 +128,11 @@
     }
     .select-group.chapter  { flex: 1; }
     .select-group.kural-no { flex: 0 0 76px; }
+    .selects-row .search-group { flex: 1 1 100%; }
+    @media (min-width: 640px) {
+      .selects-row .search-group { flex: 2; min-width: 0; }
+      .select-group.chapter { flex: 2; }
+    }
 
     label {
       font-size: 0.68rem;
@@ -639,13 +645,12 @@
               <option value="9">10</option>
             </select>
           </div>
-        </div>
-
-        <div class="search-group" role="search" aria-label="Search kurals">
-          <label for="search-input">Search by word or kural number</label>
-          <input type="text" id="search-input" autocomplete="off" placeholder="e.g. அறம், truth, 42" />
-          <ul class="search-results" id="search-results"></ul>
-          <p id="search-status" class="sr-only" aria-live="polite"></p>
+          <div class="search-group" role="search" aria-label="Search kurals">
+            <label for="search-input">Search by word or kural number</label>
+            <input type="text" id="search-input" autocomplete="off" placeholder="e.g. அறம், truth, 42" />
+            <ul class="search-results" id="search-results"></ul>
+            <p id="search-status" class="sr-only" aria-live="polite"></p>
+          </div>
         </div>
 
         <div class="nav-buttons">
