@@ -1,10 +1,12 @@
 # திருக்குறள் · Thirukkural
 
-A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets composed by the Tamil poet-philosopher **Thiruvalluvar**, covering ethics (*Arathuppal*), wealth and governance (*Porrutpal*), and love (*Kamattupal*).
+A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets composed by the Tamil poet-philosopher **Thiruvalluvar**, covering ethics (*Arathuppal*) and wealth and governance (*Porrutpal*). The third book, *Kamattupal* (love), has not been added yet.
 
 ## Live App
 
 **[https://subashini7.github.io/kural/](https://subashini7.github.io/kural/?kural=1)**
+
+![Screenshot of the Thirukkural reader showing kural 108 — Never forget a kindness done to you, but let go of a wrong the very moment it happens.](screenshots/kural-ex.png)
 
 ## Features
 
@@ -87,10 +89,11 @@ kural/
 
 ## Coverage
 
-| Section | Chapters | Kurals |
-|---|---|---|
-| அறத்துப்பால் (Arathuppal — Virtue) | 1–38 | 1–380 |
-| பொருட்பால் (Porrutpal — Wealth) | 39–108 | 381–1080 |
+| Section | Chapters | Kurals | Status |
+|---|---|---|---|
+| அறத்துப்பால் (Arathuppal — Virtue) | 1–38 | 1–380 | Included |
+| பொருட்பால் (Porrutpal — Wealth) | 39–108 | 381–1080 | Included |
+| காமத்துப்பால் (Kamattupal — Love) | 109–133 | 1081–1330 | Not yet added |
 
 > **Note:** Three chapters (6, 15, 92) are currently in `data/chapters_under_review.json` and not displayed in the app. They are being reviewed for gendered framing before being reintroduced with updated translations.
 
