@@ -701,7 +701,7 @@
     </main>
 
     <footer>
-      Last updated: 2026-06-24 17:50 UTC
+      Last updated: 2026-06-24 20:08 UTC
     </footer>
 
   </div>
@@ -1204,7 +1204,7 @@
       const n = data.length;
       header.textContent = n > 0 ? `${n} comment${n === 1 ? '' : 's'}` : 'Comments';
       list.innerHTML = n === 0
-        ? '<div class="comments-empty">Be the first to comment.</div>'
+        ? ''
         : data.map(c => `<div class="comment-item"><span>${escapeHtml(c.body)}</span><time class="comment-time" datetime="${c.created_at}">${timeAgo(c.created_at)}</time></div>`).join('');
     }
 
