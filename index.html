@@ -696,7 +696,7 @@
     </main>
 
     <footer>
-      Last updated: 2026-06-24 17:06 UTC
+      Last updated: 2026-06-24 17:26 UTC
     </footer>
 
   </div>
@@ -1109,7 +1109,7 @@
 
     const SUPABASE_URL = 'https://cbrrxpzdtptpwbquwvgn.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_2495Az1PTReBLwGGS1PBmQ_MhaQTF7N';
-    const db = (SUPABASE_URL && SUPABASE_URL !== 'https://cbrrxpzdtptpwbquwvgn.supabase.co')
+    const db = (SUPABASE_URL && SUPABASE_URL.startsWith('https://'))
       ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
       : null;
 
