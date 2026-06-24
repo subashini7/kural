@@ -23,11 +23,14 @@ const escapeXml = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 function addEmphasis(escapedText) {
-  // Force TTS to read "A" as the letter name "ay", not the article "uh"
-  return escapedText.replace(
-    /\bthe letter A\b/g,
-    'the letter <say-as interpret-as="characters">A</say-as><break time="150ms"/>'
-  );
+  return escapedText
+    // Force TTS to read "A" as the letter name "ay", not the article "uh"
+    .replace(
+      /\bthe letter A\b/g,
+      'the letter <say-as interpret-as="characters">A</say-as><break time="150ms"/>'
+    )
+    // Force injury pronunciation ("wuːnd"), not winding ("waʊnd")
+    .replace(/\bwound\b/g, '<phoneme alphabet="ipa" ph="wuːnd">wound</phoneme>');
 }
 
 function buildSsml(tamilText, englishText, tamilVoice, englishVoice) {
@@ -60,12 +63,12 @@ async function main() {
   const raw      = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
   const kurals   = raw.chapters
     .flatMap(ch => ch.kurals)
-    .filter(k => k.number >= 431 && k.number <= 630);
+    .filter(k => k.number >= 1);
 
   const outDir = path.resolve(__dirname, '../audio');
   fs.mkdirSync(outDir, { recursive: true });
 
-  console.log(`Generating ${kurals.length} kurals (431–630, excl. removed chapters) — ${PAIR.tamil} / ${PAIR.english}\n`);
+  console.log(`Generating ${kurals.length} kurals (all active, excl. chapters under review) — ${PAIR.tamil} / ${PAIR.english}\n`);
 
   for (const k of kurals) {
     await synthesize(k, PAIR, `${k.number}.mp3`, outDir);

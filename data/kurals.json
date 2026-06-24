@@ -341,9 +341,9 @@
         },
         {
           "number": 42,
-          "line1": "துறந்தார்க்கும் துவ்வாதவர்க்கும் இறந்தார்க்கும்",
+          "line1": "துறந்தார்க்கும் துவ்வா தவர்க்கும் இறந்தார்க்கும்",
           "line2": "இல்வாழ்வான் என்பான் துணை.",
-          "tamil": "துறந்தார்க்கும் துவ்வாதவர்க்கும் இறந்தார்க்கும்\nஇல்வாழ்வான் என்பான் துணை.",
+          "tamil": "துறந்தார்க்கும் துவ்வா தவர்க்கும் இறந்தார்க்கும்\nஇல்வாழ்வான் என்பான் துணை.",
           "english": "A life at home serves as a vital support for those who have renounced the world, for the impoverished, and for the departed."
         },
         {
@@ -477,8 +477,8 @@
         {
           "number": 70,
           "line1": "மகன்தந்தைக்கு ஆற்றும் உதவி இவன்தந்தை",
-          "line2": "என்நோற்றான் கொல் எனும் சொல்.",
-          "tamil": "மகன்தந்தைக்கு ஆற்றும் உதவி இவன்தந்தை\nஎன்நோற்றான் கொல் எனும் சொல்.",
+          "line2": "என்நோற்றான் கொல்எனும் சொல்.",
+          "tamil": "மகன்தந்தைக்கு ஆற்றும் உதவி இவன்தந்தை\nஎன்நோற்றான் கொல்எனும் சொல்.",
           "english": "The ultimate honor children can return to their parents is living so uprightly that the world asks, 'What exceptional values earned them such a child?'"
         }
       ]
@@ -514,8 +514,8 @@
         {
           "number": 74,
           "line1": "அன்புஈனும் ஆர்வம் உடைமை அதுஈனும்",
-          "line2": "நண்பு என்னும் நாடாச் சிறப்பு.",
-          "tamil": "அன்புஈனும் ஆர்வம் உடைமை அதுஈனும்\nநண்பு என்னும் நாடாச் சிறப்பு.",
+          "line2": "நண்பென்னும் நாடாச் சிறப்பு.",
+          "tamil": "அன்புஈனும் ஆர்வம் உடைமை அதுஈனும்\nநண்பென்னும் நாடாச் சிறப்பு.",
           "english": "Love gives rise to longing, and that longing gives rise to friendship beyond measure."
         },
         {
@@ -579,8 +579,8 @@
         {
           "number": 82,
           "line1": "விருந்து புறத்ததாத் தானுண்டல் சாவா",
-          "line2": "மருந்தெனினும் வேண் டற்பாற் றன்று.",
-          "tamil": "விருந்து புறத்ததாத் தானுண்டல் சாவா\nமருந்தெனினும் வேண் டற்பாற் றன்று.",
+          "line2": "மருந்தெனினும் வேண்டற்பாற் றன்று.",
+          "tamil": "விருந்து புறத்ததாத் தானுண்டல் சாவா\nமருந்தெனினும் வேண்டற்பாற் றன்று.",
           "english": "Even if it were the nectar of immortality, it should not be consumed alone while a guest waits outside."
         },
         {
@@ -1520,8 +1520,8 @@
         {
           "number": 211,
           "line1": "கைம்மாறு வேண்டா கடப்பாடு மாரிமாட்டு",
-          "line2": "என் ஆற்றுங் கொல்லோ உலகு.",
-          "tamil": "கைம்மாறு வேண்டா கடப்பாடு மாரிமாட்டு\nஎன் ஆற்றுங் கொல்லோ உலகு.",
+          "line2": "என்ஆற்றுங் கொல்லோ உலகு.",
+          "tamil": "கைம்மாறு வேண்டா கடப்பாடு மாரிமாட்டு\nஎன்ஆற்றுங் கொல்லோ உலகு.",
           "english": "True social responsibility expects no transaction or return; after all, what does the earth ever give back to the rain-clouds?"
         },
         {
@@ -1622,7 +1622,7 @@
           "line1": "இன்னாது இரக்கப் படுதல் இரந்தவர்",
           "line2": "இன்முகங் காணும் அளவு.",
           "tamil": "இன்னாது இரக்கப் படுதல் இரந்தவர்\nஇன்முகங் காணும் அளவு.",
-          "english": "The discomfort of being asked for help vanishes completely the moment you see the joy on the face of the one you helped."
+          "english": "The discomfort of being asked for help vanishes completely — the moment you see the joy on the face of the one you helped."
         },
         {
           "number": 225,
@@ -2589,8 +2589,8 @@
         {
           "number": 347,
           "line1": "பற்றி விடாஅ இடும்பைகள் பற்றினைப்",
-          "line2": "பற்றி விடாஅ தவர் க்கு.",
-          "tamil": "பற்றி விடாஅ இடும்பைகள் பற்றினைப்\nபற்றி விடாஅ தவர் க்கு.",
+          "line2": "பற்றி விடாஅ தவர்க்கு.",
+          "tamil": "பற்றி விடாஅ இடும்பைகள் பற்றினைப்\nபற்றி விடாஅ தவர்க்கு.",
           "english": "Sorrow never releases its grip on those who refuse to release their grip on desire."
         },
         {
@@ -2865,7 +2865,7 @@
           "line1": "படைகுடி கூழ்அமைச்சு நட்பரண் ஆறும்",
           "line2": "உடையான் அரசருள் ஏறு.",
           "tamil": "படைகுடி கூழ்அமைச்சு நட்பரண் ஆறும்\nஉடையான் அரசருள் ஏறு.",
-          "english": "A king with an army, a loyal people, wealth, good ministers, allies, and a strong fortress stands like a lion among kings."
+          "english": "A ruler with an army, loyal people, wealth, good ministers, allies, and a strong fortress stands like a lion among rulers."
         },
         {
           "number": 382,
@@ -2886,49 +2886,49 @@
           "line1": "அறனிழுக்கா தல்லவை நீக்கி மறனிழுக்கா",
           "line2": "மானம் உடைய தரசு.",
           "tamil": "அறனிழுக்கா தல்லவை நீக்கி மறனிழுக்கா\nமானம் உடைய தரசு.",
-          "english": "A true king is one who, with quiet dignity, never strays from virtue or falls into vice."
+          "english": "A true ruler is one who, with quiet dignity, never strays from virtue or falls into vice."
         },
         {
           "number": 385,
           "line1": "இயற்றலும் ஈட்டலுங் காத்தலும் காத்த",
           "line2": "வகுத்தலும் வல்ல தரசு.",
           "tamil": "இயற்றலும் ஈட்டலுங் காத்தலும் காத்த\nவகுத்தலும் வல்ல தரசு.",
-          "english": "A true king is one skilled at earning wealth, saving it, protecting it, and distributing it wisely."
+          "english": "A true ruler is one skilled at earning wealth, saving it, protecting it, and distributing it wisely."
         },
         {
           "number": 386,
           "line1": "காட்சிக் கெளியன் கடுஞ்சொல்லன் அல்லனேல்",
           "line2": "மீக்கூறும் மன்னன் நிலம்",
           "tamil": "காட்சிக் கெளியன் கடுஞ்சொல்லன் அல்லனேல்\nமீக்கூறும் மன்னன் நிலம்",
-          "english": "The whole world praises the kingdom of a king who is approachable and never speaks harshly."
+          "english": "The whole world praises the realm of a ruler who is approachable and never speaks harshly."
         },
         {
           "number": 387,
           "line1": "இன்சொலால் ஈத்தளிக்க வல்லார்க்குத் தன்சொலால்",
           "line2": "தான்கண் டனைத்திவ் வுலகு.",
           "tamil": "இன்சொலால் ஈத்தளிக்க வல்லார்க்குத் தன்சொலால்\nதான்கண் டனைத்திவ் வுலகு.",
-          "english": "The world willingly submits to a king who gives generously with warmth and protects all who seek their help."
+          "english": "The world willingly submits to a ruler who gives generously with warmth and protects all who seek their help."
         },
         {
           "number": 388,
           "line1": "முறைசெய்து காப்பாற்றும் மன்னவன் மக்கட்கு",
           "line2": "இறையென்று வைக்கப் படும்.",
           "tamil": "முறைசெய்து காப்பாற்றும் மன்னவன் மக்கட்கு\nஇறையென்று வைக்கப் படும்.",
-          "english": "A king who faithfully performs their duties and protects their people is regarded as divine."
+          "english": "A ruler who faithfully performs their duties and protects their people is regarded as divine."
         },
         {
           "number": 389,
           "line1": "செவிகைப்பச் சொற்பொறுக்கும் பண்புடை வேந்தன்",
           "line2": "கவிகைக்கீழ்த் தங்கும் உலகு.",
           "tamil": "செவிகைப்பச் சொற்பொறுக்கும் பண்புடை வேந்தன்\nகவிகைக்கீழ்த் தங்கும் உலகு.",
-          "english": "The whole world will gladly live under the protection of a king who can tolerate harsh, bitter words without retaliating."
+          "english": "The whole world will gladly live under the protection of a ruler who can tolerate harsh, bitter words without retaliating."
         },
         {
           "number": 390,
           "line1": "கொடையளி செங்கோல் குடியோம்பல் நான்கும்",
           "line2": "உடையானாம் வேந்தர்க் கொளி.",
           "tamil": "கொடையளி செங்கோல் குடியோம்பல் நான்கும்\nஉடையானாம் வேந்தர்க் கொளி.",
-          "english": "A king truly shines among kings when they have kindness, generosity, integrity, and genuine care for their people."
+          "english": "A ruler truly shines among rulers when they have kindness, generosity, integrity, and genuine care for their people."
         }
       ]
     },
@@ -3070,8 +3070,8 @@
         {
           "number": 408,
           "line1": "நல்லார்கண் பட்ட வறுமையின் இன்னாதே",
-          "line2": "கல்லார்கண் பட் ட திரு.",
-          "tamil": "நல்லார்கண் பட்ட வறுமையின் இன்னாதே\nகல்லார்கண் பட் ட திரு.",
+          "line2": "கல்லார்கண் பட்ட திரு.",
+          "tamil": "நல்லார்கண் பட்ட வறுமையின் இன்னாதே\nகல்லார்கண் பட்ட திரு.",
           "english": "Wealth in the hands of the unlearned brings more sorrow than poverty ever could to the learned."
         },
         {
@@ -3295,7 +3295,7 @@
           "line1": "தன்குற்றம் நீக்கிப் பிறர்குற்றங் காண்கிற்பின்",
           "line2": "என்குற்ற மாகும் இறைக்கு?",
           "tamil": "தன்குற்றம் நீக்கிப் பிறர்குற்றங் காண்கிற்பின்\nஎன்குற்ற மாகும் இறைக்கு?",
-          "english": "What fault could remain in a king who has corrected their own flaws while watching over others' faults too?"
+          "english": "What fault could remain in a ruler who has corrected their own flaws while watching over others' faults too?"
         },
         {
           "number": 437,
@@ -3339,21 +3339,21 @@
           "line1": "அறனறிந்து மூத்த அறிவுடையார் கேண்மை",
           "line2": "திறனறிந்து தேர்ந்து கொளல்.",
           "tamil": "அறனறிந்து மூத்த அறிவுடையார் கேண்மை\nதிறனறிந்து தேர்ந்து கொளல்.",
-          "english": "A king should recognize its true value and secure the friendship of virtuous, deeply knowledgeable people."
+          "english": "A ruler should recognize its true value and secure the friendship of virtuous, deeply knowledgeable people."
         },
         {
           "number": 442,
           "line1": "உற்றநோய் நீக்கி உறாஅமை முற்காக்கும்",
           "line2": "பெற்றியார்ப் பேணிக் கொளல்.",
           "tamil": "உற்றநோய் நீக்கி உறாஅமை முற்காக்கும்\nபெற்றியார்ப் பேணிக் கொளல்.",
-          "english": "A king should seek out and care well for people who can both handle crises as they arise and prevent them beforehand."
+          "english": "A ruler should seek out and care well for people who can both handle crises as they arise and prevent them beforehand."
         },
         {
           "number": 443,
           "line1": "அரியவற்று ளெல்லாம் அரிதே பெரியாரைப்",
           "line2": "பேணித் தமராக் கொளல்.",
           "tamil": "அரியவற்று ளெல்லாம் அரிதே பெரியாரைப்\nபேணித் தமராக் கொளல்.",
-          "english": "Winning over and keeping great people close is the hardest thing a king can do."
+          "english": "Winning over and keeping great people close is the hardest thing a ruler can do."
         },
         {
           "number": 444,
@@ -3367,14 +3367,14 @@
           "line1": "சூழ்வார்கண் ணாக ஒழுகலான் மன்னவன்",
           "line2": "சூழ்வாரைக் சூழ்ந்து கொளல்.",
           "tamil": "சூழ்வார்கண் ணாக ஒழுகலான் மன்னவன்\nசூழ்வாரைக் சூழ்ந்து கொளல்.",
-          "english": "Since a king sees their kingdom through their ministers' eyes, they must examine each one's character carefully before appointing them."
+          "english": "Since a ruler sees their realm through their ministers' eyes, they must examine each one's character carefully before appointing them."
         },
         {
           "number": 446,
           "line1": "தக்கா ரினத்தனாய்த் தானொழுக வல்லானைச்",
           "line2": "செற்றார் செயக்கிடந்த தில்.",
           "tamil": "தக்கா ரினத்தனாய்த் தானொழுக வல்லானைச்\nசெற்றார் செயக்கிடந்த தில்.",
-          "english": "Enemies are left with nothing to do against a king who knows how to secure the loyalty of worthy people."
+          "english": "Enemies are left with nothing to do against a ruler who knows how to secure the loyalty of worthy people."
         },
         {
           "number": 447,
@@ -3395,7 +3395,7 @@
           "line1": "முதலிலார்க ஊதிய மில்லை மதலையாஞ்",
           "line2": "சார்பிலார்க் கில்லை நிலை.",
           "tamil": "முதலிலார்க ஊதிய மில்லை மதலையாஞ்\nசார்பிலார்க் கில்லை நிலை.",
-          "english": "Just as those without capital can gain nothing, a king without good counsel has nothing lasting."
+          "english": "Just as those without capital can gain nothing, a ruler without good counsel has nothing lasting."
         },
         {
           "number": 450,
@@ -3625,7 +3625,7 @@
           "line1": "ஆகாறு அளவிட்டி தாயினுங் கேடில்லை",
           "line2": "போகாறு அகலாக் கடை.",
           "tamil": "ஆகாறு அளவிட்டி தாயினுங் கேடில்லை\nபோகாறு அகலாக் கடை.",
-          "english": "Even a small income won't ruin a king, as long as his spending never exceeds it."
+          "english": "Even a small income won't ruin a ruler, as long as their spending never exceeds it."
         },
         {
           "number": 479,
@@ -3655,20 +3655,20 @@
           "line1": "பகல்வெல்லும் கூகையைக் காக்கை இகல்வெல்லும்",
           "line2": "வேந்தர்க்கு வேண்டும் பொழுது.",
           "tamil": "பகல்வெல்லும் கூகையைக் காக்கை இகல்வெல்லும்\nவேந்தர்க்கு வேண்டும் பொழுது.",
-          "english": "A crow beats an owl only by day — likewise, a king who wants to defeat an enemy needs the right moment."
+          "english": "A crow beats an owl only by day — likewise, a ruler who wants to defeat an enemy needs the right moment."
         },
         {
           "number": 482,
           "line1": "பருவத்தோடு ஒட்ட ஒழுகல் திருவினைத்",
           "line2": "தீராமை ஆர்க்குங் கயிறு.",
           "tamil": "பருவத்தோடு ஒட்ட ஒழுகல் திருவினைத்\nதீராமை ஆர்க்குங் கயிறு.",
-          "english": "Acting at the right moment is the cord that binds success firmly to a king."
+          "english": "Acting at the right moment is the cord that binds success firmly to a ruler."
         },
         {
           "number": 483,
           "line1": "அருவினை யென்ப உளவோ கருவியான்",
-          "line2": "காலம் அற஧ந்து செயின்.",
-          "tamil": "அருவினை யென்ப உளவோ கருவியான்\nகாலம் அற஧ந்து செயின்.",
+          "line2": "காலம் அறிந்து செயின்.",
+          "tamil": "அருவினை யென்ப உளவோ கருவியான்\nகாலம் அறிந்து செயின்.",
           "english": "What's too difficult for someone who acts with the right tools at exactly the right time?"
         },
         {
@@ -3820,7 +3820,7 @@
           "line1": "குடிப்பிறந்து குற்றத்தின் நீங்கி வடுப்பரியும்",
           "line2": "நாணுடையான் சுட்டே தெளிவு.",
           "tamil": "குடிப்பிறந்து குற்றத்தின் நீங்கி வடுப்பரியும்\nநாணுடையான் சுட்டே தெளிவு.",
-          "english": "A king should choose someone of good family, free of faults, and humble enough to fear the wounds sin can cause."
+          "english": "A ruler should choose someone of good family, free of faults, and humble enough to fear the wounds sin can cause."
         },
         {
           "number": 503,
@@ -3848,7 +3848,7 @@
           "line1": "அற்றாரைத் தேறுதல் ஓம்புக மற்றவர்",
           "line2": "பற்றிலர் நாணார் பழி.",
           "tamil": "அற்றாரைத் தேறுதல் ஓம்புக மற்றவர்\nபற்றிலர் நாணார் பழி.",
-          "english": "A king should avoid choosing people with no family ties — without attachments, they have nothing to fear from wrongdoing."
+          "english": "A ruler should avoid choosing people with no family ties — without attachments, they have nothing to fear from wrongdoing."
         },
         {
           "number": 507,
@@ -3869,7 +3869,7 @@
           "line1": "தேறற்க யாரையும் தேராது தேர்ந்தபின்",
           "line2": "தேறுக தேறும் பொருள்.",
           "tamil": "தேறற்க யாரையும் தேராது தேர்ந்தபின்\nதேறுக தேறும் பொருள்.",
-          "english": "A king should never choose anyone without careful thought, but once chosen, assign each person their fitting duty without hesitation."
+          "english": "A ruler should never choose anyone without careful thought, but once chosen, assign each person their fitting duty without hesitation."
         },
         {
           "number": 510,
@@ -3892,21 +3892,21 @@
           "line1": "நன்மையும் தீமையும் நாடி நலம்புரிந்த",
           "line2": "தன்மையான் ஆளப் படும்.",
           "tamil": "நன்மையும் தீமையும் நாடி நலம்புரிந்த\nதன்மையான் ஆளப் படும்.",
-          "english": "A king should employ someone whose nature inclines them toward the good, after weighing both the risks and benefits of any task."
+          "english": "A ruler should employ someone whose nature inclines them toward the good, after weighing both the risks and benefits of any task."
         },
         {
           "number": 512,
           "line1": "வாரி பெருக்கி வளம்படுத்து உற்றவை",
           "line2": "ஆராய்வான் செய்க வினை.",
           "tamil": "வாரி பெருக்கி வளம்படுத்து உற்றவை\nஆராய்வான் செய்க வினை.",
-          "english": "The king's work should go to someone who can expand revenue, grow wealth, and carefully guard against whatever might destroy it."
+          "english": "The ruler's work should go to someone who can expand revenue, grow wealth, and carefully guard against whatever might destroy it."
         },
         {
           "number": 513,
           "line1": "அன்பறிவு தேற்றம் அவாவின்மை இந்நான்கும்",
           "line2": "நன்குடையான் கட்டே தெளிவு.",
           "tamil": "அன்பறிவு தேற்றம் அவாவின்மை இந்நான்கும்\nநன்குடையான் கட்டே தெளிவு.",
-          "english": "A king should choose someone rich in four things: love, knowledge, a clear mind, and freedom from greed."
+          "english": "A ruler should choose someone rich in four things: love, knowledge, a clear mind, and freedom from greed."
         },
         {
           "number": 514,
@@ -3920,21 +3920,21 @@
           "line1": "அறிந்தாற்றிச் செய்கிற்பாற்கு அல்லால் வினைதான்",
           "line2": "சிறந்தானென்று ஏவற்பாற் றன்று.",
           "tamil": "அறிந்தாற்றிச் செய்கிற்பாற்கு அல்லால் வினைதான்\nசிறந்தானென்று ஏவற்பாற் றன்று.",
-          "english": "A king's work demands wisdom and patient endurance — it should never be handed out based on personal fondness alone."
+          "english": "A ruler's work demands wisdom and patient endurance — it should never be handed out based on personal fondness alone."
         },
         {
           "number": 516,
           "line1": "செய்வானை நாடி வினைநாடிக் காலத்தோடு",
           "line2": "எய்த உணர்ந்து செயல்.",
           "tamil": "செய்வானை நாடி வினைநாடிக் காலத்தோடு\nஎய்த உணர்ந்து செயல்.",
-          "english": "A king should act only after weighing the person they're employing, the task itself, and the right timing for it."
+          "english": "A ruler should act only after weighing the person they're employing, the task itself, and the right timing for it."
         },
         {
           "number": 517,
           "line1": "இதனை இதனால் இவன்முடிக்கும் என்றாய்ந்து",
           "line2": "அதனை அவன்கண் விடல்.",
           "tamil": "இதனை இதனால் இவன்முடிக்கும் என்றாய்ந்து\nஅதனை அவன்கண் விடல்.",
-          "english": "Once a king decides, 'this person can achieve this, by these means', they should leave the task entirely in that person's hands."
+          "english": "Once a ruler decides, 'this person can achieve this, by these means', they should leave the task entirely in that person's hands."
         },
         {
           "number": 518,
@@ -3955,7 +3955,7 @@
           "line1": "நாடோறும் நாடுக மன்னன் வினைசெய்வான்",
           "line2": "கோடாமை கோடா துலகு.",
           "tamil": "நாடோறும் நாடுக மன்னன் வினைசெய்வான்\nகோடாமை கோடா துலகு.",
-          "english": "A king should review their servants' conduct every day — when they act honestly, the world follows suit."
+          "english": "A ruler should review their servants' conduct every day — when they act honestly, the world follows suit."
         }
       ]
     },
@@ -4020,7 +4020,7 @@
           "line1": "பொதுநோக்கான் வேந்தன் வரிசையா நோக்கின்",
           "line2": "அதுநோக்கி வாழ்வார் பலர்.",
           "tamil": "பொதுநோக்கான் வேந்தன் வரிசையா நோக்கின்\nஅதுநோக்கி வாழ்வார் பலர்.",
-          "english": "Relatives gather close to a king who judges each person fairly on their own merit, rather than treating everyone identically."
+          "english": "Relatives gather close to a ruler who judges each person fairly on their own merit, rather than treating everyone identically."
         },
         {
           "number": 529,
@@ -4032,9 +4032,9 @@
         {
           "number": 530,
           "line1": "உழைப்பிரிந்து காரணத்தின் வந்தானை வேந்தன்",
-          "line2": "இழைத் திருந்து எண்ணிக் கொளல்.",
-          "tamil": "உழைப்பிரிந்து காரணத்தின் வந்தானை வேந்தன்\nஇழைத் திருந்து எண்ணிக் கொளல்.",
-          "english": "When someone who once left returns for a reason, a king should welcome them back thoughtfully and help them achieve what brought them back."
+          "line2": "இழைத்திருந்து எண்ணிக் கொளல்.",
+          "tamil": "உழைப்பிரிந்து காரணத்தின் வந்தானை வேந்தன்\nஇழைத்திருந்து எண்ணிக் கொளல்.",
+          "english": "When someone who once left returns for a reason, a ruler should welcome them back thoughtfully and help them achieve what brought them back."
         }
       ]
     },
@@ -4055,8 +4055,8 @@
         {
           "number": 532,
           "line1": "பொச்சாப்புக் கொல்லும் புகழை அறிவினை",
-          "line2": "நிச்ச நிரப்புக் கொன் றாங்கு.",
-          "tamil": "பொச்சாப்புக் கொல்லும் புகழை அறிவினை\nநிச்ச நிரப்புக் கொன் றாங்கு.",
+          "line2": "நிச்ச நிரப்புக்கொன் றாங்கு.",
+          "tamil": "பொச்சாப்புக் கொல்லும் புகழை அறிவினை\nநிச்ச நிரப்புக்கொன் றாங்கு.",
           "english": "Forgetfulness destroys a person's good name, just as constant poverty erodes knowledge."
         },
         {
@@ -4106,7 +4106,7 @@
           "line1": "இகழ்ச்சியின் கெட்டாரை உள்ளுக தாந்தம்",
           "line2": "மகிழ்ச்சியின் மைந்துறும் போழ்து.",
           "tamil": "இகழ்ச்சியின் கெட்டாரை உள்ளுக தாந்தம்\nமகிழ்ச்சியின் மைந்துறும் போழ்து.",
-          "english": "Even at the height of joy, a king should remember those who were ruined by carelessness."
+          "english": "Even at the height of joy, a ruler should remember those who were ruined by carelessness."
         },
         {
           "number": 540,
@@ -4134,65 +4134,65 @@
         {
           "number": 542,
           "line1": "வானோக்கி வாழும் உலகெல்லாம் மன்னவன்",
-          "line2": "கோல் நோக்கி வாழுங் குடி.",
-          "tamil": "வானோக்கி வாழும் உலகெல்லாம் மன்னவன்\nகோல் நோக்கி வாழுங் குடி.",
-          "english": "Just as rain makes all life thrive, a just king makes their whole kingdom thrive."
+          "line2": "கோல்நோக்கி வாழுங் குடி.",
+          "tamil": "வானோக்கி வாழும் உலகெல்லாம் மன்னவன்\nகோல்நோக்கி வாழுங் குடி.",
+          "english": "Just as rain makes all life thrive, a just ruler makes their whole realm thrive."
         },
         {
           "number": 543,
           "line1": "அந்தணர் நூற்கும் அறத்திற்கும் ஆதியாய்",
           "line2": "நின்றது மன்னவன் கோல்.",
           "tamil": "அந்தணர் நூற்கும் அறத்திற்கும் ஆதியாய்\nநின்றது மன்னவன் கோல்.",
-          "english": "A king's just rule is the firm foundation that upholds sacred teaching and every virtue it describes."
+          "english": "A ruler's just rule is the firm foundation that upholds sacred teaching and every virtue it describes."
         },
         {
           "number": 544,
           "line1": "குடிதழீஇக் கோலோச்சும் மாநில மன்னன்",
           "line2": "அடிதழீஇ நிற்கும் உலகு.",
           "tamil": "குடிதழீஇக் கோலோச்சும் மாநில மன்னன்\nஅடிதழீஇ நிற்கும் உலகு.",
-          "english": "The whole world will gladly bow before a great king who rules their people with love."
+          "english": "The whole world will gladly bow before a great ruler who rules their people with love."
         },
         {
           "number": 545,
           "line1": "இயல்புளிக் கோலோச்சும் மன்னவன் நாட்ட",
           "line2": "பெயலும் விளையுளும் தொக்கு.",
           "tamil": "இயல்புளிக் கோலோச்சும் மன்னவன் நாட்ட\nபெயலும் விளையுளும் தொக்கு.",
-          "english": "Rain and bountiful harvests stay together forever in the land of a king who rules with justice."
+          "english": "Rain and bountiful harvests stay together forever in the land of a ruler who rules with justice."
         },
         {
           "number": 546,
           "line1": "வேலன்று வென்றி தருவது மன்னவன்",
           "line2": "கோலதூஉங் கோடா தெனின்.",
           "tamil": "வேலன்று வென்றி தருவது மன்னவன்\nகோலதூஉங் கோடா தெனின்.",
-          "english": "Victory comes not from the spear, but from a king's rule, as long as it commits no injustice."
+          "english": "Victory comes not from the spear, but from a ruler's governance, as long as it commits no injustice."
         },
         {
           "number": 547,
           "line1": "இறைகாக்கும் வையகம் எல்லாம் அவனை",
           "line2": "முறைகாக்கும் முட்டாச் செயின்.",
           "tamil": "இறைகாக்கும் வையகம் எல்லாம் அவனை\nமுறைகாக்கும் முட்டாச் செயின்.",
-          "english": "The king defends the whole world, and flawless justice, in turn, defends the king."
+          "english": "The ruler defends the whole world, and flawless justice, in turn, defends the ruler."
         },
         {
           "number": 548,
           "line1": "எண்பதத்தான் ஓரா முறைசெய்யா மன்னவன்",
           "line2": "தண்பதத்தான் தானே கெடும்.",
           "tamil": "எண்பதத்தான் ஓரா முறைசெய்யா மன்னவன்\nதண்பதத்தான் தானே கெடும்.",
-          "english": "A king who refuses easy access to his people and neglects to hear and judge their complaints will fall in disgrace."
+          "english": "A ruler who refuses easy access to their people and neglects to hear and judge their complaints will fall in disgrace."
         },
         {
           "number": 549,
           "line1": "குடிபுறங் காத்தோம்பிக் குற்றம் கடிதல்",
           "line2": "வடுவன்று வேந்தன் தொழில்.",
           "tamil": "குடிபுறங் காத்தோம்பிக் குற்றம் கடிதல்\nவடுவன்று வேந்தன் தொழில்.",
-          "english": "A king's true duty is to protect their people from harm, including harm from the ruler's own actions, and to punish crime fairly."
+          "english": "A ruler's true duty is to protect their people from harm — including harm from their own actions — and to punish crime fairly."
         },
         {
           "number": 550,
           "line1": "கொலையிற் கொடியாரை வேந்தொறுத்தல் பைங்கூழ்",
           "line2": "களைகட் டதனொடு நேர்.",
           "tamil": "கொலையிற் கொடியாரை வேந்தொறுத்தல் பைங்கூழ்\nகளைகட் டதனொடு நேர்.",
-          "english": "A king executing criminals is simply pulling weeds from a healthy field of corn."
+          "english": "A ruler executing criminals is simply pulling weeds from a healthy field of corn."
         }
       ]
     },
@@ -4222,49 +4222,49 @@
           "line1": "நாடொறும் நாடி முறைசெய்யா மன்னவன்",
           "line2": "நாடொறும் நாடு கெடும்.",
           "tamil": "நாடொறும் நாடி முறைசெய்யா மன்னவன்\nநாடொறும் நாடு கெடும்.",
-          "english": "A kingdom whose ruler doesn't review wrongdoing and deliver justice daily will fall into ruin day by day."
+          "english": "A realm whose ruler doesn't review wrongdoing and deliver justice daily will fall into ruin day by day."
         },
         {
           "number": 554,
           "line1": "கூழுங் குடியும் ஒருங்கிழக்கும் கோல்கோடிச்",
           "line2": "சூழாது செய்யும் அரசு.",
           "tamil": "கூழுங் குடியும் ஒருங்கிழக்கும் கோல்கோடிச்\nசூழாது செய்யும் அரசு.",
-          "english": "A king who twists justice without considering the consequences will lose both their wealth and their people at once."
+          "english": "A ruler who twists justice without considering the consequences will lose both their wealth and their people at once."
         },
         {
           "number": 555,
           "line1": "அல்லற்பட்டு ஆற்றாது அழுதகண் ணீரன்றே",
           "line2": "செல்வத்தைத் தேய்க்கும் படை",
           "tamil": "அல்லற்பட்டு ஆற்றாது அழுதகண் ணீரன்றே\nசெல்வத்தைத் தேய்க்கும் படை",
-          "english": "Don't the tears of a people crushed under their king's oppression become a saw that slowly cuts away his wealth?"
+          "english": "Don't the tears of a people crushed under their ruler's oppression become a saw that slowly cuts away their wealth?"
         },
         {
           "number": 556,
           "line1": "மன்னர்க்கு மன்னுதல் செங்கோன்மை அஃதின்றேல்",
           "line2": "மன்னாவாம் மன்னர்க் கொளி.",
           "tamil": "மன்னர்க்கு மன்னுதல் செங்கோன்மை அஃதின்றேல்\nமன்னாவாம் மன்னர்க் கொளி.",
-          "english": "Just rule is what makes a king's fame endure; without it, that fame fades quickly."
+          "english": "Just rule is what makes a ruler's fame endure; without it, that fame fades quickly."
         },
         {
           "number": 557,
           "line1": "துளியின்மை ஞாலத்திற்கு எற்றற்றே வேந்தன்",
           "line2": "அளியின்மை வாழும் உயிர்க்கு.",
           "tamil": "துளியின்மை ஞாலத்திற்கு எற்றற்றே வேந்தன்\nஅளியின்மை வாழும் உயிர்க்கு.",
-          "english": "A people ruled by an unkind king live the way the world would without rain."
+          "english": "A people ruled by an unkind ruler live the way the world would without rain."
         },
         {
           "number": 558,
           "line1": "இன்மையின் இன்னாது உடைமை முறைசெய்யா",
           "line2": "மன்னவன் கோற்கீழ்ப் படின்.",
           "tamil": "இன்மையின் இன்னாது உடைமை முறைசெய்யா\nமன்னவன் கோற்கீழ்ப் படின்.",
-          "english": "Under an unjust king, owning property brings more sorrow than poverty ever could."
+          "english": "Under an unjust ruler, owning property brings more sorrow than poverty ever could."
         },
         {
           "number": 559,
           "line1": "முறைகோடி மன்னவன் செய்யின் உறைகோடி",
           "line2": "ஒல்லாது வானம் பெயல்.",
           "tamil": "முறைகோடி மன்னவன் செய்யின் உறைகோடி\nஒல்லாது வானம் பெயல்.",
-          "english": "When a king acts against justice, the rains turn unseasonable and the heavens hold back their showers."
+          "english": "When a ruler acts against justice, the rains turn unseasonable and the heavens hold back their showers."
         },
         {
           "number": 560,
@@ -4287,49 +4287,49 @@
           "line1": "தக்காங்கு நாடித் தலைச்செல்லா வண்ணத்தால்",
           "line2": "ஒத்தாங்கு ஒறுப்பது வேந்து.",
           "tamil": "தக்காங்கு நாடித் தலைச்செல்லா வண்ணத்தால்\nஒத்தாங்கு ஒறுப்பது வேந்து.",
-          "english": "A true king investigates injustice fairly and punishes it just enough to prevent it from happening again."
+          "english": "A true ruler investigates injustice fairly and punishes it just enough to prevent it from happening again."
         },
         {
           "number": 562,
           "line1": "கடிதோச்சி மெல்ல எறிக நெடிதாக்கம்",
           "line2": "நீங்காமை வேண்டு பவர்.",
           "tamil": "கடிதோச்சி மெல்ல எறிக நெடிதாக்கம்\nநீங்காமை வேண்டு பவர்.",
-          "english": "A king who wants their prosperity to last should investigate strictly but punish gently."
+          "english": "A ruler who wants their prosperity to last should investigate strictly but punish gently."
         },
         {
           "number": 563,
           "line1": "வெருவந்த செய்தொழுகும் வெங்கோல னாயின்",
           "line2": "ஒருவந்தம் ஒல்லைக் கெடும்.",
           "tamil": "வெருவந்த செய்தொழுகும் வெங்கோல னாயின்\nஒருவந்தம் ஒல்லைக் கெடும்.",
-          "english": "A king who rules through fear is certain to come to ruin, and quickly."
+          "english": "A ruler who governs through fear is certain to come to ruin, and quickly."
         },
         {
           "number": 564,
           "line1": "இறைகடியன் என்றுரைக்கும் இன்னாச்சொல் வேந்தன்",
           "line2": "உறைகடுகி ஒல்லைக் கெடும்.",
           "tamil": "இறைகடியன் என்றுரைக்கும் இன்னாச்சொல் வேந்தன்\nஉறைகடுகி ஒல்லைக் கெடும்.",
-          "english": "A king known as cruel perishes quickly, his own life cut short."
+          "english": "A ruler known as cruel perishes quickly, their own life cut short."
         },
         {
           "number": 565,
           "line1": "அருஞ்செவ்வி இன்னா முகத்தான் பெருஞ்செல்வம்",
           "line2": "பேஎய்கண் டன்னது உடைத்து.",
           "tamil": "அருஞ்செவ்வி இன்னா முகத்தான் பெருஞ்செல்வம்\nபேஎய்கண் டன்னது உடைத்து.",
-          "english": "Wealth gained by a king who is unapproachable and stern looks no different from wealth gained by a devil."
+          "english": "Wealth gained by a ruler who is unapproachable and stern looks no different from wealth gained by a devil."
         },
         {
           "number": 566,
           "line1": "கடுஞ்சொல்லன் கண்ணிலன் ஆயின் நெடுஞ்செல்வம்",
           "line2": "நீடின்றி ஆங்கே கெடும்.",
           "tamil": "கடுஞ்சொல்லன் கண்ணிலன் ஆயின் நெடுஞ்செல்வம்\nநீடின்றி ஆங்கே கெடும்.",
-          "english": "A king with harsh words and unkind eyes will see his abundant wealth vanish instantly rather than last."
+          "english": "A ruler with harsh words and unkind eyes will see their abundant wealth vanish instantly rather than last."
         },
         {
           "number": 567,
           "line1": "கடுமொழியும் கையிகந்த தண்டமும் வேந்தன்",
           "line2": "அடுமுரண் தேய்க்கும் அரம்.",
           "tamil": "கடுமொழியும் கையிகந்த தண்டமும் வேந்தன்\nஅடுமுரண் தேய்க்கும் அரம்.",
-          "english": "Harsh words and excessive punishment quietly file away the very power a king needs to defeat his enemies."
+          "english": "Harsh words and excessive punishment quietly file away the very power a ruler needs to defeat their enemies."
         },
         {
           "number": 568,
@@ -4350,7 +4350,7 @@
           "line1": "கல்லார்ப் பிணிக்கும் கடுங்கோல் அதுவல்லது",
           "line2": "இல்லை நிலக்குப் பொறை.",
           "tamil": "கல்லார்ப் பிணிக்கும் கடுங்கோல் அதுவல்லது\nஇல்லை நிலக்குப் பொறை.",
-          "english": "The earth carries no heavier burden than the ignorant men a cruel ruler gathers to carry out his misdeeds."
+          "english": "The earth carries no heavier burden than the ignorant men a cruel ruler gathers — to carry out their misdeeds."
         }
       ]
     },
@@ -4415,7 +4415,7 @@
           "line1": "கருமம் சிதையாமல் கண்ணோட வல்லார்க்கு",
           "line2": "உரிமை உடைத்திவ் வுலகு.",
           "tamil": "கருமம் சிதையாமல் கண்ணோட வல்லார்க்கு\nஉரிமை உடைத்திவ் வுலகு.",
-          "english": "The world belongs to kings who can show kindness without ever compromising the fair administration of justice."
+          "english": "The world belongs to rulers who can show kindness without ever compromising the fair administration of justice."
         },
         {
           "number": 579,
@@ -4445,28 +4445,28 @@
           "line1": "ஒற்றும் உரைசான்ற நூலும் இவையிரண்டும்",
           "line2": "தெற்றென்க மன்னவன் கண்.",
           "tamil": "ஒற்றும் உரைசான்ற நூலும் இவையிரண்டும்\nதெற்றென்க மன்னவன் கண்.",
-          "english": "A king should treat two things as their eyes: a trusted spy and a universally respected book of law."
+          "english": "A ruler should treat two things as their eyes: a trusted spy and a universally respected book of law."
         },
         {
           "number": 582,
           "line1": "எல்லார்க்கும் எல்லாம் நிகழ்பவை எஞ்ஞான்றும்",
           "line2": "வல்லறிதல் வேந்தன் தொழில்.",
           "tamil": "எல்லார்க்கும் எல்லாம் நிகழ்பவை எஞ்ஞான்றும்\nவல்லறிதல் வேந்தன் தொழில்.",
-          "english": "Knowing what happens to everyone, at all times, without delay — that is a king's duty."
+          "english": "Knowing what happens to everyone, at all times, without delay — that is a ruler's duty."
         },
         {
           "number": 583,
           "line1": "ஒற்றினான் ஒற்றிப் பொருள்தெரியா மன்னவன்",
           "line2": "கொற்றங் கொளக்கிடந்தது இல்.",
           "tamil": "ஒற்றினான் ஒற்றிப் பொருள்தெரியா மன்னவன்\nகொற்றங் கொளக்கிடந்தது இல்.",
-          "english": "A king who doesn't understand the value of a spy's discoveries has no real path to conquest."
+          "english": "A ruler who doesn't understand the value of a spy's discoveries has no real path to conquest."
         },
         {
           "number": 584,
           "line1": "வினைசெய்வார் தம்சுற்றம் வேண்டாதார் என்றாங்கு",
           "line2": "அனைவரையும் ஆராய்வது ஒற்று.",
           "tamil": "வினைசெய்வார் தம்சுற்றம் வேண்டாதார் என்றாங்கு\nஅனைவரையும் ஆராய்வது ஒற்று.",
-          "english": "A true spy watches everyone equally — the king's own employees, his relatives, and his enemies alike."
+          "english": "A true spy watches everyone equally — the ruler's own employees, their relatives, and their enemies alike."
         },
         {
           "number": 585,
@@ -4494,21 +4494,21 @@
           "line1": "ஒற்றொற்றித் தந்த பொருளையும் மற்றுமோர்",
           "line2": "ஒற்றினால் ஒற்றிக் கொளல்.",
           "tamil": "ஒற்றொற்றித் தந்த பொருளையும் மற்றுமோர்\nஒற்றினால் ஒற்றிக் கொளல்.",
-          "english": "A king should never accept a spy's report until a second spy has independently confirmed it."
+          "english": "A ruler should never accept a spy's report until a second spy has independently confirmed it."
         },
         {
           "number": 589,
           "line1": "ஒற்றெற் றுணராமை ஆள்க உடன்மூவர்",
           "line2": "சொற்றொக்க தேறப் படும்.",
           "tamil": "ஒற்றெற் றுணராமை ஆள்க உடன்மூவர்\nசொற்றொக்க தேறப் படும்.",
-          "english": "A king should employ spies who don't know about each other, and trust information only once three of them independently agree."
+          "english": "A ruler should employ spies who don't know about each other, and trust information only once three of them independently agree."
         },
         {
           "number": 590,
           "line1": "சிறப்பறிய ஒற்றின்கண் செய்யற்க செய்யின்",
           "line2": "புறப்படுத்தான் ஆகும் மறை.",
           "tamil": "சிறப்பறிய ஒற்றின்கண் செய்யற்க செய்யின்\nபுறப்படுத்தான் ஆகும் மறை.",
-          "english": "A king should never publicly reward a spy — doing so gives away their own secret."
+          "english": "A ruler should never publicly reward a spy — doing so gives away their own secret."
         }
       ]
     },
@@ -4578,8 +4578,8 @@
         {
           "number": 599,
           "line1": "பரியது கூர்ங்கோட்டது ஆயினும் யானை",
-          "line2": "஦வ்ருஉம் புலிதாக் குறின்.",
-          "tamil": "பரியது கூர்ங்கோட்டது ஆயினும் யானை\n஦வ்ருஉம் புலிதாக் குறின்.",
+          "line2": "வெரூஉம் புலிதாக் குறின்.",
+          "tamil": "பரியது கூர்ங்கோட்டது ஆயினும் யானை\nவெரூஉம் புலிதாக் குறின்.",
           "english": "Even a massive elephant with sharp tusks still fears a tiger's attack."
         },
         {
@@ -4638,7 +4638,7 @@
           "line1": "படியுடையார் பற்றமைந்தக் கண்ணும் மடியுடையார்",
           "line2": "மாண்பயன் எய்தல் அரிது.",
           "tamil": "படியுடையார் பற்றமைந்தக் கண்ணும் மடியுடையார்\nமாண்பயன் எய்தல் அரிது.",
-          "english": "Even with the riches of a world-ruling king, the idle rarely manage to gain any real benefit from it."
+          "english": "Even with the riches of a world-ruling sovereign, the idle rarely manage to gain any real benefit from it."
         },
         {
           "number": 607,
@@ -4666,7 +4666,7 @@
           "line1": "மடியிலா மன்னவன் எய்தும் அடியளந்தான்",
           "line2": "தாஅய தெல்லாம் ஒருங்கு.",
           "tamil": "மடியிலா மன்னவன் எய்தும் அடியளந்தான்\nதாஅய தெல்லாம் ஒருங்கு.",
-          "english": "A king who never gives in to idleness can come to possess the entire earth once spanned by Vishnu's own stride."
+          "english": "A ruler who never gives in to idleness can come to possess the entire earth once spanned by Vishnu's own stride."
         }
       ]
     },
@@ -4768,7 +4768,7 @@
           "line1": "வெள்ளத் தனைய இடும்பை அறிவுடையான்",
           "line2": "உள்ளத்தின் உள்ளக் கெடும்.",
           "tamil": "வெள்ளத் தனைய இடும்பை அறிவுடையான்\nஉள்ளத்தின் உள்ளக் கெடும்.",
-          "english": "A flood of troubles can be overcome by the same courageous thinking the wise hold onto even in sorrow."
+          "english": "A flood of troubles can be overcome — by the same courageous thinking the wise hold onto even in sorrow."
         },
         {
           "number": 623,
@@ -4868,7 +4868,7 @@
           "line1": "அறனறிந்து ஆன்றமைந்த சொல்லான்எஞ் ஞான்றுந்",
           "line2": "திறனறிந்தான் தேர்ச்சித் துணை.",
           "tamil": "அறனறிந்து ஆன்றமைந்த சொல்லான்எஞ் ஞான்றுந்\nதிறனறிந்தான் தேர்ச்சித் துணை.",
-          "english": "A king's best helper understands his duties, applies deep learning to give full advice, and always knows the best way forward."
+          "english": "A ruler's best helper understands their duties, applies deep learning to give full advice, and always knows the best way forward."
         },
         {
           "number": 636,
@@ -4889,14 +4889,14 @@
           "line1": "அறிகொன்று அறியான் எனினும் உறுதி",
           "line2": "உழையிருந்தான் கூறல் கடன்.",
           "tamil": "அறிகொன்று அறியான் எனினும் உறுதி\nஉழையிருந்தான் கூறல் கடன்.",
-          "english": "Even if the king himself is utterly ignorant, it remains the minister's duty to give him sound advice."
+          "english": "Even if a ruler is utterly ignorant, it remains the minister's duty to give them sound advice."
         },
         {
           "number": 639,
           "line1": "பழுதெண்ணும் மந்திரியின் பக்கததுள் தெவ்வோர்",
           "line2": "எழுபது கோடி உறும்.",
           "tamil": "பழுதெண்ணும் மந்திரியின் பக்கததுள் தெவ்வோர்\nஎழுபது கோடி உறும்.",
-          "english": "A king is far safer surrounded by millions of enemies than by a single minister secretly plotting his ruin."
+          "english": "A ruler is far safer surrounded by millions of enemies than by a single minister secretly plotting their ruin."
         },
         {
           "number": 640,
@@ -4933,7 +4933,7 @@
           "line1": "கேட்டார்ப் பிணிக்கும் தகையவாய்க் கேளாரும்",
           "line2": "வேட்ப மொழிவதாம் சொல்.",
           "tamil": "கேட்டார்ப் பிணிக்கும் தகையவாய்க் கேளாரும்\nவேட்ப மொழிவதாம் சொல்.",
-          "english": "A minister's speech should bind friends ever closer while making even enemies wish for his friendship."
+          "english": "A minister's speech should bind friends ever closer while making even enemies wish for their friendship."
         },
         {
           "number": 644,
@@ -4954,7 +4954,7 @@
           "line1": "வேட்பத்தாஞ் சொல்லிப் பிறர்சொல் பயன்கோடல்",
           "line2": "மாட்சியின் மாசற்றார் கோள்.",
           "tamil": "வேட்பத்தாஞ் சொல்லிப் பிறர்சொல் பயன்கோடல்\nமாட்சியின் மாசற்றார் கோள்.",
-          "english": "Skilled diplomats agree a minister should speak so listeners crave more, while also grasping fully whatever he himself is told."
+          "english": "Skilled diplomats agree a minister should speak so listeners crave more, while also grasping fully whatever they themselves are told."
         },
         {
           "number": 647,
@@ -5026,14 +5026,14 @@
           "line1": "எற்றென்று இரங்குவ செய்யற்க செய்வானேல்",
           "line2": "மற்றன்ன செய்யாமை நன்று.",
           "tamil": "எற்றென்று இரங்குவ செய்யற்க செய்வானேல்\nமற்றன்ன செய்யாமை நன்று.",
-          "english": "A minister should never act in ways he'd later regret, asking 'what have I done.' — though once it's done, regret changes nothing."
+          "english": "A minister should never act in ways they'd later regret, asking 'what have I done?' — though once it's done, regret changes nothing."
         },
         {
           "number": 656,
           "line1": "ஈன்றாள் பசிகாண்பான் ஆயினுஞ் செய்யற்க",
           "line2": "சான்றோர் பழிக்கும் வினை.",
           "tamil": "ஈன்றாள் பசிகாண்பான் ஆயினுஞ் செய்யற்க\nசான்றோர் பழிக்கும் வினை.",
-          "english": "Even watching his own mother starve, a minister should never resort to an act the wise would hold in contempt."
+          "english": "Even watching their own mother starve, a minister should never resort to an act the wise would hold in contempt."
         },
         {
           "number": 657,
@@ -5061,7 +5061,7 @@
           "line1": "சலத்தால் பொருள்செய்தே மார்த்தல் பசுமண்",
           "line2": "கலத்துள்நீர் பெய்திரீஇ யற்று.",
           "tamil": "சலத்தால் பொருள்செய்தே மார்த்தல் பசுமண்\nகலத்துள்நீர் பெய்திரீஇ யற்று.",
-          "english": "Protecting a king with wealth gained through foul means is like trying to preserve a clay pot by filling it with water."
+          "english": "Protecting a ruler with wealth gained through foul means is like trying to preserve a clay pot by filling it with water."
         }
       ]
     },
@@ -5105,7 +5105,7 @@
           "line1": "வீறெய்தி மாண்டார் வினைத்திட்பம் வேந்தன்கண்",
           "line2": "ஊறெய்தி உள்ளப் படும்.",
           "tamil": "வீறெய்தி மாண்டார் வினைத்திட்பம் வேந்தன்கண்\nஊறெய்தி உள்ளப் படும்.",
-          "english": "The firm resolve of those who've earned greatness through wise counsel earns everyone's esteem once it's fulfilled through the king himself."
+          "english": "The firm resolve of those who have earned their greatness is so admired that even the ruler holds it in the highest esteem."
         },
         {
           "number": 666,
@@ -5249,7 +5249,7 @@
           "line1": "நூலாருள் நூல்வல்லன் ஆகுதல் வேலாருள்",
           "line2": "வென்றி வினையுரைப்பான் பண்பு.",
           "tamil": "நூலாருள் நூல்வல்லன் ஆகுதல் வேலாருள்\nவென்றி வினையுரைப்பான் பண்பு.",
-          "english": "A true speaker holds real political power even among the most ethically learned people."
+          "english": "An ambassador's quality is to be the most learned among the learned — and to carry a message that wins, even before the most formidable audience."
         },
         {
           "number": 684,
@@ -5263,7 +5263,7 @@
           "line1": "தொகச்சொல்லித் தூவாத நீக்கி நகச்சொல்லி",
           "line2": "நன்றி பயப்பதாந் தூது.",
           "tamil": "தொகச்சொல்லித் தூவாத நீக்கி நகச்சொல்லி\nநன்றி பயப்பதாந் தூது.",
-          "english": "A true ambassador speaks briefly before foreign rulers, avoids harshness, brings a smile to their faces, and benefits his own sovereign in doing so."
+          "english": "A true ambassador speaks briefly before foreign rulers, avoids harshness, brings a smile to their faces, and benefits their own sovereign in doing so."
         },
         {
           "number": 686,
@@ -5277,7 +5277,7 @@
           "line1": "கடனறிந்து காலங் கருதி இடனறிந்து",
           "line2": "எண்ணி உரைப்பான் தலை.",
           "tamil": "கடனறிந்து காலங் கருதி இடனறிந்து\nஎண்ணி உரைப்பான் தலை.",
-          "english": "The finest ambassador understands proper etiquette before foreign princes, finds the right occasion and place, and delivers his message only after careful thought."
+          "english": "The finest ambassador understands proper etiquette before foreign rulers, finds the right occasion and place, and delivers their message only after careful thought."
         },
         {
           "number": 688,
@@ -5289,16 +5289,16 @@
         {
           "number": 689,
           "line1": "விடுமாற்றம் வேந்தர்க்கு உரைப்பான் வடுமாற்றம்",
-          "line2": "வாய்சேரா வன்கணவன்.",
-          "tamil": "விடுமாற்றம் வேந்தர்க்கு உரைப்பான் வடுமாற்றம்\nவாய்சேரா வன்கணவன்.",
-          "english": "Only someone disciplined enough never to slip and say anything discrediting his sovereign is fit to deliver that sovereign's reply."
+          "line2": "வாய்சேரா வன்க ணவன்.",
+          "tamil": "விடுமாற்றம் வேந்தர்க்கு உரைப்பான் வடுமாற்றம்\nவாய்சேரா வன்க ணவன்.",
+          "english": "Only someone disciplined enough never to slip and say anything discrediting their sovereign is fit to deliver that sovereign's reply."
         },
         {
           "number": 690,
           "line1": "இறுதி பயப்பினும் எஞ்சாது இறைவற்கு",
           "line2": "உறுதி பயப்பதாம் தூது.",
           "tamil": "இறுதி பயப்பினும் எஞ்சாது இறைவற்கு\nஉறுதி பயப்பதாம் தூது.",
-          "english": "A true ambassador fearlessly pursues his sovereign's interests, even if delivering the message costs him his own life."
+          "english": "A true ambassador fearlessly pursues their sovereign's interests, even if delivering the message costs them their own life."
         }
       ]
     },
@@ -5314,7 +5314,7 @@
           "line1": "அகலாது அணுகாது தீக்காய்வார் போல்க",
           "line2": "இகல்வேந்தர்ச் சேர்ந்தொழுகு வார்.",
           "tamil": "அகலாது அணுகாது தீக்காய்வார் போல்க\nஇகல்வேந்தர்ச் சேர்ந்தொழுகு வார்.",
-          "english": "This is how anyone living under the roof of a powerful king should conduct themselves."
+          "english": "Those who serve close to a powerful ruler should be like someone warming by a fire — never too far to feel its warmth, never so close as to get burned."
         },
         {
           "number": 692,
@@ -5328,28 +5328,28 @@
           "line1": "போற்றின் அரியவை போற்றல் கடுத்தபின்",
           "line2": "தேற்றுதல் யார்க்கும் அரிது.",
           "tamil": "போற்றின் அரியவை போற்றல் கடுத்தபின்\nதேற்றுதல் யார்க்கும் அரிது.",
-          "english": "Ministers who want to protect themselves should avoid serious errors — once a king's suspicion is roused, nothing can undo it."
+          "english": "Ministers who want to protect themselves should avoid serious errors — once a ruler's suspicion is roused, nothing can undo it."
         },
         {
           "number": 694,
           "line1": "செவிச்சொல்லும் சேர்ந்த நகையும் அவித்தொழுகல்",
           "line2": "ஆன்ற பெரியா ரகத்து.",
           "tamil": "செவிச்சொல்லும் சேர்ந்த நகையும் அவித்தொழுகல்\nஆன்ற பெரியா ரகத்து.",
-          "english": "In the king's presence, ministers should never whisper to or smile knowingly at others."
+          "english": "In the ruler's presence, ministers should never whisper to or smile knowingly at others."
         },
         {
           "number": 695,
           "line1": "எப்பொருளும் ஓரார் தொடரார்மற் றப்பொருளை",
           "line2": "விட்டக்கால் கேட்க மறை.",
           "tamil": "எப்பொருளும் ஓரார் தொடரார்மற் றப்பொருளை\nவிட்டக்கால் கேட்க மறை.",
-          "english": "When the king is in private counsel with others, ministers should neither eavesdrop nor pry — only listen once it's openly shared."
+          "english": "When the ruler is in private counsel with others, ministers should neither eavesdrop nor pry — only listen once it's openly shared."
         },
         {
           "number": 696,
           "line1": "குறிப்பறிந்து காலங் கருதி வெறுப்பில",
           "line2": "வேண்டுப வேட்பச் சொலல்.",
           "tamil": "குறிப்பறிந்து காலங் கருதி வெறுப்பில\nவேண்டுப வேட்பச் சொலல்.",
-          "english": "A minister should read the king's mood, choose the right moment, and pleasantly suggest only what's desirable, never anything disagreeable."
+          "english": "A minister should read the ruler's mood, choose the right moment, and pleasantly suggest only what's desirable, never anything disagreeable."
         },
         {
           "number": 697,
@@ -5363,7 +5363,7 @@
           "line1": "இளையர் இனமுறையர் என்றிகழார் நின்ற",
           "line2": "ஒளியோடு ஒழுகப் படும்.",
           "tamil": "இளையர் இனமுறையர் என்றிகழார் நின்ற\nஒளியோடு ஒழுகப் படும்.",
-          "english": "Ministers should honor the authority a king carries and never belittle him by thinking, 'he's younger than me, or family.'"
+          "english": "Ministers should honor the authority a ruler carries and never belittle them by thinking, 'they're younger than me, or family.'"
         },
         {
           "number": 699,
@@ -5377,7 +5377,7 @@
           "line1": "பழையம் எனக்கருதிப் பண்பல்ல செய்யும்",
           "line2": "கெழுதகைமை கேடு தரும்.",
           "tamil": "பழையம் எனக்கருதிப் பண்பல்ல செய்யும்\nகெழுதகைமை கேடு தரும்.",
-          "english": "A minister who excuses unbecoming behavior because of his long familiarity with the king is guaranteeing his own ruin."
+          "english": "A minister who excuses unbecoming behavior because of their long familiarity with the ruler is guaranteeing their own ruin."
         }
       ]
     },
@@ -5393,7 +5393,7 @@
           "line1": "கூறாமை நோக்கக் குறிப்பறிவான் எஞ்ஞான்றும்",
           "line2": "மாறாநீர் வையக் கணி.",
           "tamil": "கூறாமை நோக்கக் குறிப்பறிவான் எஞ்ஞான்றும்\nமாறாநீர் வையக் கணி.",
-          "english": "A minister who can read the king's mind from a glance alone becomes a lasting jewel to the whole sea-bound world."
+          "english": "A minister who can read the ruler's mind from a glance alone becomes a lasting jewel to the whole sea-bound world."
         },
         {
           "number": 702,
@@ -5407,7 +5407,7 @@
           "line1": "குறிப்பிற் குறிப்புணர் வாரை உறுப்பினுள்",
           "line2": "யாது கொடுத்தும் கொளல்.",
           "tamil": "குறிப்பிற் குறிப்புணர் வாரை உறுப்பினுள்\nயாது கொடுத்தும் கொளல்.",
-          "english": "A king should give freely of whatever's asked, just to keep close anyone who can read another's mind through their own."
+          "english": "A ruler should give freely of whatever's asked, just to keep close anyone who can read another's mind through their own."
         },
         {
           "number": 704,
@@ -5442,14 +5442,14 @@
           "line1": "முகம்நோக்கி நிற்க அமையும் அகம்நோக்கி",
           "line2": "உற்ற துணர்வார்ப் பெறின்.",
           "tamil": "முகம்நோக்கி நிற்க அமையும் அகம்நோக்கி\nஉற்ற துணர்வார்ப் பெறின்.",
-          "english": "A king blessed with advisors who read his mind at a glance need only look at their faces to feel understood."
+          "english": "A ruler blessed with advisors who read their mind at a glance need only look at their faces to feel understood."
         },
         {
           "number": 709,
           "line1": "பகைமையும் கேண்மையும் கண்ணுரைக்கும் கண்ணின்",
           "line2": "வகைமை உணர்வார்ப் பெறின்.",
           "tamil": "பகைமையும் கேண்மையும் கண்ணுரைக்கும் கண்ணின்\nவகைமை உணர்வார்ப் பெறின்.",
-          "english": "A king with ministers skilled at reading eyes will have foreign rulers' own eyes betray whether they hold hatred or friendship."
+          "english": "A ruler with ministers skilled at reading eyes will have foreign rulers' own eyes betray whether they hold hatred or friendship."
         },
         {
           "number": 710,
@@ -5630,63 +5630,63 @@
           "line1": "தள்ளா விளையுளும் தக்காரும் தாழ்விலாச்",
           "line2": "செல்வரும் சேர்வது நாடு.",
           "tamil": "தள்ளா விளையுளும் தக்காரும் தாழ்விலாச்\nசெல்வரும் சேர்வது நாடு.",
-          "english": "A true kingdom is one with reliable harvests, virtuous people, and wealth that endures."
+          "english": "A true realm is one with reliable harvests, virtuous people, and wealth that endures."
         },
         {
           "number": 732,
           "line1": "பெரும்பொருளால் பெட்டக்க தாகி அருங்கேட்டால்",
           "line2": "ஆற்ற விளைவது நாடு.",
           "tamil": "பெரும்பொருளால் பெட்டக்க தாகி அருங்கேட்டால்\nஆற்ற விளைவது நாடு.",
-          "english": "A true kingdom is one coveted for its immense wealth, growing steadily in prosperity, free from anything that could destroy it."
+          "english": "A true realm is one coveted for its immense wealth, growing steadily in prosperity, free from anything that could destroy it."
         },
         {
           "number": 733,
           "line1": "பொறையொருங்கு மேல்வருங்கால் தாங்கி இறைவற்கு",
           "line2": "இறையொருங்கு நேர்வது நாடு.",
           "tamil": "பொறையொருங்கு மேல்வருங்கால் தாங்கி இறைவற்கு\nஇறையொருங்கு நேர்வது நாடு.",
-          "english": "A true kingdom can bear any pressure neighboring kingdoms place on it, while still paying its sovereign in full."
+          "english": "A true realm can bear any pressure neighboring realms place on it, while still paying its sovereign in full."
         },
         {
           "number": 734,
           "line1": "உறுபசியும் ஓவாப் பிணியும் செறுபகையும்",
           "line2": "சேரா தியல்வது நாடு.",
           "tamil": "உறுபசியும் ஓவாப் பிணியும் செறுபகையும்\nசேரா தியல்வது நாடு.",
-          "english": "A true kingdom stays free of severe famine, incurable epidemics, and destructive enemies."
+          "english": "A true realm stays free of severe famine, incurable epidemics, and destructive enemies."
         },
         {
           "number": 735,
           "line1": "பல்குழுவும் பாழ்செய்யும் உட்பகையும் வேந்தலைக்கும்",
           "line2": "கொல்குறும்பும் இல்லது நாடு.",
           "tamil": "பல்குழுவும் பாழ்செய்யும் உட்பகையும் வேந்தலைக்கும்\nகொல்குறும்பும் இல்லது நாடு.",
-          "english": "A true kingdom has no dangerous factions, no destructive internal enemies, and no violent groups threatening its ruler."
+          "english": "A true realm has no dangerous factions, no destructive internal enemies, and no violent groups threatening its ruler."
         },
         {
           "number": 736,
           "line1": "கேடறியாக் கெட்ட இடத்தும் வளங்குன்றா",
           "line2": "நாடென்ப நாட்டின் தலை.",
           "tamil": "கேடறியாக் கெட்ட இடத்தும் வளங்குன்றா\nநாடென்ப நாட்டின் தலை.",
-          "english": "The wise say the best kingdom suffers no harm from enemies, and even if wounded, never loses its fruitfulness."
+          "english": "The wise say the best realm suffers no harm from enemies, and even if wounded, never loses its fruitfulness."
         },
         {
           "number": 737,
           "line1": "இருபுனலும் வாய்ந்த மலையும் வருபுனலும்",
           "line2": "வல்லரணும் நாட்டிற்கு உறுப்பு.",
           "tamil": "இருபுனலும் வாய்ந்த மலையும் வருபுனலும்\nவல்லரணும் நாட்டிற்கு உறுப்பு.",
-          "english": "A true kingdom is built on two sources of water, well-placed hills, and an indestructible fort."
+          "english": "A true realm is built on two sources of water, well-placed hills, and an indestructible fort."
         },
         {
           "number": 738,
           "line1": "பிணியின்மை செல்வம் விளைவின்பம் ஏமம்",
           "line2": "அணியென்ப நாட்டிவ் வைந்து.",
           "tamil": "பிணியின்மை செல்வம் விளைவின்பம் ஏமம்\nஅணியென்ப நாட்டிவ் வைந்து.",
-          "english": "Freedom from disease, wealth, abundant produce, happiness, and protection for its people — the wise call these five the true ornaments of a kingdom."
+          "english": "Freedom from disease, wealth, abundant produce, happiness, and protection for its people — the wise call these five the true ornaments of a realm."
         },
         {
           "number": 739,
           "line1": "நாடென்ப நாடா வளத்தன நாடல்ல",
           "line2": "நாட வளந்தரு நாடு.",
           "tamil": "நாடென்ப நாடா வளத்தன நாடல்ல\nநாட வளந்தரு நாடு.",
-          "english": "The wise say a true kingdom's wealth flows in naturally, while a lesser one's wealth comes only through heavy labor."
+          "english": "The wise say a true realm's wealth flows in naturally, while a lesser one's wealth comes only through heavy labor."
         },
         {
           "number": 740,
@@ -5823,7 +5823,7 @@
           "line1": "உறுபொருளும் உல்கு பொருளும்தன் ஒன்னார்த்",
           "line2": "தெறுபொருளும் வேந்தன் பொருள்.",
           "tamil": "உறுபொருளும் உல்கு பொருளும்தன் ஒன்னார்த்\nதெறுபொருளும் வேந்தன் பொருள்.",
-          "english": "A king's true revenue is the spoils taken from defeated enemies."
+          "english": "A ruler's wealth comes from tribute, tariffs, and the spoils seized from enemies."
         },
         {
           "number": 757,
@@ -5867,14 +5867,14 @@
           "line1": "உறுப்பமைந்து ஊறஞ்சா வெல்படை வேந்தன்",
           "line2": "வெறுக்கையுள் எல்லாம் தலை.",
           "tamil": "உறுப்பமைந்து ஊறஞ்சா வெல்படை வேந்தன்\nவெறுக்கையுள் எல்லாம் தலை.",
-          "english": "A complete army that conquers without fear of wounds is a king's greatest wealth."
+          "english": "A complete army that conquers without fear of wounds is a ruler's greatest wealth."
         },
         {
           "number": 762,
           "line1": "உலைவிடத்து ஊறஞ்சா வன்கண் தொலைவிடத்துத்",
           "line2": "தொல்படைக் கல்லால் அரிது.",
           "tamil": "உலைவிடத்து ஊறஞ்சா வன்கண் தொலைவிடத்துத்\nதொல்படைக் கல்லால் அரிது.",
-          "english": "Only a long-standing army has the courage to stand by its king even in defeat, fearless of wounds and undeterred by its own dwindling numbers."
+          "english": "Only a long-standing army has the courage to stand by its sovereign even in defeat, fearless of wounds and undeterred by its own dwindling numbers."
         },
         {
           "number": 763,
@@ -5946,7 +5946,7 @@
           "line1": "என்னைமுன் நில்லன்மின் தெவ்விர் பலரென்னை",
           "line2": "முன்நின்று கல்நின் றவர்.",
           "tamil": "என்னைமுன் நில்லன்மின் தெவ்விர் பலரென்னை\nமுன்நின்று கல்நின் றவர்.",
-          "english": "Enemies, don't stand before my leader — many who tried that now stand frozen as statues."
+          "english": "Enemies, don't dare stand before me — many who faced me now stand frozen as stone."
         },
         {
           "number": 772,
@@ -5981,7 +5981,7 @@
           "line1": "விழுப்புண் படாதநாள் எல்லாம் வழுக்கினுள்",
           "line2": "வைக்கும்தன் நாளை எடுத்து.",
           "tamil": "விழுப்புண் படாதநாள் எல்லாம் வழுக்கினுள்\nவைக்கும்தன் நாளை எடுத்து.",
-          "english": "A true hero counts as wasted any day that didn't leave him with serious wounds."
+          "english": "A true hero counts as wasted any day that didn't leave them with serious wounds."
         },
         {
           "number": 777,
@@ -5995,7 +5995,7 @@
           "line1": "உறின்உயிர் அஞ்சா மறவர் இறைவன்",
           "line2": "செறினும் சீர்குன்றல் இலர்.",
           "tamil": "உறின்உயிர் அஞ்சா மறவர் இறைவன்\nசெறினும் சீர்குன்றல் இலர்.",
-          "english": "Heroes unafraid of dying in battle won't cool their passion for it, even if their king forbids them from fighting."
+          "english": "Heroes unafraid of dying in battle won't cool their passion for it, even if their sovereign forbids them from fighting."
         },
         {
           "number": 779,
@@ -6025,7 +6025,7 @@
           "line1": "செயற்கரிய யாவுள நட்பின் அதுபோல்",
           "line2": "வினைக்கரிய யாவுள காப்பு.",
           "tamil": "செயற்கரிய யாவுள நட்பின் அதுபோல்\nவினைக்கரிய யாவுள காப்பு.",
-          "english": "What surer defense exists against everything an enemy can do?"
+          "english": "Nothing is harder to win than true friendship — and nothing acts as a surer shield against everything an enemy can do."
         },
         {
           "number": 782,
@@ -6397,7 +6397,7 @@
           "line1": "மிகச்செய்து தம்மெள்ளு வாரை நகச்செய்து",
           "line2": "நட்பினுள் சாப்புல்லற் பாற்று.",
           "tamil": "மிகச்செய்து தம்மெள்ளு வாரை நகச்செய்து\nநட்பினுள் சாப்புல்லற் பாற்று.",
-          "english": "Kings should respond to enemies who fake friendship with the same trick — show great affection outwardly while letting it die inside."
+          "english": "A ruler should respond to enemies who fake friendship with the same trick — show great affection outwardly while letting it die inside."
         },
         {
           "number": 830,
@@ -6576,8 +6576,8 @@
         {
           "number": 851,
           "line1": "இகலென்ப எல்லா உயிர்க்கும் பகலென்னும்",
-          "line2": "பண்பின்மை பார஧க்கும் நோய்.",
-          "tamil": "இகலென்ப எல்லா உயிர்க்கும் பகலென்னும்\nபண்பின்மை பார஧க்கும் நோய்.",
+          "line2": "பண்பின்மை பாரிக்கும் நோய்.",
+          "tamil": "இகலென்ப எல்லா உயிர்க்கும் பகலென்னும்\nபண்பின்மை பாரிக்கும் நோய்.",
           "english": "The wise call it hatred: the disease that breeds division among all living beings."
         },
         {
@@ -6720,7 +6720,7 @@
           "line1": "கல்லான் வெகுளும் சிறுபொருள் எஞ்ஞான்றும்",
           "line2": "ஒல்லானை ஒல்லா தொளி.",
           "tamil": "கல்லான் வெகுளும் சிறுபொருள் எஞ்ஞான்றும்\nஒல்லானை ஒல்லா தொளி.",
-          "english": "No one earns true fame's light without even the modest credit of having faced an unlearned opponent."
+          "english": "Even defeating someone unlearned and quick to anger earns a glory that never fades."
         }
       ]
     },
@@ -6757,7 +6757,7 @@
           "line1": "பகைநட்பாக் கொண்டொழுகும் பண்புடை யாளன்",
           "line2": "தகைமைக்கண் தங்கிற்று உலகு.",
           "tamil": "பகைநட்பாக் கொண்டொழுகும் பண்புடை யாளன்\nதகைமைக்கண் தங்கிற்று உலகு.",
-          "english": "A truly worthy ruler can turn even his enemies into friends."
+          "english": "A truly worthy ruler can turn even their enemies into friends."
         },
         {
           "number": 875,
@@ -6843,7 +6843,7 @@
           "line1": "உறல்முறையான் உட்பகை தோன்றின் இறல்முறையான்",
           "line2": "ஏதம் பலவும் தரும்.",
           "tamil": "உறல்முறையான் உட்பகை தோன்றின் இறல்முறையான்\nஏதம் பலவும் தரும்.",
-          "english": "When hatred takes root inside a king's own family, it paves the way for many fatal crimes."
+          "english": "When hatred takes root inside a ruler's own family, it paves the way for many fatal crimes."
         },
         {
           "number": 886,
@@ -6950,7 +6950,7 @@
           "line1": "ஏந்திய கொள்கையார் சீறின் இடைமுரிந்து",
           "line2": "வேந்தனும் வேந்து கெடும்.",
           "tamil": "ஏந்திய கொள்கையார் சீறின் இடைமுரிந்து\nவேந்தனும் வேந்து கெடும்.",
-          "english": "If those who stand by high principles are provoked to anger, even the mightiest ruler and their kingdom will snap and fall."
+          "english": "If those who stand by high principles are provoked to anger, even the mightiest ruler and their realm will snap and fall."
         },
         {
           "number": 900,
@@ -7020,8 +7020,8 @@
         {
           "number": 908,
           "line1": "நட்டார் குறைமுடியார் நன்றாற்றார் நன்னுதலாள்",
-          "line2": "பெட் டாங்கு ஒழுகு பவர்.",
-          "tamil": "நட்டார் குறைமுடியார் நன்றாற்றார் நன்னுதலாள்\nபெட் டாங்கு ஒழுகு பவர்.",
+          "line2": "பெட்டாங்கு ஒழுகு பவர்.",
+          "tamil": "நட்டார் குறைமுடியார் நன்றாற்றார் நன்னுதலாள்\nபெட்டாங்கு ஒழுகு பவர்.",
           "english": "A man who only ever yields to his wife's wishes will neither help his friends in need nor perform any virtuous deed."
         },
         {
@@ -7101,7 +7101,7 @@
           "line1": "களித்தறியேன் என்பது கைவிடுக நெஞ்சத்து",
           "line2": "ஒளித்ததூஉம் ஆங்கே மிகும்.",
           "tamil": "களித்தறியேன் என்பது கைவிடுக நெஞ்சத்து\nஒளித்ததூஉம் ஆங்கே மிகும்.",
-          "english": "A drunkard should stop claiming, 'I never drink.' — the moment he drinks again, he exposes every past attempt to hide it."
+          "english": "A drunkard should stop claiming, 'I never drink' — the moment they drink again, they expose every past attempt to hide it."
         },
         {
           "number": 929,
@@ -7145,7 +7145,7 @@
           "line1": "உருளாயம் ஓவாது கூறின் பொருளாயம்",
           "line2": "போஒய்ப் புறமே படும்.",
           "tamil": "உருளாயம் ஓவாது கூறின் பொருளாயம்\nபோஒய்ப் புறமே படும்.",
-          "english": "A king endlessly chasing the dice in hopes of profit will watch his wealth and resources slip away into other hands."
+          "english": "Anyone who endlessly chases the income of dice will watch their real wealth slip away into other hands."
         },
         {
           "number": 934,
@@ -7271,8 +7271,8 @@
         {
           "number": 950,
           "line1": "உற்றவன் தீர்ப்பான் மருந்துழைச் செல்வானென்று",
-          "line2": "அப்பால் நாற் கூற்றே மருந்து.",
-          "tamil": "உற்றவன் தீர்ப்பான் மருந்துழைச் செல்வானென்று\nஅப்பால் நாற் கூற்றே மருந்து.",
+          "line2": "அப்பால் நாற்கூற்றே மருந்து.",
+          "tamil": "உற்றவன் தீர்ப்பான் மருந்துழைச் செல்வானென்று\nஅப்பால் நாற்கூற்றே மருந்து.",
           "english": "Medicine rests on four pillars — patient, physician, medicine, and pharmacist — each with its own four finer details."
         }
       ]
@@ -7322,15 +7322,15 @@
         {
           "number": 956,
           "line1": "சலம்பற்றிச் சால்பில செய்யார்மா சற்ற",
-          "line2": "குலம்பற்றி வாழ்தும் என் பார்.",
-          "tamil": "சலம்பற்றிச் சால்பில செய்யார்மா சற்ற\nகுலம்பற்றி வாழ்தும் என் பார்.",
+          "line2": "குலம்பற்றி வாழ்தும்என் பார்.",
+          "tamil": "சலம்பற்றிச் சால்பில செய்யார்மா சற்ற\nகுலம்பற்றி வாழ்தும்என் பார்.",
           "english": "Those who want to keep their family's honor spotless will never act in ways that could tarnish it."
         },
         {
           "number": 957,
           "line1": "குடிப்பிறந்தார் கண்விளங்கும் குற்றம் விசும்பின்",
-          "line2": "மத஧க்கண் மறுப்போல் உயர்ந்து.",
-          "tamil": "குடிப்பிறந்தார் கண்விளங்கும் குற்றம் விசும்பின்\nமத஧க்கண் மறுப்போல் உயர்ந்து.",
+          "line2": "மதிக்கண் மறுப்போல் உயர்ந்து.",
+          "tamil": "குடிப்பிறந்தார் கண்விளங்கும் குற்றம் விசும்பின்\nமதிக்கண் மறுப்போல் உயர்ந்து.",
           "english": "A flaw stands out the same way dark spots stand out on the moon's bright, sublime face in the evening sky."
         },
         {
@@ -7480,8 +7480,8 @@
         {
           "number": 976,
           "line1": "சிறியார் உணர்ச்சியுள் இல்லை பெரியாரைப்",
-          "line2": "பேணிக் கொள் வேம் என்னும் நோக்கு.",
-          "tamil": "சிறியார் உணர்ச்சியுள் இல்லை பெரியாரைப்\nபேணிக் கொள் வேம் என்னும் நோக்கு.",
+          "line2": "பேணிக்கொள் வேம்என்னும் நோக்கு.",
+          "tamil": "சிறியார் உணர்ச்சியுள் இல்லை பெரியாரைப்\nபேணிக்கொள் வேம்என்னும் நோக்கு.",
           "english": "It's simply not in a base person's nature to seek out the company of the great or absorb their qualities."
         },
         {
@@ -7573,8 +7573,8 @@
         {
           "number": 988,
           "line1": "இன்மை ஒருவற்கு இளிவன்று சால்பென்னும்",
-          "line2": "திண்மை உண் டாகப் பெறின்.",
-          "tamil": "இன்மை ஒருவற்கு இளிவன்று சால்பென்னும்\nதிண்மை உண் டாகப் பெறின்.",
+          "line2": "திண்மைஉண் டாகப் பெறின்.",
+          "tamil": "இன்மை ஒருவற்கு இளிவன்று சால்பென்னும்\nதிண்மைஉண் டாகப் பெறின்.",
           "english": "Poverty is no disgrace at all for someone rich in good qualities."
         },
         {
@@ -7942,7 +7942,7 @@
           "line1": "பலகுடை நீழலும் தங்குடைக்கீழ்க் காண்பர்",
           "line2": "அலகுடை நீழ லவர்.",
           "tamil": "பலகுடை நீழலும் தங்குடைக்கீழ்க் காண்பர்\nஅலகுடை நீழ லவர்.",
-          "english": "Patriotic farmers want every other land brought under the rule of their own king."
+          "english": "Those who toil under the shade of the plow see all other canopies — even the king's — as sheltered beneath their own."
         },
         {
           "number": 1035,
@@ -8293,7 +8293,7 @@
           "line1": "உடுப்பதூஉம் உண்பதூஉம் காணின் பிறர்மேல்",
           "line2": "வடுக்காண வற்றாகும் கீழ்.",
           "tamil": "உடுப்பதூஉம் உண்பதூஉம் காணின் பிறர்மேல்\nவடுக்காண வற்றாகும் கீழ்.",
-          "english": "The base will spit out an ugly accusation against anyone they merely see enjoying a good meal."
+          "english": "The base, merely seeing others enjoy good clothing and a proper meal, can't resist finding fault with them."
         },
         {
           "number": 1080,

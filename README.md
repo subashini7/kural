@@ -14,7 +14,7 @@ A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets comp
 - Search by Tamil word, English phrase, or kural number
 - Deep-linkable URLs (`?kural=610`)
 - Per-kural audio playback (Tamil + English, read aloud)
-- **Play Randomly (1–630)** — shuffles all 610 available kurals and plays them in a fresh random order each time
+- **Play Randomly** — shuffles all available kurals and plays them in a fresh random order each time
 - Fully accessible (ARIA live regions, skip link, focus management)
 
 ## Translation Philosophy
@@ -41,7 +41,9 @@ Audio files are generated using **Azure Cognitive Services Text-to-Speech**:
 - **English**: `en-GB-SoniaNeural` (female) at −25% speed
 - Format: 24 kHz mono MP3
 
-Audio is available for kurals **1–630** (610 kurals; chapters under review are excluded). The script to regenerate audio is in `scripts/generate-audio.js` and requires an `.env` file with `AZURE_TTS_KEY` and `AZURE_TTS_REGION`.
+Audio is available for all **1,050 kurals** (1–1,080, excluding the three chapters under review). The script to regenerate audio is in `scripts/generate-audio.js` and requires an `.env` file with `AZURE_TTS_KEY` and `AZURE_TTS_REGION`.
+
+- **Pronunciation fixes**: The script applies SSML phoneme tags for English heteronyms that Azure mispronounces (e.g. *wound* as an injury is forced to "wuːnd"; *the letter A* uses `<say-as interpret-as="characters">` to avoid being read as the article). Em-dashes in English translations mark the Tamil couplet's line-break pivot so Azure's prosody model pauses in the right place.
 
 ## Sources
 
@@ -53,6 +55,19 @@ The Tamil couplets are sourced from [tk120404/thirukkural](https://github.com/tk
 
 Original modernised rendering written for this project, cross-checked against the Tamil source and reviewed for accuracy, inclusivity, gender neutrality, and plain-language clarity.
 
+## Tests
+
+The test suite uses Node's built-in `node:test` runner — no dependencies to install.
+
+```bash
+npm test
+```
+
+| File | What it covers |
+|---|---|
+| `tests/data.test.js` | `kurals.json` integrity — required fields, no duplicates, `tamil` matches `line1 + line2`, removed chapters absent, `meta.total_kurals` accurate, no invalid Tamil Unicode codepoints, 4+3 word structure per couplet |
+| `tests/ssml.test.js` | `escapeXml`, `addEmphasis`, and `buildSsml` — XML escaping, emphasis tagging, SSML structure |
+
 ## Project Structure
 
 ```
@@ -62,12 +77,12 @@ kural/
 │   ├── kurals.json         # Active kurals with Tamil, English, chapter, and section fields
 │   └── chapters_under_review.json  # Chapters temporarily removed pending translation review
 ├── audio/
-│   └── {number}.mp3        # Pre-generated TTS audio for kurals 1–630
-└── scripts/
-│    └── generate-audio.js   # Azure TTS generation script (requires .env)
-├── tests/
-│   └── data.test.js           # Unit tests (node:test, no dependencies)
-│   └── ssml.test.js           # Unit tests (node:test, no dependencies)
+│   └── {number}.mp3        # Pre-generated TTS audio for all kurals (excl. chapters under review)
+├── scripts/
+│   └── generate-audio.js   # Azure TTS generation script (requires .env)
+└── tests/
+    ├── data.test.js        # Data integrity tests
+    └── ssml.test.js        # SSML helper unit tests
 ```
 
 ## Coverage
@@ -79,4 +94,4 @@ kural/
 
 > **Note:** Three chapters (6, 15, 92) are currently in `data/chapters_under_review.json` and not displayed in the app. They are being reviewed for gendered framing before being reintroduced with updated translations.
 
-Audio playback is available for kurals 1–630 (610 kurals, skipping the chapters under review).
+Audio playback is available for all 1,050 kurals (1–1,080, skipping the three chapters under review).
