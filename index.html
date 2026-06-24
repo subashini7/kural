@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function(){var t=localStorage.getItem('theme'),d=t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.setAttribute('data-theme','dark');var s=[0.85,1,1.2],f=parseInt(localStorage.getItem('fontStep'),10);document.documentElement.style.setProperty('--font-scale',s[isNaN(f)||f<0||f>2?1:f]);})();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>திருக்குறள் · Thirukkural</title>
+  <meta name="description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://subashini7.github.io/kural/" />
+  <meta property="og:title"       content="திருக்குறள் · Thirukkural" />
+  <meta property="og:description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
+  <meta property="og:image"       content="https://subashini7.github.io/kural/screenshots/kural-ex.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="திருக்குறள் · Thirukkural" />
+  <meta name="twitter:description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
+  <meta name="twitter:image"       content="https://subashini7.github.io/kural/screenshots/kural-ex.png" />
+
+  <link rel="canonical" id="canonical-url" href="https://subashini7.github.io/kural/" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #f9f7f2;
+      --card:       #ffffff;
+      --border:     #e5e0d5;
+      --red:        #8b1a1a;
+      --green:      #1a4a2e;
+      --blue:       #1a2e52;
+      --text:       #1a1a1a;
+      --muted:      #6b6560;
+      --radius:     14px;
+      --font-scale: 1;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* ── Accessibility utilities ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--red);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 0 0 8px 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 2rem 0 1.75rem;
+    }
+    .title-tamil {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 0.03em;
+    }
+    .title-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    }
+    .selects-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+    .select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .select-group.chapter  { flex: 1; }
+    .select-group.kural-no { flex: 0 0 76px; }
+
+    label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+    }
+    select {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      font-size: 0.875rem;
+      color: var(--text);
+      font-family: inherit;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6560' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.65rem center;
+      padding-right: 2rem;
+    }
+    select:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+
+    /* ── Search ── */
+    .search-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      position: relative;
+    }
+    #search-input {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--text);
+    }
+    #search-input:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    .search-results {
+      list-style: none;
+    }
+    .search-results:not(:empty) {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 0.2rem;
+    }
+    .search-result-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.55rem 0.7rem;
+      background: var(--card);
+      border: none;
+      border-bottom: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.82rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .search-results li:last-child .search-result-btn { border-bottom: none; }
+    .search-result-btn:hover { background: var(--bg); }
+    .search-result-btn:focus-visible { outline: 2px solid var(--red); outline-offset: -2px; }
+    .search-result-btn .sr-no {
+      font-weight: 700;
+      color: var(--red);
+      margin-right: 0.4rem;
+    }
+
+    /* ── Nav + random buttons ── */
+    .nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-nav {
+      flex: 0 0 92px;
+      padding: 0.75rem 0.4rem;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+    .btn-nav:hover  { background: var(--border); }
+    .btn-nav:active { opacity: 0.8; }
+
+    .btn-random {
+      flex: 1;
+      padding: 0.75rem;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .btn-random:hover  { opacity: 0.88; }
+    .btn-random:active { opacity: 0.72; transform: scale(0.99); }
+
+    button:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 2px;
+    }
+
+    /* ── Play All button (header pill) ── */
+    .btn-play-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.28rem 0.6rem;
+      background: none;
+      color: var(--red);
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-play-all:hover   { background: var(--red); color: #fff; }
+    .btn-play-all.playing { background: var(--red); color: #fff; }
+
+    .kbd-hint {
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── Kural card ── */
+    .kural-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      min-height: 200px;
+    }
+    .kural-card:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 2px;
+    }
+
+    .kural-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .badge {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.22rem 0.65rem;
+      border-radius: 20px;
+      color: #fff;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.72rem;
+    }
+    .badge-aratha { background: var(--green); }
+    .badge-porul  { background: var(--blue);  }
+
+    .kural-no {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .chapter-name {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: right;
+      max-width: 55%;
+    }
+
+    .kural-tamil {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: calc(clamp(1.2rem, 4.5vw, 1.55rem) * var(--font-scale));
+      line-height: 1.85;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+    }
+    .kural-line { display: block; }
+    @media (min-width: 480px) {
+      .kural-line { white-space: nowrap; }
+    }
+
+    .divider {
+      width: 36px;
+      height: 2px;
+      background: var(--border);
+      margin-bottom: 1.25rem;
+      border-radius: 2px;
+    }
+
+    .kural-english {
+      font-size: calc(clamp(0.92rem, 3vw, 1rem) * var(--font-scale));
+      line-height: 1.75;
+      color: var(--text);
+    }
+
+    /* ── Audio button ── */
+    .audio-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      padding: 0;
+      flex-shrink: 0;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .audio-btn:hover  { color: var(--red); border-color: var(--red); }
+    .audio-btn.playing { color: var(--red); border-color: var(--red); }
+    .audio-btn:disabled { opacity: 0.3; cursor: default; }
+
+    .loading {
+      text-align: center;
+      color: var(--muted);
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+    }
+    .error {
+      text-align: center;
+      color: var(--red);
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 400px) {
+      .kural-card { padding: 1.25rem 1rem 1.5rem; }
+      .chapter-name { max-width: 45%; }
+    }
+    @media (min-width: 860px) {
+      .container { max-width: 820px; }
+    }
+
+    /* ── Reactions ── */
+    .reactions-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .reaction-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    .reaction-btn:hover { color: var(--text); border-color: var(--muted); }
+    .reaction-btn.voted-up   { color: var(--green); border-color: var(--green); background: rgba(26,74,46,.07); }
+    .reaction-btn.voted-down { color: var(--red);   border-color: var(--red);   background: rgba(139,26,26,.07); }
+    [data-theme="dark"] .reaction-btn.voted-up   { background: rgba(26,74,46,.2); }
+    [data-theme="dark"] .reaction-btn.voted-down { background: rgba(139,26,26,.2); }
+
+    /* ── Comments ── */
+    .comments-section {
+      margin-top: 0.75rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      overflow: hidden;
+    }
+    .comments-header {
+      padding: 0.7rem 1.25rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .comment-item {
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--text);
+      word-break: break-word;
+    }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-time {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+    /* ── Footer ── */
+    footer {
+      margin-top: 2rem;
+      padding: 1rem 0 1.5rem;
+      text-align: center;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .comments-empty, .comments-loading {
+      padding: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .comment-form {
+      padding: 0.85rem 1.25rem 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .comment-input {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 3.5rem;
+      max-height: 10rem;
+    }
+    .comment-input:focus {
+      outline: 2px solid var(--red);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    .comment-form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .comment-char-count { font-size: 0.68rem; color: var(--muted); }
+    .comment-char-count.over { color: var(--red); }
+    .btn-comment-submit {
+      padding: 0.4rem 1rem;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn-comment-submit:hover:not(:disabled) { opacity: 0.85; }
+    .btn-comment-submit:disabled { opacity: 0.4; cursor: default; }
+
+    /* ── Dark mode ── */
+    [data-theme="dark"] {
+      --bg:     #1c1914;
+      --card:   #252118;
+      --border: #3c3830;
+      --text:   #e8e4dc;
+      --muted:  #9a9590;
+      --red:    #c0392b;
+    }
+    [data-theme="dark"] select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9590' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    body, .controls, .kural-card, select, #search-input, .search-result-btn, label {
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    /* ── Pref bar (dark mode + font size) ── */
+    .pref-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+    }
+    .pref-right {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .pref-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.28rem 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.8rem;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .pref-btn:hover:not(:disabled) { color: var(--text); border-color: var(--muted); }
+    .pref-btn:disabled { opacity: 0.35; cursor: default; }
+
+    /* ── Share button ── */
+    .share-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      padding: 0;
+      flex-shrink: 0;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .share-btn:hover   { color: var(--red); border-color: var(--red); }
+    .share-btn.success { color: var(--green); border-color: var(--green); }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#kural-display">Skip to kural</a>
+
+  <div class="container">
+
+    <header>
+      <h1 class="title-tamil">திருக்குறள்</h1>
+      <p class="title-sub">Thirukkural &middot; Thiruvalluvar</p>
+      <div class="pref-bar" role="toolbar" aria-label="Display preferences">
+        <button type="button" class="btn-play-all" id="play-all-btn">
+          <svg width="9" height="10" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          <span id="play-all-label">Play</span>
+        </button>
+        <div class="pref-right">
+          <button class="pref-btn" id="font-dec-btn" aria-label="Decrease font size">A−</button>
+          <button class="pref-btn" id="font-inc-btn" aria-label="Increase font size">A+</button>
+          <button class="pref-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="controls">
+        <div class="selects-row">
+          <div class="select-group chapter">
+            <label for="chapter-sel">Chapter</label>
+            <select id="chapter-sel"></select>
+          </div>
+          <div class="select-group kural-no">
+            <label for="kural-sel">Kural</label>
+            <select id="kural-sel">
+              <option value="0">1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">4</option>
+              <option value="4">5</option>
+              <option value="5">6</option>
+              <option value="6">7</option>
+              <option value="7">8</option>
+              <option value="8">9</option>
+              <option value="9">10</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="search-group" role="search" aria-label="Search kurals">
+          <label for="search-input">Search by word or kural number</label>
+          <input type="text" id="search-input" autocomplete="off" placeholder="e.g. அறம், truth, 42" />
+          <ul class="search-results" id="search-results"></ul>
+          <p id="search-status" class="sr-only" aria-live="polite"></p>
+        </div>
+
+        <div class="nav-buttons">
+          <button type="button" class="btn-nav" id="prev-btn" aria-label="Previous kural">
+            <span aria-hidden="true">⟵</span> Previous
+          </button>
+          <button type="button" class="btn-random" id="random-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 9 15"/>
+              <path d="M21 3L3 21"/><path d="M21 21l-5-5"/><path d="M3 3l5 5"/>
+            </svg>
+            Random Kural
+          </button>
+          <button type="button" class="btn-nav" id="next-btn" aria-label="Next kural">
+            Next <span aria-hidden="true">⟶</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="kural-card" id="kural-display" tabindex="-1" aria-live="polite" aria-atomic="true">
+        <div class="loading">Loading…</div>
+      </div>
+
+      <div class="reactions-row" id="reactions-row">
+        <button class="reaction-btn" id="btn-up" aria-label="Thumbs up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          <span id="count-up">—</span>
+        </button>
+        <button class="reaction-btn" id="btn-down" aria-label="Thumbs down">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/><path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+          <span id="count-down">—</span>
+        </button>
+      </div>
+
+      <section class="comments-section">
+        <div class="comments-header" id="comments-header">Comments</div>
+        <div id="comments-list"></div>
+        <form class="comment-form" id="comment-form" novalidate>
+          <textarea class="comment-input" id="comment-input" placeholder="Share your thoughts on this kural…" maxlength="280" rows="3"></textarea>
+          <div class="comment-form-footer">
+            <span class="comment-char-count" id="comment-char-count">280</span>
+            <button type="submit" class="btn-comment-submit" id="comment-submit-btn" disabled>Post</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      Last updated: 2026-06-24 16:38 UTC
+    </footer>
+
+  </div>
+
+  <script>
+    let chapters = [];
+    let flatKurals = [];   // flattened, in canonical order 1..1080
+    let currentFlatIndex = 0;
+    let currentAudio   = null;
+    let playAllActive  = false;
+    let playAllTimeout = null;
+
+    function stopAudio() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+    }
+
+    function setPlayAllBtn(active) {
+      const btn   = document.getElementById('play-all-btn');
+      const label = document.getElementById('play-all-label');
+      const icon  = btn.querySelector('svg');
+      btn.classList.toggle('playing', active);
+      if (active) {
+        label.textContent = 'Stop';
+        icon.innerHTML    = '<rect width="8" height="8"/>';
+        icon.setAttribute('viewBox', '0 0 8 8');
+      } else {
+        label.textContent = 'Play';
+        icon.innerHTML    = '<polygon points="0,0 8,5 0,10"/>';
+        icon.setAttribute('viewBox', '0 0 8 10');
+      }
+    }
+
+    function stopPlayAll() {
+      playAllActive = false;
+      if (playAllTimeout) { clearTimeout(playAllTimeout); playAllTimeout = null; }
+      stopAudio();
+      setPlayAllBtn(false);
+    }
+
+    function playAudioPromise(number) {
+      return new Promise((resolve) => {
+        stopAudio();
+        const audio = new Audio(`audio/${number}.mp3`);
+        currentAudio = audio;
+
+        // Reflect state on the per-kural audio button
+        const btn = document.getElementById('audio-btn');
+        if (btn) {
+          btn.removeAttribute('disabled');
+          btn.classList.add('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 8" fill="currentColor" width="8" height="8" aria-hidden="true"><rect width="8" height="8"/></svg>';
+        }
+
+        const done = () => {
+          if (btn) {
+            btn.classList.remove('playing');
+            btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          }
+          resolve();
+        };
+
+        audio.addEventListener('ended', done);
+        audio.addEventListener('error', resolve);
+
+        // Resolve if play-all is cancelled externally
+        const poll = setInterval(() => {
+          if (!playAllActive || currentAudio !== audio) {
+            clearInterval(poll);
+            resolve();
+          }
+        }, 200);
+        audio.addEventListener('ended', () => clearInterval(poll));
+        audio.addEventListener('error', () => clearInterval(poll));
+
+        audio.play().catch(resolve);
+      });
+    }
+
+    function shuffleArray(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    async function startPlayAll() {
+      if (playAllActive) { stopPlayAll(); return; }
+
+      playAllActive = true;
+      setPlayAllBtn(true);
+
+      const pool    = flatKurals.slice();
+      const targets = shuffleArray(pool);
+
+      for (let i = 0; i < targets.length; i++) {
+        if (!playAllActive) break;
+
+        const k   = targets[i];
+        const idx = flatKurals.indexOf(k);
+        showKuralByFlatIndex(idx, { updateUrl: true, focusCard: false });
+
+        await playAudioPromise(k.number);
+        if (!playAllActive) break;
+
+        if (i < targets.length - 1) {
+          await new Promise(r => { playAllTimeout = setTimeout(r, 5000); });
+        }
+      }
+
+      if (playAllActive) stopPlayAll();
+    }
+
+    async function loadData() {
+      try {
+        const resp = await fetch('data/kurals.json');
+        if (!resp.ok) throw new Error('Failed to load data');
+        const data = await resp.json();
+        chapters = data.chapters;
+        buildFlatKurals();
+        buildChapterDropdown();
+
+        const params = new URLSearchParams(location.search);
+        const requestedNumber = parseInt(params.get('kural'), 10);
+        const startIdx = flatKurals.findIndex(k => k.number === requestedNumber);
+        // No specific kural requested via URL → open on a random one instead of always kural 1.
+        const initialIdx = startIdx >= 0 ? startIdx : Math.floor(Math.random() * flatKurals.length);
+        showKuralByFlatIndex(initialIdx, { updateUrl: false, focusCard: false });
+      } catch (e) {
+        document.getElementById('kural-display').innerHTML =
+          '<div class="error">Could not load kural data.<br>Make sure data/kurals.json is present.</div>';
+      }
+    }
+
+    function buildFlatKurals() {
+      flatKurals = [];
+      chapters.forEach((ch, chIdx) => {
+        ch.kurals.forEach((k, kuralIdx) => {
+          flatKurals.push({
+            chIdx, kuralIdx,
+            number: k.number,
+            line1: k.line1,
+            line2: k.line2,
+            tamil: k.tamil,
+            english: k.english,
+            section: ch.section,
+            sectionTamil: ch.section_tamil,
+            chapterTamil: ch.chapter_tamil,
+            chapterEnglish: ch.chapter_english,
+          });
+        });
+      });
+    }
+
+    function buildChapterDropdown() {
+      const sel = document.getElementById('chapter-sel');
+      chapters.forEach((ch, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = `${ch.chapter_number}. ${ch.chapter_tamil} — ${ch.chapter_english}`;
+        sel.appendChild(opt);
+      });
+    }
+
+    // ── Core render + navigation ──
+
+    function showKuralByFlatIndex(flatIdx, opts = {}) {
+      const { updateUrl = true, focusCard = true } = opts;
+      if (!flatKurals.length) return;
+      if (flatIdx < 0) flatIdx = flatKurals.length - 1;
+      if (flatIdx >= flatKurals.length) flatIdx = 0;
+      currentFlatIndex = flatIdx;
+
+      const k = flatKurals[flatIdx];
+      const isAratha = k.section === 'Arathuppal';
+
+      document.getElementById('chapter-sel').value = k.chIdx;
+      document.getElementById('kural-sel').value = k.kuralIdx;
+
+      stopAudio();
+
+      const display = document.getElementById('kural-display');
+      display.innerHTML = `
+        <div class="kural-meta">
+          <span class="badge ${isAratha ? 'badge-aratha' : 'badge-porul'}">${k.sectionTamil}</span>
+          <span class="kural-no">குறள் ${k.number}</span>
+          <button class="audio-btn" id="audio-btn" aria-label="Play audio for kural ${k.number}" title="Play audio" disabled>
+            <svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          </button>
+          <button class="share-btn" id="share-btn" aria-label="Share kural ${k.number}" title="Share or copy link">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="8,3 6,1 4,3"/><line x1="6" y1="1" x2="6" y2="8"/><path d="M2 8v2.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V8"/></svg>
+          </button>
+          <span class="chapter-name">${k.chapterTamil} · ${k.chapterEnglish}</span>
+        </div>
+        <h2 class="kural-tamil" lang="ta"><span class="kural-line">${k.line1}</span><span class="kural-line">${k.line2}</span></h2>
+        <div class="divider"></div>
+        <p class="kural-english" lang="en">${k.english}</p>
+      `;
+
+      // Probe for audio file — enable button only if it exists
+      const audioSrc = `audio/${k.number}.mp3`;
+      const btn = document.getElementById('audio-btn');
+      fetch(audioSrc, { method: 'HEAD' }).then(r => {
+        if (r.ok) btn.removeAttribute('disabled');
+      }).catch(() => {});
+
+      btn.addEventListener('click', () => {
+        if (currentAudio && !currentAudio.paused) {
+          stopAudio();
+          btn.classList.remove('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          btn.setAttribute('aria-label', `Play audio for kural ${k.number}`);
+          return;
+        }
+        currentAudio = new Audio(audioSrc);
+        currentAudio.play();
+        btn.classList.add('playing');
+        btn.innerHTML = '<svg viewBox="0 0 8 8" fill="currentColor" width="8" height="8" aria-hidden="true"><rect width="8" height="8"/></svg>';
+        btn.setAttribute('aria-label', `Stop audio for kural ${k.number}`);
+        currentAudio.addEventListener('ended', () => {
+          btn.classList.remove('playing');
+          btn.innerHTML = '<svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>';
+          btn.setAttribute('aria-label', `Play audio for kural ${k.number}`);
+          currentAudio = null;
+        });
+      });
+
+      const shareBtn = document.getElementById('share-btn');
+      const shareSVG = shareBtn.innerHTML;
+      const checkSVG = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="2,6 5,9 10,3"/></svg>`;
+      const kuralShareUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      shareBtn.addEventListener('click', async () => {
+        let ok = false;
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: `குறள் ${k.number} · ${k.chapterEnglish} · Thirukkural`,
+              text: `${k.tamil}\n\n${k.english}`,
+              url: kuralShareUrl,
+            });
+            ok = true;
+          } catch (e) {
+            if (e.name !== 'AbortError') {
+              try { await navigator.clipboard.writeText(kuralShareUrl); ok = true; } catch {}
+            }
+          }
+        } else {
+          try { await navigator.clipboard.writeText(kuralShareUrl); ok = true; } catch {}
+        }
+        if (ok) {
+          shareBtn.classList.add('success');
+          shareBtn.innerHTML = checkSVG;
+          shareBtn.setAttribute('aria-label', 'Copied!');
+          setTimeout(() => {
+            shareBtn.classList.remove('success');
+            shareBtn.innerHTML = shareSVG;
+            shareBtn.setAttribute('aria-label', `Share kural ${k.number}`);
+          }, 1500);
+        }
+      });
+
+      document.title = `குறள் ${k.number} · திருக்குறள்`;
+
+      const kuralUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      document.getElementById('canonical-url').setAttribute('href', kuralUrl);
+      document.querySelector('meta[name="description"]').setAttribute('content', k.english);
+      document.querySelector('meta[property="og:url"]').setAttribute('content', kuralUrl);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', `குறள் ${k.number} · ${k.chapterEnglish} · Thirukkural`);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', k.english);
+
+      activeKuralNumber = k.number;
+      loadReactions(k.number);
+      loadComments(k.number);
+
+      if (updateUrl) {
+        const url = new URL(location.href);
+        url.searchParams.set('kural', k.number);
+        history.pushState({ kuralNumber: k.number }, '', url);
+      }
+
+      if (focusCard) {
+        display.focus();
+      }
+    }
+
+    function showKuralByNumber(number, opts) {
+      const idx = flatKurals.findIndex(k => k.number === number);
+      if (idx >= 0) showKuralByFlatIndex(idx, opts);
+    }
+
+    function getSelections() {
+      return {
+        chIdx: parseInt(document.getElementById('chapter-sel').value, 10),
+        kuralIdx: parseInt(document.getElementById('kural-sel').value, 10),
+      };
+    }
+
+    function showFromSelections() {
+      const { chIdx, kuralIdx } = getSelections();
+      const idx = flatKurals.findIndex(k => k.chIdx === chIdx && k.kuralIdx === kuralIdx);
+      // Don't steal focus from the dropdown the user is still interacting with;
+      // aria-live on the card announces the change instead.
+      showKuralByFlatIndex(idx, { updateUrl: true, focusCard: false });
+    }
+
+    document.getElementById('chapter-sel').addEventListener('change', showFromSelections);
+    document.getElementById('kural-sel').addEventListener('change', showFromSelections);
+
+    document.getElementById('play-all-btn').addEventListener('click', startPlayAll);
+
+    document.getElementById('random-btn').addEventListener('click', () => {
+      let idx;
+      do {
+        idx = Math.floor(Math.random() * flatKurals.length);
+      } while (idx === currentFlatIndex && flatKurals.length > 1);
+      showKuralByFlatIndex(idx);
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      stopPlayAll();
+      showKuralByFlatIndex(currentFlatIndex - 1);
+    });
+    document.getElementById('next-btn').addEventListener('click', () => {
+      stopPlayAll();
+      showKuralByFlatIndex(currentFlatIndex + 1);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        showKuralByFlatIndex(currentFlatIndex + 1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        showKuralByFlatIndex(currentFlatIndex - 1);
+      }
+    });
+
+    // Support browser Back/Forward for shared/bookmarked links.
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(location.search);
+      const number = parseInt(params.get('kural'), 10);
+      if (!isNaN(number)) showKuralByNumber(number, { updateUrl: false });
+    });
+
+    // ── Search ──
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchStatus = document.getElementById('search-status');
+
+    function clearSearch() {
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      searchStatus.textContent = '';
+    }
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim();
+      searchResults.innerHTML = '';
+      if (!q) {
+        searchStatus.textContent = '';
+        return;
+      }
+
+      const qLower = q.toLowerCase();
+      let matches;
+      if (/^\d+$/.test(q)) {
+        const asNumber = parseInt(q, 10);
+        matches = flatKurals.filter(k => k.number === asNumber);
+      } else {
+        matches = flatKurals
+          .filter(k => k.tamil.includes(q) || k.english.toLowerCase().includes(qLower))
+          .slice(0, 8);
+      }
+
+      searchStatus.textContent = `${matches.length} result${matches.length === 1 ? '' : 's'} found`;
+
+      matches.forEach(k => {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'search-result-btn';
+        const snippet = k.english.length > 70 ? k.english.slice(0, 70) + '…' : k.english;
+        btn.innerHTML = `<span class="sr-no">குறள் ${k.number}</span>${snippet}`;
+        btn.addEventListener('click', () => {
+          showKuralByFlatIndex(flatKurals.indexOf(k));
+          clearSearch();
+        });
+        li.appendChild(btn);
+        searchResults.appendChild(li);
+      });
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const first = searchResults.querySelector('.search-result-btn');
+        if (first) first.click();
+      } else if (e.key === 'Escape') {
+        clearSearch();
+      }
+    });
+
+    // ── Supabase ──
+
+    const SUPABASE_URL = 'https://cbrrxpzdtptpwbquwvgn.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_2495Az1PTReBLwGGS1PBmQ_MhaQTF7N';
+    const db = (SUPABASE_URL !== 'https://cbrrxpzdtptpwbquwvgn.supabase.co')
+      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+      : null;
+
+    let activeKuralNumber = null;
+
+    function escapeHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function timeAgo(dateStr) {
+      const s = Math.floor((Date.now() - new Date(dateStr)) / 1000);
+      if (s < 60)    return 'just now';
+      if (s < 3600)  return `${Math.floor(s / 60)}m ago`;
+      if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
+      return `${Math.floor(s / 86400)}d ago`;
+    }
+
+    // ── Reactions ──
+
+    async function loadReactions(kuralNumber) {
+      const voted = localStorage.getItem(`kural_vote_${kuralNumber}`);
+      document.getElementById('btn-up').classList.toggle('voted-up',     voted === 'up');
+      document.getElementById('btn-down').classList.toggle('voted-down', voted === 'down');
+
+      if (!db) return;
+      const { data } = await db
+        .from('kural_reactions')
+        .select('up, down')
+        .eq('kural_number', kuralNumber)
+        .maybeSingle();
+      document.getElementById('count-up').textContent   = data ? data.up   : 0;
+      document.getElementById('count-down').textContent = data ? data.down : 0;
+    }
+
+    async function castVote(kuralNumber, direction) {
+      const current = localStorage.getItem(`kural_vote_${kuralNumber}`);
+      let dUp = 0, dDown = 0, next = direction;
+
+      if (current === direction) {
+        next = null;
+        if (direction === 'up')   dUp   = -1;
+        if (direction === 'down') dDown = -1;
+      } else {
+        if (current === 'up')   dUp   = -1;
+        if (current === 'down') dDown = -1;
+        if (direction === 'up')   dUp   += 1;
+        if (direction === 'down') dDown += 1;
+      }
+
+      next === null
+        ? localStorage.removeItem(`kural_vote_${kuralNumber}`)
+        : localStorage.setItem(`kural_vote_${kuralNumber}`, next);
+
+      const cUp   = document.getElementById('count-up');
+      const cDown = document.getElementById('count-down');
+      cUp.textContent   = Math.max(0, (parseInt(cUp.textContent,   10) || 0) + dUp);
+      cDown.textContent = Math.max(0, (parseInt(cDown.textContent, 10) || 0) + dDown);
+      document.getElementById('btn-up').classList.toggle('voted-up',     next === 'up');
+      document.getElementById('btn-down').classList.toggle('voted-down', next === 'down');
+
+      if (!db) return;
+      await db.rpc('vote_kural', { p_kural_number: kuralNumber, p_delta_up: dUp, p_delta_down: dDown });
+    }
+
+    document.getElementById('btn-up').addEventListener('click',   () => castVote(activeKuralNumber, 'up'));
+    document.getElementById('btn-down').addEventListener('click', () => castVote(activeKuralNumber, 'down'));
+
+    // ── Comments ──
+
+    async function loadComments(kuralNumber) {
+      const list   = document.getElementById('comments-list');
+      const header = document.getElementById('comments-header');
+      list.innerHTML = '<div class="comments-loading">Loading…</div>';
+
+      if (!db) { list.innerHTML = ''; return; }
+
+      const { data, error } = await db
+        .from('kural_comments')
+        .select('body, created_at')
+        .eq('kural_number', kuralNumber)
+        .order('created_at', { ascending: true });
+
+      if (error || !data) { list.innerHTML = ''; return; }
+
+      const n = data.length;
+      header.textContent = n > 0 ? `${n} comment${n === 1 ? '' : 's'}` : 'Comments';
+      list.innerHTML = n === 0
+        ? '<div class="comments-empty">Be the first to comment.</div>'
+        : data.map(c => `<div class="comment-item"><span>${escapeHtml(c.body)}</span><time class="comment-time" datetime="${c.created_at}">${timeAgo(c.created_at)}</time></div>`).join('');
+    }
+
+    const commentInput = document.getElementById('comment-input');
+    const commentForm  = document.getElementById('comment-form');
+    const charCount    = document.getElementById('comment-char-count');
+    const submitBtn    = document.getElementById('comment-submit-btn');
+    const MAX_CHARS    = 280;
+
+    commentInput.addEventListener('input', () => {
+      const rem = MAX_CHARS - commentInput.value.length;
+      charCount.textContent = rem;
+      charCount.classList.toggle('over', rem < 0);
+      submitBtn.disabled = commentInput.value.trim().length === 0 || rem < 0;
+    });
+
+    commentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const body = commentInput.value.trim();
+      if (!body || body.length > MAX_CHARS || !db) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Posting…';
+
+      const { error } = await db.from('kural_comments').insert({ kural_number: activeKuralNumber, body });
+
+      if (!error) {
+        commentInput.value = '';
+        charCount.textContent = MAX_CHARS;
+        await loadComments(activeKuralNumber);
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Post';
+    });
+
+    // ── Preferences: dark mode + font size ──
+
+    const FONT_STEPS = [0.85, 1, 1.2];
+    let fontStepIdx = 1;
+
+    const moonSVG = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>`;
+    const sunSVG  = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><line x1="7" y1="0.5" x2="7" y2="2.5"/><line x1="7" y1="11.5" x2="7" y2="13.5"/><line x1="0.5" y1="7" x2="2.5" y2="7"/><line x1="11.5" y1="7" x2="13.5" y2="7"/><line x1="2.55" y1="2.55" x2="3.96" y2="3.96"/><line x1="10.04" y1="10.04" x2="11.45" y2="11.45"/><line x1="11.45" y1="2.55" x2="10.04" y2="3.96"/><line x1="3.96" y1="10.04" x2="2.55" y2="11.45"/></svg>`;
+
+    function applyTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      const btn = document.getElementById('theme-btn');
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.innerHTML = dark ? sunSVG : moonSVG;
+    }
+
+    function applyFontScale(idx) {
+      fontStepIdx = Math.max(0, Math.min(FONT_STEPS.length - 1, idx));
+      document.documentElement.style.setProperty('--font-scale', FONT_STEPS[fontStepIdx]);
+      localStorage.setItem('fontStep', fontStepIdx);
+      document.getElementById('font-dec-btn').disabled = fontStepIdx === 0;
+      document.getElementById('font-inc-btn').disabled = fontStepIdx === FONT_STEPS.length - 1;
+    }
+
+    (function initPrefs() {
+      const saved = localStorage.getItem('theme');
+      applyTheme(saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+      const step = parseInt(localStorage.getItem('fontStep'), 10);
+      applyFontScale(isNaN(step) ? 1 : step);
+    })();
+
+    document.getElementById('theme-btn').addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
+    });
+    document.getElementById('font-dec-btn').addEventListener('click', () => applyFontScale(fontStepIdx - 1));
+    document.getElementById('font-inc-btn').addEventListener('click', () => applyFontScale(fontStepIdx + 1));
+
+    loadData();
+  </script>
+</body>
+</html>

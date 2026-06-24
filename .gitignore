@@ -1,0 +1,12 @@
+# Environment — never commit secrets
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Claude agents
+.agents/
