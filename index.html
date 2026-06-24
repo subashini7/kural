@@ -2,6 +2,9 @@
 <html lang="ta">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function(){var t=localStorage.getItem('theme'),d=t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.setAttribute('data-theme','dark');var s=[0.85,1,1.2],f=parseInt(localStorage.getItem('fontStep'),10);document.documentElement.style.setProperty('--font-scale',s[isNaN(f)||f<0||f>2?1:f]);})();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>திருக்குறள் · Thirukkural</title>
   <meta name="description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
@@ -28,15 +31,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #f9f7f2;
-      --card:     #ffffff;
-      --border:   #e5e0d5;
-      --red:      #8b1a1a;
-      --green:    #1a4a2e;
-      --blue:     #1a2e52;
-      --text:     #1a1a1a;
-      --muted:    #6b6560;
-      --radius:   14px;
+      --bg:         #f9f7f2;
+      --card:       #ffffff;
+      --border:     #e5e0d5;
+      --red:        #8b1a1a;
+      --green:      #1a4a2e;
+      --blue:       #1a2e52;
+      --text:       #1a1a1a;
+      --muted:      #6b6560;
+      --radius:     14px;
+      --font-scale: 1;
     }
 
     body {
@@ -330,7 +334,7 @@
 
     .kural-tamil {
       font-family: 'Noto Sans Tamil', sans-serif;
-      font-size: clamp(1.2rem, 4.5vw, 1.55rem);
+      font-size: calc(clamp(1.2rem, 4.5vw, 1.55rem) * var(--font-scale));
       line-height: 1.85;
       font-weight: 500;
       color: var(--text);
@@ -350,9 +354,9 @@
     }
 
     .kural-english {
-      font-size: clamp(0.92rem, 3vw, 1rem);
+      font-size: calc(clamp(0.92rem, 3vw, 1rem) * var(--font-scale));
       line-height: 1.75;
-      color: #333;
+      color: var(--text);
     }
 
     /* ── Audio button ── */
@@ -395,6 +399,68 @@
     @media (min-width: 860px) {
       .container { max-width: 820px; }
     }
+
+    /* ── Dark mode ── */
+    [data-theme="dark"] {
+      --bg:     #1c1914;
+      --card:   #252118;
+      --border: #3c3830;
+      --text:   #e8e4dc;
+      --muted:  #9a9590;
+    }
+    [data-theme="dark"] select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9590' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+
+    body, .controls, .kural-card, select, #search-input, .search-result-btn, label {
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    /* ── Pref bar (dark mode + font size) ── */
+    .pref-bar {
+      display: flex;
+      gap: 0.4rem;
+      justify-content: flex-end;
+      margin-top: 0.75rem;
+    }
+    .pref-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.28rem 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.8rem;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .pref-btn:hover:not(:disabled) { color: var(--text); border-color: var(--muted); }
+    .pref-btn:disabled { opacity: 0.35; cursor: default; }
+
+    /* ── Share button ── */
+    .share-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      padding: 0;
+      flex-shrink: 0;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .share-btn:hover   { color: var(--red); border-color: var(--red); }
+    .share-btn.success { color: var(--green); border-color: var(--green); }
   </style>
 </head>
 <body>
@@ -406,6 +472,13 @@
     <header>
       <h1 class="title-tamil">திருக்குறள்</h1>
       <p class="title-sub">Thirukkural &middot; Thiruvalluvar</p>
+      <div class="pref-bar" role="toolbar" aria-label="Display preferences">
+        <button class="pref-btn" id="font-dec-btn" aria-label="Decrease font size">A−</button>
+        <button class="pref-btn" id="font-inc-btn" aria-label="Increase font size">A+</button>
+        <button class="pref-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>
+        </button>
+      </div>
     </header>
 
     <main>
@@ -659,6 +732,9 @@
           <button class="audio-btn" id="audio-btn" aria-label="Play audio for kural ${k.number}" title="Play audio" disabled>
             <svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
           </button>
+          <button class="share-btn" id="share-btn" aria-label="Share kural ${k.number}" title="Share or copy link">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="8,3 6,1 4,3"/><line x1="6" y1="1" x2="6" y2="8"/><path d="M2 8v2.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V8"/></svg>
+          </button>
           <span class="chapter-name">${k.chapterTamil} · ${k.chapterEnglish}</span>
         </div>
         <h2 class="kural-tamil" lang="ta"><span class="kural-line">${k.line1}</span><span class="kural-line">${k.line2}</span></h2>
@@ -692,6 +768,40 @@
           btn.setAttribute('aria-label', `Play audio for kural ${k.number}`);
           currentAudio = null;
         });
+      });
+
+      const shareBtn = document.getElementById('share-btn');
+      const shareSVG = shareBtn.innerHTML;
+      const checkSVG = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="2,6 5,9 10,3"/></svg>`;
+      const kuralShareUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      shareBtn.addEventListener('click', async () => {
+        let ok = false;
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: `குறள் ${k.number} · ${k.chapterEnglish} · Thirukkural`,
+              text: `${k.tamil}\n\n${k.english}`,
+              url: kuralShareUrl,
+            });
+            ok = true;
+          } catch (e) {
+            if (e.name !== 'AbortError') {
+              try { await navigator.clipboard.writeText(kuralShareUrl); ok = true; } catch {}
+            }
+          }
+        } else {
+          try { await navigator.clipboard.writeText(kuralShareUrl); ok = true; } catch {}
+        }
+        if (ok) {
+          shareBtn.classList.add('success');
+          shareBtn.innerHTML = checkSVG;
+          shareBtn.setAttribute('aria-label', 'Copied!');
+          setTimeout(() => {
+            shareBtn.classList.remove('success');
+            shareBtn.innerHTML = shareSVG;
+            shareBtn.setAttribute('aria-label', `Share kural ${k.number}`);
+          }, 1500);
+        }
       });
 
       document.title = `குறள் ${k.number} · திருக்குறள்`;
@@ -832,6 +942,44 @@
         clearSearch();
       }
     });
+
+    // ── Preferences: dark mode + font size ──
+
+    const FONT_STEPS = [0.85, 1, 1.2];
+    let fontStepIdx = 1;
+
+    const moonSVG = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>`;
+    const sunSVG  = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><line x1="7" y1="0.5" x2="7" y2="2.5"/><line x1="7" y1="11.5" x2="7" y2="13.5"/><line x1="0.5" y1="7" x2="2.5" y2="7"/><line x1="11.5" y1="7" x2="13.5" y2="7"/><line x1="2.55" y1="2.55" x2="3.96" y2="3.96"/><line x1="10.04" y1="10.04" x2="11.45" y2="11.45"/><line x1="11.45" y1="2.55" x2="10.04" y2="3.96"/><line x1="3.96" y1="10.04" x2="2.55" y2="11.45"/></svg>`;
+
+    function applyTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      const btn = document.getElementById('theme-btn');
+      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.innerHTML = dark ? sunSVG : moonSVG;
+    }
+
+    function applyFontScale(idx) {
+      fontStepIdx = Math.max(0, Math.min(FONT_STEPS.length - 1, idx));
+      document.documentElement.style.setProperty('--font-scale', FONT_STEPS[fontStepIdx]);
+      localStorage.setItem('fontStep', fontStepIdx);
+      document.getElementById('font-dec-btn').disabled = fontStepIdx === 0;
+      document.getElementById('font-inc-btn').disabled = fontStepIdx === FONT_STEPS.length - 1;
+    }
+
+    (function initPrefs() {
+      const saved = localStorage.getItem('theme');
+      applyTheme(saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+      const step = parseInt(localStorage.getItem('fontStep'), 10);
+      applyFontScale(isNaN(step) ? 1 : step);
+    })();
+
+    document.getElementById('theme-btn').addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
+    });
+    document.getElementById('font-dec-btn').addEventListener('click', () => applyFontScale(fontStepIdx - 1));
+    document.getElementById('font-inc-btn').addEventListener('click', () => applyFontScale(fontStepIdx + 1));
 
     loadData();
   </script>
