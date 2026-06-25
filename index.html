@@ -8,18 +8,18 @@
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://subashini7.github.io/kural/" />
+  <meta property="og:url"         content="https://kural.prashub.com/" />
   <meta property="og:title"       content="திருக்குறள் · Thirukkural" />
   <meta property="og:description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
-  <meta property="og:image"       content="https://subashini7.github.io/kural/screenshots/kural-ex.png" />
+  <meta property="og:image"       content="https://kural.prashub.com/screenshots/kural-ex.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="திருக்குறள் · Thirukkural" />
   <meta name="twitter:description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
-  <meta name="twitter:image"       content="https://subashini7.github.io/kural/screenshots/kural-ex.png" />
+  <meta name="twitter:image"       content="https://kural.prashub.com/screenshots/kural-ex.png" />
 
-  <link rel="canonical" id="canonical-url" href="https://subashini7.github.io/kural/" />
+  <link rel="canonical" id="canonical-url" href="https://kural.prashub.com/" />
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
@@ -786,7 +786,7 @@
       const shareBtn = document.getElementById('share-btn');
       const shareSVG = shareBtn.innerHTML;
       const checkSVG = `<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="2,6 5,9 10,3"/></svg>`;
-      const kuralShareUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      const kuralShareUrl = `https://kural.prashub.com/?kural=${k.number}`;
       shareBtn.addEventListener('click', async () => {
         let ok = false;
         if (navigator.share) {
@@ -819,7 +819,7 @@
 
       document.title = `குறள் ${k.number} · திருக்குறள்`;
 
-      const kuralUrl = `https://subashini7.github.io/kural/?kural=${k.number}`;
+      const kuralUrl = `https://kural.prashub.com/?kural=${k.number}`;
       document.getElementById('canonical-url').setAttribute('href', kuralUrl);
       document.querySelector('meta[name="description"]').setAttribute('content', k.english);
       document.querySelector('meta[property="og:url"]').setAttribute('content', kuralUrl);

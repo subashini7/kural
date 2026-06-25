@@ -4,7 +4,7 @@ A minimal, accessible web reader for the **Thirukkural** — 1,080 couplets comp
 
 ## Live App
 
-**[https://subashini7.github.io/kural/](https://subashini7.github.io/kural/?kural=1)**
+**[https://kural.prashub.com/](https://kural.prashub.com/?kural=1)**
 
 ![Screenshot of the Thirukkural reader showing kural 108 — Never forget a kindness done to you, but let go of a wrong the very moment it happens.](screenshots/kural-ex.png)
 
