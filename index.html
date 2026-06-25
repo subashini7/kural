@@ -2,10 +2,7 @@
 <html lang="ta">
 <head>
   <meta charset="UTF-8" />
-  <script>
-    (function(){var t=localStorage.getItem('theme'),d=t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.setAttribute('data-theme','dark');var s=[0.85,1,1.2],f=parseInt(localStorage.getItem('fontStep'),10);document.documentElement.style.setProperty('--font-scale',s[isNaN(f)||f<0||f>2?1:f]);})();
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>திருக்குறள் · Thirukkural</title>
   <meta name="description" content="A clean, accessible reader for the Thirukkural — 1,050 couplets of timeless wisdom by the Tamil poet-philosopher Thiruvalluvar, with Tamil text, modern English translations, and audio." />
 
@@ -42,7 +39,6 @@
       --text:       #1a1a1a;
       --muted:      #6b6560;
       --radius:     14px;
-      --font-scale: 1;
     }
 
     body {
@@ -50,7 +46,7 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      padding: 1rem;
+      padding: 0.5rem 1rem;
     }
 
     .container {
@@ -86,7 +82,7 @@
     /* ── Header ── */
     header {
       text-align: center;
-      padding: 2rem 0 1.75rem;
+      padding: 1.25rem 0 1rem;
     }
     .title-tamil {
       font-family: 'Noto Sans Tamil', sans-serif;
@@ -110,30 +106,15 @@
       border-radius: var(--radius);
       padding: 1.25rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      margin-bottom: 1.1rem;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
       box-shadow: 0 1px 4px rgba(0,0,0,.04);
     }
-    .selects-row {
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-end;
-      flex-wrap: wrap;
-    }
-    .select-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-    .select-group.chapter  { flex: 1; }
-    .select-group.kural-no { flex: 0 0 76px; }
-    .selects-row .search-group { flex: 1 1 100%; }
-    @media (min-width: 640px) {
-      .selects-row .search-group { flex: 2; min-width: 0; }
-      .select-group.chapter { flex: 2; }
-    }
-
+    .controls .search-group { flex: 1; min-width: 0; display: flex; align-items: center; }
+    .controls #search-input  { flex: 1; box-sizing: border-box; }
+    .controls .btn-play-all  { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 0; height: auto; }
     label {
       font-size: 0.68rem;
       font-weight: 600;
@@ -216,47 +197,28 @@
       margin-right: 0.4rem;
     }
 
-    /* ── Nav + random buttons ── */
-    .nav-buttons {
+    /* ── Card nav arrows ── */
+    .kural-card-wrapper {
       display: flex;
+      align-items: stretch;
       gap: 0.5rem;
     }
-    .btn-nav {
-      flex: 0 0 92px;
-      padding: 0.75rem 0.4rem;
-      background: var(--bg);
-      color: var(--text);
+    .btn-card-nav {
+      flex: 0 0 36px;
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      font-family: inherit;
+      border-radius: var(--radius);
       cursor: pointer;
-      letter-spacing: 0.01em;
-    }
-    .btn-nav:hover  { background: var(--border); }
-    .btn-nav:active { opacity: 0.8; }
-
-    .btn-random {
-      flex: 1;
-      padding: 0.75rem;
-      background: var(--red);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      letter-spacing: 0.02em;
-      transition: opacity 0.15s, transform 0.1s;
+      color: var(--muted);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      padding: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      transition: background 0.15s, color 0.15s;
     }
-    .btn-random:hover  { opacity: 0.88; }
-    .btn-random:active { opacity: 0.72; transform: scale(0.99); }
+    .btn-card-nav:hover  { background: var(--border); color: var(--text); }
+    .btn-card-nav:active { opacity: 0.7; }
 
     button:focus-visible {
       outline: 2px solid var(--red);
@@ -268,20 +230,20 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.28rem 0.6rem;
-      background: none;
-      color: var(--red);
+      padding: 0.6rem 0.7rem;
+      background: var(--red);
+      color: #fff;
       border: 1px solid var(--red);
-      border-radius: 6px;
-      font-size: 0.72rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
       font-weight: 600;
       font-family: inherit;
       cursor: pointer;
-      line-height: 1;
+      line-height: normal;
       transition: background 0.15s, color 0.15s;
     }
-    .btn-play-all:hover   { background: var(--red); color: #fff; }
-    .btn-play-all.playing { background: var(--red); color: #fff; }
+    .btn-play-all:hover   { opacity: 0.88; }
+    .btn-play-all.playing { background: #7a1a1a; border-color: #7a1a1a; color: #fff; }
 
     .kbd-hint {
       font-size: 0.68rem;
@@ -294,9 +256,9 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.75rem 1.5rem 2rem;
+      padding: 1.25rem 1.25rem 1.5rem;
       box-shadow: 0 1px 4px rgba(0,0,0,.04);
-      min-height: 200px;
+      min-height: 160px;
     }
     .kural-card:focus {
       outline: 2px solid var(--red);
@@ -307,7 +269,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 0.9rem;
       flex-wrap: wrap;
     }
     .badge {
@@ -339,7 +301,7 @@
 
     .kural-tamil {
       font-family: 'Noto Sans Tamil', sans-serif;
-      font-size: calc(clamp(1.2rem, 4.5vw, 1.55rem) * var(--font-scale));
+      font-size: clamp(1.2rem, 4.5vw, 1.55rem);
       line-height: 1.85;
       font-weight: 500;
       color: var(--text);
@@ -359,7 +321,7 @@
     }
 
     .kural-english {
-      font-size: calc(clamp(0.92rem, 3vw, 1rem) * var(--font-scale));
+      font-size: clamp(0.92rem, 3vw, 1rem);
       line-height: 1.75;
       color: var(--text);
     }
@@ -466,15 +428,6 @@
       color: var(--muted);
       margin-top: 0.3rem;
     }
-    /* ── Footer ── */
-    footer {
-      margin-top: 2rem;
-      padding: 1rem 0 1.5rem;
-      text-align: center;
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-    }
 
     .comments-empty, .comments-loading {
       padding: 1.25rem;
@@ -530,54 +483,6 @@
     .btn-comment-submit:hover:not(:disabled) { opacity: 0.85; }
     .btn-comment-submit:disabled { opacity: 0.4; cursor: default; }
 
-    /* ── Dark mode ── */
-    [data-theme="dark"] {
-      --bg:     #1c1914;
-      --card:   #252118;
-      --border: #3c3830;
-      --text:   #e8e4dc;
-      --muted:  #9a9590;
-      --red:    #c0392b;
-    }
-    [data-theme="dark"] select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9590' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    }
-
-    body, .controls, .kural-card, select, #search-input, .search-result-btn, label {
-      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-    }
-
-    /* ── Pref bar (dark mode + font size) ── */
-    .pref-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0.75rem;
-    }
-    .pref-right {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-    }
-    .pref-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.28rem 0.5rem;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--muted);
-      cursor: pointer;
-      font-family: inherit;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 1.8rem;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .pref-btn:hover:not(:disabled) { color: var(--text); border-color: var(--muted); }
-    .pref-btn:disabled { opacity: 0.35; cursor: default; }
 
     /* ── Share button ── */
     .share-btn {
@@ -608,71 +513,32 @@
     <header>
       <h1 class="title-tamil">திருக்குறள்</h1>
       <p class="title-sub">Thirukkural &middot; Thiruvalluvar</p>
-      <div class="pref-bar" role="toolbar" aria-label="Display preferences">
-        <button type="button" class="btn-play-all" id="play-all-btn">
-          <svg width="9" height="10" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
-          <span id="play-all-label">Play All Randomly</span>
-        </button>
-        <div class="pref-right">
-          <button class="pref-btn" id="font-dec-btn" aria-label="Decrease font size">A−</button>
-          <button class="pref-btn" id="font-inc-btn" aria-label="Increase font size">A+</button>
-          <button class="pref-btn" id="theme-btn" aria-label="Switch to dark mode" aria-pressed="false">
-            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>
-          </button>
-        </div>
-      </div>
     </header>
 
     <main>
       <div class="controls">
-        <div class="selects-row">
-          <div class="select-group chapter">
-            <label for="chapter-sel">Chapter</label>
-            <select id="chapter-sel"></select>
-          </div>
-          <div class="select-group kural-no">
-            <label for="kural-sel">Kural</label>
-            <select id="kural-sel">
-              <option value="0">1</option>
-              <option value="1">2</option>
-              <option value="2">3</option>
-              <option value="3">4</option>
-              <option value="4">5</option>
-              <option value="5">6</option>
-              <option value="6">7</option>
-              <option value="7">8</option>
-              <option value="8">9</option>
-              <option value="9">10</option>
-            </select>
-          </div>
-          <div class="search-group" role="search" aria-label="Search kurals">
-            <label for="search-input">Search by word or kural number</label>
-            <input type="text" id="search-input" autocomplete="off" placeholder="e.g. அறம், truth, 42" />
-            <ul class="search-results" id="search-results"></ul>
-            <p id="search-status" class="sr-only" aria-live="polite"></p>
-          </div>
+        <div class="search-group" role="search" aria-label="Search kurals">
+          <label for="search-input" class="sr-only">Search by word or kural number</label>
+          <input type="text" id="search-input" autocomplete="off" placeholder="Search — e.g. அறம், truth, 42" />
+          <ul class="search-results" id="search-results"></ul>
+          <p id="search-status" class="sr-only" aria-live="polite"></p>
         </div>
-
-        <div class="nav-buttons">
-          <button type="button" class="btn-nav" id="prev-btn" aria-label="Previous kural">
-            <span aria-hidden="true">⟵</span> Previous
-          </button>
-          <button type="button" class="btn-random" id="random-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="16 3 21 3 21 8"/><polyline points="4 20 9 20 9 15"/>
-              <path d="M21 3L3 21"/><path d="M21 21l-5-5"/><path d="M3 3l5 5"/>
-            </svg>
-            Random Kural
-          </button>
-          <button type="button" class="btn-nav" id="next-btn" aria-label="Next kural">
-            Next <span aria-hidden="true">⟶</span>
-          </button>
-        </div>
-
+        <button type="button" class="btn-play-all" id="play-all-btn">
+          <svg width="9" height="10" viewBox="0 0 8 10" fill="currentColor" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
+          <span id="play-all-label">Play All Randomly</span>
+        </button>
       </div>
 
-      <div class="kural-card" id="kural-display" tabindex="-1" aria-live="polite" aria-atomic="true">
-        <div class="loading">Loading…</div>
+      <div class="kural-card-wrapper">
+        <button type="button" class="btn-card-nav" id="prev-btn" aria-label="Previous kural">
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8,1 2,8 8,15"/></svg>
+        </button>
+        <div class="kural-card" id="kural-display" tabindex="-1" aria-live="polite" aria-atomic="true">
+          <div class="loading">Loading…</div>
+        </div>
+        <button type="button" class="btn-card-nav" id="next-btn" aria-label="Next kural">
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,1 8,8 2,15"/></svg>
+        </button>
       </div>
 
       <div class="reactions-row" id="reactions-row">
@@ -699,10 +565,6 @@
         </form>
       </section>
     </main>
-
-    <footer>
-      Last updated: 2026-06-25 02:50 UTC
-    </footer>
 
   </div>
 
@@ -828,7 +690,6 @@
         const data = await resp.json();
         chapters = data.chapters;
         buildFlatKurals();
-        buildChapterDropdown();
 
         const params = new URLSearchParams(location.search);
         const requestedNumber = parseInt(params.get('kural'), 10);
@@ -857,18 +718,9 @@
             sectionTamil: ch.section_tamil,
             chapterTamil: ch.chapter_tamil,
             chapterEnglish: ch.chapter_english,
+            chapterNumber: ch.chapter_number,
           });
         });
-      });
-    }
-
-    function buildChapterDropdown() {
-      const sel = document.getElementById('chapter-sel');
-      chapters.forEach((ch, i) => {
-        const opt = document.createElement('option');
-        opt.value = i;
-        opt.textContent = `${ch.chapter_number}. ${ch.chapter_tamil} — ${ch.chapter_english}`;
-        sel.appendChild(opt);
       });
     }
 
@@ -884,23 +736,20 @@
       const k = flatKurals[flatIdx];
       const isAratha = k.section === 'Arathuppal';
 
-      document.getElementById('chapter-sel').value = k.chIdx;
-      document.getElementById('kural-sel').value = k.kuralIdx;
-
       stopAudio();
 
       const display = document.getElementById('kural-display');
       display.innerHTML = `
         <div class="kural-meta">
           <span class="badge ${isAratha ? 'badge-aratha' : 'badge-porul'}">${k.sectionTamil}</span>
-          <span class="kural-no">குறள் ${k.number}</span>
+          <span class="kural-no">Kural ${k.number}</span>
           <button class="audio-btn" id="audio-btn" aria-label="Play audio for kural ${k.number}" title="Play audio" disabled>
             <svg viewBox="0 0 8 10" fill="currentColor" width="8" height="10" aria-hidden="true"><polygon points="0,0 8,5 0,10"/></svg>
           </button>
           <button class="share-btn" id="share-btn" aria-label="Share kural ${k.number}" title="Share or copy link">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="10" height="10" aria-hidden="true"><polyline points="8,3 6,1 4,3"/><line x1="6" y1="1" x2="6" y2="8"/><path d="M2 8v2.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V8"/></svg>
           </button>
-          <span class="chapter-name">${k.chapterTamil} · ${k.chapterEnglish}</span>
+          <span class="chapter-name">Ch. ${k.chapterNumber} · ${k.chapterTamil} · ${k.chapterEnglish}</span>
         </div>
         <h2 class="kural-tamil" lang="ta"><span class="kural-line">${k.line1}</span><span class="kural-line">${k.line2}</span></h2>
         <div class="divider"></div>
@@ -998,33 +847,7 @@
       if (idx >= 0) showKuralByFlatIndex(idx, opts);
     }
 
-    function getSelections() {
-      return {
-        chIdx: parseInt(document.getElementById('chapter-sel').value, 10),
-        kuralIdx: parseInt(document.getElementById('kural-sel').value, 10),
-      };
-    }
-
-    function showFromSelections() {
-      const { chIdx, kuralIdx } = getSelections();
-      const idx = flatKurals.findIndex(k => k.chIdx === chIdx && k.kuralIdx === kuralIdx);
-      // Don't steal focus from the dropdown the user is still interacting with;
-      // aria-live on the card announces the change instead.
-      showKuralByFlatIndex(idx, { updateUrl: true, focusCard: false });
-    }
-
-    document.getElementById('chapter-sel').addEventListener('change', showFromSelections);
-    document.getElementById('kural-sel').addEventListener('change', showFromSelections);
-
     document.getElementById('play-all-btn').addEventListener('click', startPlayAll);
-
-    document.getElementById('random-btn').addEventListener('click', () => {
-      let idx;
-      do {
-        idx = Math.floor(Math.random() * flatKurals.length);
-      } while (idx === currentFlatIndex && flatKurals.length > 1);
-      showKuralByFlatIndex(idx);
-    });
 
     document.getElementById('prev-btn').addEventListener('click', () => {
       stopPlayAll();
@@ -1249,43 +1072,6 @@
       submitBtn.textContent = 'Post';
     });
 
-    // ── Preferences: dark mode + font size ──
-
-    const FONT_STEPS = [0.85, 1, 1.2];
-    let fontStepIdx = 1;
-
-    const moonSVG = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M12.5 9.5A6 6 0 0 1 4.5 1.5a6 6 0 1 0 8 8z"/></svg>`;
-    const sunSVG  = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><line x1="7" y1="0.5" x2="7" y2="2.5"/><line x1="7" y1="11.5" x2="7" y2="13.5"/><line x1="0.5" y1="7" x2="2.5" y2="7"/><line x1="11.5" y1="7" x2="13.5" y2="7"/><line x1="2.55" y1="2.55" x2="3.96" y2="3.96"/><line x1="10.04" y1="10.04" x2="11.45" y2="11.45"/><line x1="11.45" y1="2.55" x2="10.04" y2="3.96"/><line x1="3.96" y1="10.04" x2="2.55" y2="11.45"/></svg>`;
-
-    function applyTheme(dark) {
-      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      localStorage.setItem('theme', dark ? 'dark' : 'light');
-      const btn = document.getElementById('theme-btn');
-      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      btn.setAttribute('aria-pressed', String(dark));
-      btn.innerHTML = dark ? sunSVG : moonSVG;
-    }
-
-    function applyFontScale(idx) {
-      fontStepIdx = Math.max(0, Math.min(FONT_STEPS.length - 1, idx));
-      document.documentElement.style.setProperty('--font-scale', FONT_STEPS[fontStepIdx]);
-      localStorage.setItem('fontStep', fontStepIdx);
-      document.getElementById('font-dec-btn').disabled = fontStepIdx === 0;
-      document.getElementById('font-inc-btn').disabled = fontStepIdx === FONT_STEPS.length - 1;
-    }
-
-    (function initPrefs() {
-      const saved = localStorage.getItem('theme');
-      applyTheme(saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
-      const step = parseInt(localStorage.getItem('fontStep'), 10);
-      applyFontScale(isNaN(step) ? 1 : step);
-    })();
-
-    document.getElementById('theme-btn').addEventListener('click', () => {
-      applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
-    });
-    document.getElementById('font-dec-btn').addEventListener('click', () => applyFontScale(fontStepIdx - 1));
-    document.getElementById('font-inc-btn').addEventListener('click', () => applyFontScale(fontStepIdx + 1));
 
     loadData();
   </script>
