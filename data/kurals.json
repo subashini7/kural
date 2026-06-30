@@ -6,7 +6,7 @@
       "Arathuppal (chapters 1-38)",
       "Porrutpal (chapters 39-108)"
     ],
-    "total_kurals": 1050
+    "total_kurals": 1080
   },
   "chapters": [
     {
@@ -401,6 +401,85 @@
           "line2": "தெய்வத்துள் வைக்கப் படும்.",
           "tamil": "வையத்துள் வாழ்வாங்கு வாழ்பவன் வான்உறையும்\nதெய்வத்துள் வைக்கப் படும்.",
           "english": "Whoever lives a shared domestic life with perfect integrity on earth will be revered as a truly divine human being."
+        }
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_tamil": "வாழ்க்கைத் துணைநலம்",
+      "chapter_english": "The Excellence of a Life Partner",
+      "section": "Arathuppal",
+      "section_tamil": "அறத்துப்பால்",
+      "kurals": [
+        {
+          "number": 51,
+          "line1": "மனைக்தக்க மாண்புடையள் ஆகித்தற் கொண்டான்",
+          "line2": "வளத்தக்காள் வாழ்க்கைத் துணை.",
+          "tamil": "மனைக்தக்க மாண்புடையள் ஆகித்தற் கொண்டான்\nவளத்தக்காள் வாழ்க்கைத் துணை.",
+          "english": "A partner who brings true virtue to the home and lives wisely within shared means is a true companion in life."
+        },
+        {
+          "number": 52,
+          "line1": "மனைமாட்சி இல்லாள்கண் இல்லாயின் வாழ்க்கை",
+          "line2": "எனைமாட்சித் தாயினும் இல்.",
+          "tamil": "மனைமாட்சி இல்லாள்கண் இல்லாயின் வாழ்க்கை\nஎனைமாட்சித் தாயினும் இல்.",
+          "english": "Without a partner's excellence at home, no other achievement can make a shared life truly worthwhile."
+        },
+        {
+          "number": 53,
+          "line1": "இல்லதென் இல்லவள் மாண்பானால் உள்ளதென்",
+          "line2": "இல்லவள் மாணாக் கடை?",
+          "tamil": "இல்லதென் இல்லவள் மாண்பானால் உள்ளதென்\nஇல்லவள் மாணாக் கடை?",
+          "english": "With a virtuous partner, nothing is truly lacking; without one, nothing is truly possessed."
+        },
+        {
+          "number": 54,
+          "line1": "பெண்ணின் பெருந்தக்க யாவுள கற்பென்னும்",
+          "line2": "திண்மைஉண் டாகப் பெறின்.",
+          "tamil": "பெண்ணின் பெருந்தக்க யாவுள கற்பென்னும்\nதிண்மைஉண் டாகப் பெறின்.",
+          "english": "Nothing is more excellent than a partner whose integrity never wavers."
+        },
+        {
+          "number": 55,
+          "line1": "தெய்வம் தொழாஅள் கொழுநன் தொழுதெழுவாள்",
+          "line2": "பெய்யெனப் பெய்யும் மழை.",
+          "tamil": "தெய்வம் தொழாஅள் கொழுநன் தொழுதெழுவாள்\nபெய்யெனப் பெய்யும் மழை.",
+          "english": "One who rises each day with genuine devotion to the person they love holds a quiet power so pure — even the heavens respond."
+        },
+        {
+          "number": 56,
+          "line1": "தற்காத்துத் தற்கொண்டாற் பேணித் தகைசான்ற",
+          "line2": "சொற்காத்துச் சோர்விலாள் பெண்.",
+          "tamil": "தற்காத்துத் தற்கொண்டாற் பேணித் தகைசான்ற\nசொற்காத்துச் சோர்விலாள் பெண்.",
+          "english": "A true partner tirelessly guards their own integrity, cares for those they love, and never lets their good name slip."
+        },
+        {
+          "number": 57,
+          "line1": "சிறைகாக்கும் காப்பெவன் செய்யும் மகளிர்",
+          "line2": "நிறைகாக்கும் காப்பே தலை.",
+          "tamil": "சிறைகாக்கும் காப்பெவன் செய்யும் மகளிர்\nநிறைகாக்கும் காப்பே தலை.",
+          "english": "External guards offer little protection — a person's true safeguard is the integrity they carry within."
+        },
+        {
+          "number": 58,
+          "line1": "பெற்றாற் பெறின்பெறுவர் பெண்டிர் பெருஞ்சிறப்புப்",
+          "line2": "புத்தேளிர் வாழும் உலகு.",
+          "tamil": "பெற்றாற் பெறின்பெறுவர் பெண்டிர் பெருஞ்சிறப்புப்\nபுத்தேளிர் வாழும் உலகு.",
+          "english": "Those who honor their partner with genuine devotion earn great distinction, even in the highest of realms."
+        },
+        {
+          "number": 59,
+          "line1": "புகழ்புரிந்த இல்லிலோர்க்கு இல்லை இகழ்வார்முன்",
+          "line2": "ஏறுபோல் பீடு நடை.",
+          "tamil": "புகழ்புரிந்த இல்லிலோர்க்கு இல்லை இகழ்வார்முன்\nஏறுபோல் பீடு நடை.",
+          "english": "When a partner fails to cherish their own good name, one cannot walk with dignity before those who would judge."
+        },
+        {
+          "number": 60,
+          "line1": "மங்கலம் என்ப மனைமாட்சி மற்றதன்",
+          "line2": "நன்கலம் நன்மக்கட் பேறு.",
+          "tamil": "மங்கலம் என்ப மனைமாட்சி மற்றதன்\nநன்கலம் நன்மக்கட் பேறு.",
+          "english": "A partner's excellence at home is one's greatest blessing, and good children are the finest jewels that crown it."
         }
       ]
     },
@@ -1033,6 +1112,85 @@
           "line2": "கல்லார் அறிவிலா தார்",
           "tamil": "உலகத்தோடு ஒட்ட ஒழுகல் பலகற்றும்\nகல்லார் அறிவிலா தார்",
           "english": "No matter how much information they have learned, those who fail to live in harmony with society remain fundamentally ignorant."
+        }
+      ]
+    },
+    {
+      "chapter_number": 15,
+      "chapter_tamil": "பிறனில் விழையாமை",
+      "chapter_english": "Not Pursuing Another's Partner",
+      "section": "Arathuppal",
+      "section_tamil": "அறத்துப்பால்",
+      "kurals": [
+        {
+          "number": 141,
+          "line1": "பிறன்பொருளாள் பெட்டொழுகும் பேதைமை ஞாலத்து",
+          "line2": "அறம்பொருள் கண்டார்கண் இல்.",
+          "tamil": "பிறன்பொருளாள் பெட்டொழுகும் பேதைமை ஞாலத்து\nஅறம்பொருள் கண்டார்கண் இல்.",
+          "english": "Those who truly understand virtue and right conduct will never be foolish enough to pursue someone committed to another."
+        },
+        {
+          "number": 142,
+          "line1": "அறன்கடை நின்றாருள் எல்லாம் பிறன்கடை",
+          "line2": "நின்றாரின் பேதையார் இல்.",
+          "tamil": "அறன்கடை நின்றாருள் எல்லாம் பிறன்கடை\nநின்றாரின் பேதையார் இல்.",
+          "english": "Among all who stray from virtue, none are more foolish than those who seek what rightfully belongs to another."
+        },
+        {
+          "number": 143,
+          "line1": "விளிந்தாரின் வேறல்லர் மன்ற தெளிந்தாரில்",
+          "line2": "தீமை புரிந்துதொழுகு வார்.",
+          "tamil": "விளிந்தாரின் வேறல்லர் மன்ற தெளிந்தாரில்\nதீமை புரிந்துதொழுகு வார்.",
+          "english": "Those who deliberately pursue someone committed to another are no different from the dead."
+        },
+        {
+          "number": 144,
+          "line1": "எனைத்துணையர் ஆயினும் என்னாம் தினைத்துணையும்",
+          "line2": "தேரான் பிறனில் புகல்.",
+          "tamil": "எனைத்துணையர் ஆயினும் என்னாம் தினைத்துணையும்\nதேரான் பிறனில் புகல்.",
+          "english": "However great a person may be, it counts for nothing if they carelessly pursue someone committed to another."
+        },
+        {
+          "number": 145,
+          "line1": "எளிதென இல்லிறப்பான் எய்துமெஞ் ஞான்றும்",
+          "line2": "விளியாது நிற்கும் பழி.",
+          "tamil": "எளிதென இல்லிறப்பான் எய்துமெஞ் ஞான்றும்\nவிளியாது நிற்கும் பழி.",
+          "english": "Treating the pursuit of another's partner as a trivial matter brings a shame that never, ever fades."
+        },
+        {
+          "number": 146,
+          "line1": "பகைபாவம் அச்சம் பழியென நான்கும்",
+          "line2": "இகவாவாம் இல்லிறப்பான் கண்.",
+          "tamil": "பகைபாவம் அச்சம் பழியென நான்கும்\nஇகவாவாம் இல்லிறப்பான் கண்.",
+          "english": "Hatred, guilt, fear, and disgrace will forever follow anyone who pursues another's partner."
+        },
+        {
+          "number": 147,
+          "line1": "அறனியலான் இல்வாழ்வான் என்பான் பிறனியலாள்",
+          "line2": "பெண்மை நயவா தவன்.",
+          "tamil": "அறனியலான் இல்வாழ்வான் என்பான் பிறனியலாள்\nபெண்மை நயவா தவன்.",
+          "english": "One who never pursues another's partner earns genuine respect as a truly virtuous person."
+        },
+        {
+          "number": 148,
+          "line1": "பிறன்மனை நோக்காத பேராண்மை சான்றோர்க்கு",
+          "line2": "அறனொன்றோ ஆன்ற வொழுக்கு.",
+          "tamil": "பிறன்மனை நோக்காத பேராண்மை சான்றோர்க்கு\nஅறனொன்றோ ஆன்ற வொழுக்கு.",
+          "english": "True nobility never casts a covetous glance at another's partner — that is the mark of genuine greatness."
+        },
+        {
+          "number": 149,
+          "line1": "நலக்குரியார் யாரெனின் நாமநீர் வைப்பின்",
+          "line2": "பிறர்க்குரியாள் தோள்தோயா தார்.",
+          "tamil": "நலக்குரியார் யாரெனின் நாமநீர் வைப்பின்\nபிறர்க்குரியாள் தோள்தோயா தார்.",
+          "english": "Who finds true good fortune in this fearsome world? Those who never pursue anyone who belongs to another."
+        },
+        {
+          "number": 150,
+          "line1": "அறன்வரையான் அல்ல செயினும் பிறன்வரையாள்",
+          "line2": "பெண்மை நயவாமை நன்று.",
+          "tamil": "அறன்வரையான் அல்ல செயினும் பிறன்வரையாள்\nபெண்மை நயவாமை நன்று.",
+          "english": "Even someone guilty of many other failings is still far better placed if they never pursue another's partner."
         }
       ]
     },
@@ -7037,6 +7195,85 @@
           "line2": "பெண்சேர்ந்தாம் பேதைமை இல்.",
           "tamil": "எண்சேர்ந்த நெஞ்சத் திடனுடையார்க்கு எஞ்ஞான்றும்\nபெண்சேர்ந்தாம் பேதைமை இல்.",
           "english": "Those with a firm and thoughtful mind never fall into the foolishness of being blindly led by desire."
+        }
+      ]
+    },
+    {
+      "chapter_number": 92,
+      "chapter_tamil": "வரைவின் மகளிர்",
+      "chapter_english": "The Peril of Bought Affection",
+      "section": "Porrutpal",
+      "section_tamil": "பொருட்பால்",
+      "kurals": [
+        {
+          "number": 911,
+          "line1": "அன்பின் விழையார் பொருள்விழையும் ஆய்தொடியார்",
+          "line2": "இன்சொல் இழுக்குத் தரும்.",
+          "tamil": "அன்பின் விழையார் பொருள்விழையும் ஆய்தொடியார்\nஇன்சொல் இழுக்குத் தரும்.",
+          "english": "The sweet words of those who seek only money — not genuine affection — lead to nothing but sorrow."
+        },
+        {
+          "number": 912,
+          "line1": "பயன்தூக்கிப் பண்புரைக்கும் பண்பின் மகளிர்",
+          "line2": "நயன்தூக்கி நள்ளா விடல்.",
+          "tamil": "பயன்தூக்கிப் பண்புரைக்கும் பண்பின் மகளிர்\nநயன்தூக்கி நள்ளா விடல்.",
+          "english": "Learn to see through those who weigh your worth before pretending to care, and keep well away."
+        },
+        {
+          "number": 913,
+          "line1": "பொருட்பெண்டிர் பொய்ம்மை முயக்கம் இருட்டறையில்",
+          "line2": "ஏதில் பிணந்தழீஇ அற்று.",
+          "tamil": "பொருட்பெண்டிர் பொய்ம்மை முயக்கம் இருட்டறையில்\nஏதில் பிணந்தழீஇ அற்று.",
+          "english": "Intimacy bought with money feels as hollow as paid mourners embracing a stranger's corpse in a dark room."
+        },
+        {
+          "number": 914,
+          "line1": "பொருட்பொருளார் புன்னலந் தோயார் அருட்பொருள்",
+          "line2": "ஆயும் அறிவி னவர்.",
+          "tamil": "பொருட்பொருளார் புன்னலந் தோயார் அருட்பொருள்\nஆயும் அறிவி னவர்.",
+          "english": "Those who seek the true wealth of grace never waste themselves on the empty favors of those who value only money."
+        },
+        {
+          "number": 915,
+          "line1": "பொதுநலத்தார் புன்னலம் தோயார் மதிநலத்தின்",
+          "line2": "மாண்ட அறிவி னவர்.",
+          "tamil": "பொதுநலத்தார் புன்னலம் தோயார் மதிநலத்தின்\nமாண்ட அறிவி னவர்.",
+          "english": "Those whose judgment is sharpened by genuine wisdom never seek out such shallow, fleeting pleasures."
+        },
+        {
+          "number": 916,
+          "line1": "தந்நலம் பாரிப்பார் தோயார் தகைசெருக்கிப்",
+          "line2": "புன்னலம் பாரிப்பார் தோள்.",
+          "tamil": "தந்நலம் பாரிப்பார் தோயார் தகைசெருக்கிப்\nபுன்னலம் பாரிப்பார் தோள்.",
+          "english": "Anyone who values their own good name will not seek out those who offer their affection only to whoever pays."
+        },
+        {
+          "number": 917,
+          "line1": "நிறைநெஞ்சம் இல்லவர் தோய்வார் பிறநெஞ்சிற்",
+          "line2": "பேணிப் புணர்பவர் தோள்.",
+          "tamil": "நிறைநெஞ்சம் இல்லவர் தோய்வார் பிறநெஞ்சிற்\nபேணிப் புணர்பவர் தோள்.",
+          "english": "Only an unrefined mind seeks closeness with someone whose heart is truly set on something else entirely."
+        },
+        {
+          "number": 918,
+          "line1": "ஆயும் அறிவினர் அல்லார்க்கு அணங்கென்ப",
+          "line2": "மாய மகளிர் முயக்கு.",
+          "tamil": "ஆயும் அறிவினர் அல்லார்க்கு அணங்கென்ப\nமாய மகளிர் முயக்கு.",
+          "english": "The wise say that to a person without discernment, a bought embrace is every bit as ruinous as a divine curse."
+        },
+        {
+          "number": 919,
+          "line1": "வரைவிலா மாணிழையார் மென்தோள் புரையிலாப்",
+          "line2": "பூரியர்கள் ஆழும் அளறு.",
+          "tamil": "வரைவிலா மாணிழையார் மென்தோள் புரையிலாப்\nபூரியர்கள் ஆழும் அளறு.",
+          "english": "The glamorous allure of bought companionship is simply a pit that swallows up those who cannot see through it."
+        },
+        {
+          "number": 920,
+          "line1": "இருமனப் பெண்டிரும் கள்ளும் கவறும்",
+          "line2": "திருநீக்கப் பட்டார் தொடர்பு.",
+          "tamil": "இருமனப் பெண்டிரும் கள்ளும் கவறும்\nதிருநீக்கப் பட்டார் தொடர்பு.",
+          "english": "Bought affection, liquor, and gambling are the constant companions of those Fortune has already forsaken."
         }
       ]
     },
